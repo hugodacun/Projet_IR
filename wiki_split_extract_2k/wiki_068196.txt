@@ -1,0 +1,10 @@
+Modèles compartimentaux en épidémiologie
+Les modèles mathématiques de maladies infectieuses , d' abord outils purement théoriques , ont commencé à être mis en pratique avec le problème du SIDA dans les années 1980 .
+Lors de la pandémie Covid 19 , les modélisations mathématiques ont connu un essor lors de la prise de décision relatives aux politiques de santé publique et a également contribué à l' épidémiosurveillance de la maladie .
+Bien avant cela , depuis la pandémie de grippe espagnole , des modèles compartimentaux sont utilisés pour faciliter les calculs de probabilité de contagion .
+Ces modèles divisent la population en classes épidémiologiques .
+Le cours d' une épidémie dans une population dépend de paramètres complexes et très nombreux ( stades cliniques possibles , déplacement des individus , souches de la maladie ) .
+Les modèles mathématiques se sont peu à peu affirmés comme outils d' aide à la décision pour les politiques publiques car permettant de prévoir les conséquences sanitaires d' actions aussi variées que la vaccination , la mise en quarantaine ou la distribution de tests de dépistage .
+Une approche fondatrice fut celle des modèles compartimentaux créés en 1927 par Anderson Gray McKendrick et William Ogilvy Kermack ; elle fut ensuite étendue par ces derniers dans deux autres articles scientifiques quelques années plus tard ( 1932 et 1933 ) .
+Le principe est de diviser la population en classes épidémiologiques telles que les individus susceptibles d' être infectés , ceux qui sont infectieux , et ceux qui ont acquis une immunité à la suite de la guérison .
+Depuis , cette approche est utilisée pour modéliser de nombreuses maladies , et continue d' être un sujet de recherche actif en prenant en compte de nouveaux éléments tels que les découvertes de la science des réseaux .

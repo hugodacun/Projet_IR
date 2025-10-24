@@ -1,0 +1,10 @@
+Holonomie
+Cet article concerne l' holonomie d' une connexion .
+Pour le concept d' holonomie associée à un feuilletage , voir feuilletage .
+En mathématiques , et plus précisément en géométrie différentielle , l' holonomie d' une connexion sur une variété différentielle est une mesure de la façon dont le transport parallèle le long de boucles fermées modifie les informations géométriques transportées .
+Cette modification est une conséquence de la courbure de la connexion ( ou plus généralement de sa " forme " ) .
+Pour des connexions plates , l' holonomie associée est un type de monodromie , et c' est dans ce cas une notion uniquement globale .
+Pour des connexions de courbure non nulle , l' holonomie a des aspects locaux et globaux non triviaux .
+Toute connexion sur une variété donne naissance , grâce aux applications de transport parallèle , à une notion d' holonomie .
+Parmi les exemples importants , on trouve : l' holonomie de la connexion de Levi-Civita ( appelée holonomie riemannienne ) , les holonomies des connexions des fibrés vectoriels , l' holonomie des connexions de Cartan ( en ) , et l' holonomie des connexions des fibrés principaux .
+Dans chacun de ces cas , l' holonomie de la connexion peut s' identifier à un groupe de Lie , le groupe d' holonomie .

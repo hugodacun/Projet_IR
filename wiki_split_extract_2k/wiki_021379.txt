@@ -1,0 +1,10 @@
+Microscopie de seconde harmonique
+Ne doit pas être confondu avec Microscopie par excitation à deux photons .
+La microscopie de seconde harmonique ( M2H ou ( en ) SHIM ) , aussi appelée « microscopie par génération de seconde harmonique » est basée sur un effet optique non-linéaire connu sous le nom de génération de seconde harmonique ( GSH , ( en ) SHG ) : on la nomme ainsi souvent " microscopie SHG " .
+Elle a été établie comme un mécanisme de contraste d' imagerie par microscope , utile pour la visualisation de la structure de certains tissus biologiques ou fonctions cellulaire , mais aussi de certains cristaux ferroélectriques .
+Un microscope SHG produit des images dont le contraste est dû aux variations de la capacité d' un échantillon à générer de la lumière d' harmonique deux à partir de la lumière incidente , tandis qu' un microscope optique classique obtient son contraste en détectant les variations de densité optique , de la longueur du trajet ou de l' indice de réfraction optique du spécimen .
+La SHG requiert une lumière laser intense traversant un matériau de structure moléculaire non-centrosymétrique ( qui ne possède pas de centre de symétrie ) .
+La lumière SHG émergeant d' un tel matériau correspond exactement à la moitié de la longueur d' onde ( fréquence doublée ) de la lumière pénétrant dans le matériau .
+Bien que la microscopie par excitation à deux photons ( 2PEF ) soit également un processus à deux photons , la 2PEF perd de l' énergie lors de la relaxation de l' état excité , alors que la SHG conserve l' énergie .
+Généralement , un cristal inorganique est utilisé pour produire de la lumière SHG , mais certains matériaux biologiques peuvent être hautement polarisables et s' assembler en grandes structures non centrosymétriques assez ordonnées ( longs filaments à symétrie cylindrique ) .
+Les matériaux biologiques tels que le collagène , les microtubules ( via la tubuline ) et les muscles ( via la myosine ) peuvent produire des signaux de SHG .

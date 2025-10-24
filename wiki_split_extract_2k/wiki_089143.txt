@@ -1,0 +1,10 @@
+Théorie des représentations
+Pour les articles homonymes , voir Représentation ( homonymie ) .
+La théorie des représentations est une branche des mathématiques qui étudie les structures algébriques abstraites en représentant leurs éléments comme des transformations linéaires d' espaces vectoriels , et qui étudie les modules sur ces structures algébriques abstraites .
+Essentiellement , une représentation concrétise un objet algébrique abstrait en décrivant ses éléments par des matrices et les opérations sur ces éléments en termes d' addition matricielle et de produit matriciel .
+Parmi les objets algébriques qui se prêtent à une telle approche figurent les groupes , les algèbres associatives et les algèbres de Lie .
+La théorie primordiale des représentations est celle des représentations de groupes , où les éléments d' un groupe sont représentés par des matrices inversibles de telle façon que la loi du groupe corresponde au produit matriciel .
+La théorie des représentations est un outil puissant , parce qu' elle réduit des problèmes d' algèbre abstraite à des problèmes d' algèbre linéaire , un domaine qui est bien compris .
+En outre , lorsqu' on autorise l' espace vectoriel , sur lequel un groupe ( par exemple ) est représenté , à être un espace de dimension infinie , par exemple un espace de Hilbert , on peut appliquer à la théorie des groupes des méthodes d' analyse .
+La théorie des représentations est aussi importante en physique , parce qu' elle permet de décrire , par exemple , comment le groupe des symétries d' un système influe sur les solutions des équations qui le décrivent .
+Une caractéristique saisissante de la théorie des représentations est son omniprésence en mathématiques .

@@ -1,0 +1,10 @@
+Forme bilinéaire
+En mathématiques , plus précisément en algèbre linéaire , une forme bilinéaire est un type particulier d' application f qui , à deux vecteurs d' un espace vectoriel V ( sur un certain corps commutatif K ) , associe un scalaire ( c'est-à-dire un élément de ce corps ) . f : V × V → K Une forme bilinéaire est de plus linéaire par rapport à ses deux antécédents .
+Les formes bilinéaires sont naturellement introduites pour les produits scalaires .
+Les produits scalaires ( sur les espaces vectoriels de dimension finie ou infinie ) sont très utilisés , dans toutes les branches mathématiques , pour définir une distance .
+La physique classique , relativiste ou quantique utilise ce cadre formel .
+Les formes bilinéaires interviennent dans de nombreux domaines des mathématiques .
+Elles forment une vaste classe d' outils utilisés pour résoudre des questions de natures très diverses .
+Article détaillé : Algèbre linéaire .
+Le domaine natif des formes bilinéaires est celui de l' algèbre linéaire .
+La notion de forme bilinéaire est définie sur les espaces vectoriels et se généralise sur les modules , structures de base de l' algèbre linéaire .

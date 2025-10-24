@@ -1,0 +1,10 @@
+Cataphore ( grammaire )
+En linguistique , le terme ayant la forme française cataphore a été formé par le linguiste allemand Karl Bühler des éléments grecs anciens κατά ( katá ) « en bas » et φέρω ( phéro ) « je porte » , donnant le mot καταφορά ( kataphorá ) , par analogie avec le terme ἀναφορά ( anaphorá ) « anaphore » .
+C' est un phénomène syntactico-sémantique qui consiste en l' anticipation , par un élément linguistique ayant le statut de substitut , d' une entité également linguistique ( mot , groupe de mots , phrase simple , phrase complexe ) exprimée par la suite , ex .
+Moi , je vais te dire ceci : je n' aime pas beaucoup ce film .
+L' entité anticipée , appelée postcédent , représente une réalité extra-linguistique appelée référent , et le substitut , appelé élément cataphorique , représente à son tour le postcédent , donc , dans la plupart des cas , indirectement le référent , , , , .
+La référence cataphorique est un moyen de marquer l' identité , appelée coréférence , entre ce qui est exprimé et ce qui va être exprimé .
+L' élément κατά ( katá ) « en bas » est motivé par l' écriture , dans l' Antiquité , sur des rouleaux .
+La cataphore s' oppose à deux autres phénomènes de référence .
+L' un est également phorique , l' anaphore , plus fréquente , qui diffère de la cataphore par le fait que c' est une reprise , c'est-à-dire une référence à une entité linguistique exprimée auparavant , ex .
+Nos filles sont étudiantes ; elles sont à Paris .

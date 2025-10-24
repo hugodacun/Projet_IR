@@ -1,0 +1,10 @@
+Astronomie infrarouge
+L' astronomie en infrarouge , souvent abrégée en astronomie infrarouge , est la branche de l' astronomie et de l' astrophysique qui étudie la partie située dans l' infrarouge du rayonnement émis par les objets astronomiques .
+La gamme de longueurs d' onde de l' infrarouge se situe entre 0,75 et 300 micromètres entre la lumière visible ( 0,3 à 0,75 micromètre ) et les ondes submillimétriques .
+La lumière infrarouge émise par les objets célestes est en partie absorbée par la vapeur d' eau contenue dans l' atmosphère terrestre .
+Pour contourner ce problème la plupart des télescopes à infrarouge sont soit situés à des altitudes élevées ( Observatoire du Mauna Kea , VISTA … ) , soit placés en orbite ( Spitzer , IRAS ( Infrared Astronomical Satellite ) , Herschel ) .
+L' infrarouge moyen et lointain ne sont pratiquement observables que depuis l' espace .
+Les scientifiques rangent dans la même catégorie l' astronomie infrarouge et l' astronomie optique car les composants optiques utilisés sont à peu près identiques ( miroirs , éléments optiques , détecteurs ) , et les techniques observationnelles sont les mêmes .
+Néanmoins l' astronomie infrarouge n' a pris son essor qu' après la Seconde Guerre mondiale lorsque des détecteurs spécialisés ont pu être mis au point .
+Les progrès de l' électronique au cours des décennies qui ont suivi ont permis d' accroître de manière considérable la sensibilité des instruments utilisés .
+L' astronomie infrarouge permet d' étudier des objets célestes qui ne sont pas observables en lumière visible ainsi que des processus dont les caractéristiques sont en partie révélées par le rayonnement infrarouge qu' ils émettent .

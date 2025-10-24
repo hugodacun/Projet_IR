@@ -1,0 +1,10 @@
+Liste des projets BOINC
+La liste des projets BOINC est un inventaire des principales caractéristiques de tous les projets informatiques , présents et passés , utilisant le logiciel BOINC .
+Cette liste évolue au fil du temps , les projets ayant des durées de vie inégales .
+Permanents , intermittents ou éphémères , ils dépendent de multiples facteurs , financiers , humains et sociétaux .
+Les projets BOINC sont des programmes informatiques exploitant le calcul massif et parallèle d' une multitude d' ordinateurs clients appartenant à des particuliers ( principe du calcul distribué ) .
+L' écosystème de ces projets est riche et varié .
+Ce type de projet devient prépondérant lorsque la puissance de calcul requise s' accroît et lorsque le coût des infrastructures informatiques nécessaires dépasse les budgets permis par les finances du lanceur de projet .
+La simultanéité et le parallélisme des unités de travail autorisent la résolution de problèmes complexes , en des temps abordables , à l' échelle humaine .
+Ils sont notamment employés dans les recherches d' avant-garde tant dans les disciplines fondamentales que dans les sciences appliquées .
+Ce sont les internautes du monde entier qui , en s' inscrivant à un ou plusieurs projets , leur fournissent les ressources informatiques manquantes .

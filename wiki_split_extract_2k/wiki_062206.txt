@@ -1,0 +1,10 @@
+Télescope
+Pour les articles homonymes , voir Télescope ( homonymie ) .
+Télescope Le télescope de 193 cm de l' observatoire de Haute-Provence .
+Un télescope ( du grec τηλε ( tele ) signifiant « loin » et σκοπεῖν ( skopein ) signifiant « regarder , voir » ) est un instrument d' optique permettant d' augmenter la luminosité ainsi que la taille apparente des objets à observer .
+Son rôle de récepteur de lumière est souvent plus important que son grossissement optique , il permet d' apercevoir des objets célestes ponctuels difficilement perceptibles ou invisibles à l' œil nu .
+Les télescopes sont principalement utilisés en astronomie , car leurs réglages ne les rendent propices qu' aux observations d' objets très éloignés et se déplaçant relativement lentement .
+On distingue deux types majeurs de télescopes , selon la manière dont la lumière est focalisée par l' objectif ( d' après la terminologie anglaise ) : dans un télescope réfracteur ( appelé lunette astronomique en France , refracting telescope en anglais ) , la lumière est focalisée par un « système dioptrique » composé d' un ensemble de lentilles ( réfraction ) ; dans un télescope réflecteur ( auquel se restreint l' appellation de télescope en France et dans le présent article , reflecting telescope en anglais ) , la lumière est focalisée soit par un système purement réflectif ( télescope de Newton ) soit par un système hybride « catadioptrique » composé de miroirs ( réflexion ) et de dioptres ( par exemple correcteurs ) .
+Article détaillé : Histoire du télescope .
+Précurseur du télescope , la lunette d' approche aurait été conçue en Italie vers 1586 très probablement par l' opticien italien Giambattista della Porta , ou peut-être dès les alentours de 1550 par Leonard Digges , en Angleterre .
+Le télescope apparaît en Hollande où les États Généraux de 1608 reçoivent successivement la demande de brevet de Hans Lippershey le 2 octobre puis quelques semaines après celle de Jacob Metius ; le facteur de grossissement de ces télescopes est de 3 à 4 .

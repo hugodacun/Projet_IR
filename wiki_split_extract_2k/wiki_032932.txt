@@ -1,0 +1,10 @@
+Fraction continue
+En mathématiques , une fraction continue ou fraction continue simple ou plus rarement fraction continuée est une expression de la forme : a 0 + 1 a 1 + 1 a 2 + 1 a 3 + … { \ displaystyle a_ { 0 } + { \ cfrac { 1 } { a_ { 1 } + { \ cfrac { 1 } { a_ { 2 } + { \ cfrac { 1 } { a_ { 3 } + \ dots } } } } } } } comportant un nombre fini ou infini d' étages .
+On montre qu' on peut « représenter » — en un sens qui sera précisé — tout nombre réel sous forme d' une fraction continue , finie ou infinie , dans laquelle a0 est un entier relatif et les autres aj sont des entiers strictement positifs .
+Comme dans la notation décimale usuelle , où chaque réel est approché par des nombres décimaux de plus en plus précisément au fur et à mesure de la donnée des décimales successives , de même chaque réel est approché par des fractions étagées de la forme ci-dessus de plus en plus précisément au fur et à mesure qu' on rajoute des étages .
+En outre , s' il faut une infinité de décimales pour décrire exactement un nombre non décimal , il faut un développement infini en fraction continue pour décrire exactement un nombre irrationnel .
+Les fractions continues sont utiles en approximation diophantienne , notamment parce qu' elles fournissent , en un certain sens , les « meilleures » approximations des réels par des rationnels .
+Cette propriété est à l' origine d' algorithmes pour l' approximation de racines carrées , mais aussi de démonstrations d' irrationalité voire de transcendance pour certains nombres comme π ou e .
+La périodicité des fractions continues des racines carrées d' entiers strictement supérieurs à 1 et sans facteur carré a des conséquences utiles pour l' étude de l' équation de Pell-Fermat .
+Déjà usitées chez les mathématiciens indiens au Moyen Âge , les fractions continues sont étudiées en Europe dès le XVIIe siècle .
+Elles sont maintenant généralisées à d' autres expressions , appliquées aux approximations de séries entières appelées approximant de Padé , ou encore adaptées aux applications linéaires .

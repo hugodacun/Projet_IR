@@ -1,0 +1,10 @@
+Polarisation circulaire
+La polarisation circulaire d' un rayonnement électromagnétique est une polarisation où la norme du vecteur du champ électrique ne change pas alors que son orientation change selon un mouvement de rotation .
+En électrodynamique la norme et la direction d' un champ électrique sont représentés par un vecteur comme on peut le voir dans l' animation ci-contre .
+Dans le cas d' une onde polarisée circulairement , les vecteurs d' un champ électrique , à un point donné dans l' espace , décrivent un cercle en fonction du temps .
+Si l' on observe l' onde à un moment donné , le vecteur du champ électrique de l' onde décrit un mouvement hélicoïdal le long de la direction de propagation .
+La polarisation circulaire est un cas particulier de la polarisation elliptique ( en ) , tout comme la polarisation linéaire ( en ) .
+Le phénomène de polarisation se présente comme une conséquence du fait que la lumière se comporte comme une onde transversale à deux dimensions .
+Article connexe : sens de rotation .
+La polarisation circulaire peut être définie dans le sens horaire ou anti-horaire , selon la direction dans laquelle le vecteur champ électrique tourne .
+Deux conventions historiques opposées existent .

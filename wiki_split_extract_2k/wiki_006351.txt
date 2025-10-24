@@ -1,0 +1,10 @@
+Robustesse ( évolution )
+Pour les articles homonymes , voir robustesse .
+En biologie de l' évolution , la robustesse d' un système biologique ( également appelée robustesse biologique ou génétique , robustness en anglais ) correspond à la persistance d' une certaine caractéristique ou trait de ce système subissant des perturbations ou des conditions incertaines , .
+En biologie du développement , la robustesse est connue sous le nom de canalisation , .
+Selon le type de perturbation concerné , la robustesse peut être classifiée comme mutationnelle , environnementale , recombinatoire , comportementale , etc , , .
+La robustesse est obtenue par la combinaison de plusieurs mécanismes génétiques et moléculaires et peut évoluer aussi bien par sélection directe que par sélection indirecte .
+Plusieurs systèmes d' étude d' organismes modèles ont été développés afin d' étudier expérimentalement la robustesse et ses conséquences sur le plan de l' évolution .
+La robustesse mutationnelle ( également appelée tolérance aux mutations ) décrit l' étendue jusqu' à laquelle le phénotype d' un organisme reste constant malgré une ou plusieurs mutations affectant son génotype .
+Cette robustesse peut être quantifiée empiriquement dans plusieurs génomes , et gènes individuels en induisant des mutations et en mesurant la proportion de mutants qui conservent le même phénotype , la même fonction ou la même valeur sélective .
+De façon plus générale , ce mécanisme est connu comme la distribution des effets sur la fitness due aux mutations ( autrement dit , les fréquences des différentes valeurs sélectives des mutants ) .

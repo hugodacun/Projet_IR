@@ -1,0 +1,10 @@
+Global Positioning System
+Pour les articles homonymes , voir GPS .
+Cet article concerne le système de géolocalisation américain .
+Pour l' assistant de navigation , voir GPS ( assistant de navigation ) .
+Le Global Positioning System ( GPS ) ( en français : « Système mondial de positionnement » [ littéralement ] ou « Géo-positionnement par satellite » ) , originellement connu sous le nom de Navstar GPS , est un système de positionnement par satellites appartenant au gouvernement fédéral des États-Unis .
+Mis en place par le département de la Défense des États-Unis à des fins militaires à partir de 1973 , le système avec vingt-quatre satellites est totalement opérationnel en 1995 .
+Les signaux transmis par les satellites peuvent être librement reçus et exploités par quiconque .
+L' utilisateur , qu' il soit sur terre , sur mer ou dans les airs , peut connaître sa position à toute heure et en tout lieu sur la surface ou au voisinage de la surface de la Terre avec une précision sans précédent , dès lors qu' il est équipé d' un récepteur GPS et du logiciel nécessaire au traitement des informations reçues .
+Le principe de fonctionnement repose sur la trilatération de signaux électromagnétiques synchronisés émis par les satellites .
+Pour assurer la précision du positionnement , le système GPS utilise des technologies sophistiquées : horloges atomiques embarquées , compensation d' effets relativistes , mise en place de stations d' observation et de synchronisation .

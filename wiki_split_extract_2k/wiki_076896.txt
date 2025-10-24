@@ -1,0 +1,10 @@
+Accord ( musique )
+Pour les articles homonymes , voir Accord .
+En musique , un accord est un ensemble de notes considéré comme formant un tout du point de vue de l' harmonie .
+Le plus souvent , ces notes sont simultanées , superposées en un même moment ; mais les accords peuvent aussi s' exprimer par des notes successives , par exemple dans des arpèges .
+En harmonie tonale , le terme « accord » désigne une combinaison d' au moins trois notes simultanées ( deux notes émises simultanément ne constituent pas un accord : il s' agit seulement d' un intervalle ; un accord est donc une superposition de plusieurs intervalles ) .
+Il existe plusieurs classements des accords et plusieurs modes de description de leur formation ; les accords correspondant à ces descriptions sont dits « accords classés » .
+Les superpositions de notes non classées comme accords sont appelées « agrégats » ; un ensemble de notes contiguës est un cluster .
+Jusqu' à la Renaissance , les superpositions de plusieurs notes ne sont pas considérées comme des accords .
+L' écriture musicale est régie exclusivement par des règles de superpositions de notes et de lignes mélodiques , celles qui formeront le procédé d' écriture appelé contrepoint .
+Cependant , dès la fin du XIVe siècle , une plus grande attention est accordée aux superpositions de trois notes consonantes entre elles , désignées aujourd'hui par les intervalles qui les séparent : tierce et quinte , tierce et sixte , quarte et sixte ( d' autres combinaisons , comme tierce et octave ou quinte et octave , elles aussi consonantes et fréquentes aux périodes précédentes , ne donnent cependant que deux notes différentes , si on admet que les deux notes à l' octave l' une de l' autre sont conceptuellement la même note ) .
