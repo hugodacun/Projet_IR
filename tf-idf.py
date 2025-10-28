@@ -11,8 +11,8 @@ from scipy.sparse import csr_matrix
 from tqdm import tqdm
 from unidecode import unidecode
 
-# ---------- Prétraitement (FR léger) ----------
-# Stoplist FR rapide (tu pourras l'étendre)
+# ---------- Prétraitement ----------
+# mots très fréquents mais peu informatifs
 STOPWORDS = {
     "le","la","les","un","une","des","de","du","au","aux","et","ou","mais","donc","or","ni","car",
     "a","à","dans","en","sur","sous","pour","par","avec","sans","chez","comme","plus","moins",
@@ -25,6 +25,7 @@ STOPWORDS = {
 
 TOKEN_RE = re.compile(r"[a-z0-9]+")
 
+# Fonction pour nettoyer et norlmaliser le texte
 def preprocess(text: str):
     text = text.lower()
     text = unidecode(text)              # é -> e, etc.
@@ -236,12 +237,11 @@ def main():
 
     ap_search = sub.add_parser("search", help="Chercher top-k")
     #ap_search.add_argument("--data_dir", type=str, required=True)
-    ap_search.add_argument("--query", type=str, required=True)
     ap_search.add_argument("--k", type=int, default=10)
 
     ap_eval = sub.add_parser("eval", help="Évaluer sur requetes.jsonl")
-    ap_eval.add_argument("--data_dir", type=str, required=True)
-    ap_eval.add_argument("--queries", type=str, required=True)
+    #ap_eval.add_argument("--data_dir", type=str, required=True)
+    #ap_eval.add_argument("--queries", type=str, required=True)
     ap_eval.add_argument("--k", type=int, default=10)
     ap_eval.add_argument("--agg", type=str, choices=["mean","max"], default="mean")
 
@@ -253,7 +253,7 @@ def main():
         X, idf, vocab, doc_ids, _ = build_tfidf(docs)
 
     if args.cmd == "index":
-        data_dir = Path(args.data_dir)
+        data_dir = Path("data") #Path(args.data_dir)
         docs = load_documents(data_dir)
         X, idf, vocab, doc_ids, _ = build_tfidf(docs)
         if args.save:
@@ -265,12 +265,13 @@ def main():
             print(f"Sauvé: {out}, {out.with_suffix('.idf.npy')}, {out.with_suffix('.vocab.json')}, {out.with_suffix('.docids.json')}")
 
     elif args.cmd == "search":
-        res = search_topk(args.query, X, vocab, idf, doc_ids, k=args.k)
+        query = input("Enter your research: ")
+        res = search_topk(query, X, vocab, idf, doc_ids, k=args.k)
         for fn, sc in res:
             print(f"{sc: .4f}\t{fn}")
 
     elif args.cmd == "eval":
-        requetes_path = Path(args.queries)
+        requetes_path = Path("requetes.jsonl") #Path(args.queries)
         res = evaluate(requetes_path, X, vocab, idf, doc_ids, agg=args.agg, k=args.k)
         print(json.dumps(res, indent=2, ensure_ascii=False))
 
