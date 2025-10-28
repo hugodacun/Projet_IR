@@ -3,7 +3,7 @@ Projet de Information Retrieval
 
 Le but de se projet est réaliser un moteur de recherche
 
-# TF-IDF
+## TF-IDF
 
 Pour lancer une recherche : python3 tf-idf.py search
 
