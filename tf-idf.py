@@ -237,6 +237,7 @@ def main():
 
     ap_search = sub.add_parser("search", help="Chercher top-k")
     #ap_search.add_argument("--data_dir", type=str, required=True)
+    ap_search.add_argument("--query", type=str, required=True)
     ap_search.add_argument("--k", type=int, default=10)
 
     ap_eval = sub.add_parser("eval", help="Évaluer sur requetes.jsonl")
@@ -265,7 +266,7 @@ def main():
             print(f"Sauvé: {out}, {out.with_suffix('.idf.npy')}, {out.with_suffix('.vocab.json')}, {out.with_suffix('.docids.json')}")
 
     elif args.cmd == "search":
-        query = input("Enter your research: ")
+        query = args.query#input("Enter your research: ")
         res = search_topk(query, X, vocab, idf, doc_ids, k=args.k)
         for fn, sc in res:
             print(f"{sc: .4f}\t{fn}")
