@@ -11,6 +11,8 @@ from scipy.sparse import csr_matrix
 from tqdm import tqdm
 from unidecode import unidecode
 
+import time
+
 # ---------- Prétraitement ----------
 # mots très fréquents mais peu informatifs
 STOPWORDS = {
@@ -250,8 +252,10 @@ def main():
 
     if args.cmd in ("search","eval"):
         data_dir = Path("data") #Path(args.data_dir)
+        t0 = time.perf_counter() #t0 pour le calcul de l'indexation
         docs = load_documents(data_dir)
         X, idf, vocab, doc_ids, _ = build_tfidf(docs)
+        index_time = time.perf_counter() - t0
 
     if args.cmd == "index":
         data_dir = Path("data") #Path(args.data_dir)
@@ -270,10 +274,13 @@ def main():
         res = search_topk(query, X, vocab, idf, doc_ids, k=args.k)
         for fn, sc in res:
             print(f"{sc: .4f}\t{fn}")
+        print(f"# Index time (s): {index_time:.3f}", file=sys.stderr)
+
 
     elif args.cmd == "eval":
         requetes_path = Path("requetes.jsonl") #Path(args.queries)
         res = evaluate(requetes_path, X, vocab, idf, doc_ids, agg=args.agg, k=args.k)
+        res["IndexTimeSec"] = round(index_time, 3)   # <-- ajoute la métrique
         print(json.dumps(res, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
