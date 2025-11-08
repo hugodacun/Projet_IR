@@ -1,4 +1,3 @@
-# src/index.py
 from __future__ import annotations
 from collections import Counter, defaultdict
 from typing import Dict, List, Tuple
