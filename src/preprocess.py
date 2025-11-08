@@ -4,7 +4,7 @@ import unicodedata ## pour normaliser Unicode ( retirer les accents proprement )
 from typing import List ## annotation de type List
 
 class TextPreprocessor: 
-    STOP_WORDS = """ au aux avec ce ces dans de des du elle en et eux il je la le les leur lui ma mais me
+    STOP_WORDS = """ au aux avec ce ces dans de des du elle elles en et eux il ils je la le les leur lui ma mais me
     meme nos notre nous on ou par pas pour qu que qui sa se ses son sur ta te tes toi
     tu un une vos votre vous c d j l a y ete etes etant est et auj hui """
     ## on mais tous les stop words sous forme de list avec split ["c","d"...]
