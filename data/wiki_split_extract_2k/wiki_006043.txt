@@ -1,0 +1,10 @@
+Démonstration du dernier théorème de Fermat pour les exposants 3 , 4 et 5
+Pour un article plus général , voir Dernier théorème de Fermat .
+En mathématiques , plus précisément en arithmétique modulaire , le dernier théorème de Fermat traite des racines de l' équation diophantienne suivante , d' inconnues x { \ displaystyle x } , y { \ displaystyle y } et z { \ displaystyle z } : n ∈ N x n + y n = z n . { \ displaystyle n \ in \ mathbb { N } \ quad x ^ { n } + y ^ { n } = z ^ { n } . } Il affirme qu' il n' existe aucune solution non triviale si le paramètre n est strictement supérieur à 2 .
+Une équation diophantienne est une équation à coefficients entiers dont les solutions recherchées sont entières .
+Si , comme dans l' exemple ci-dessus , l' expression est souvent simple , la résolution s' avère en général ardue .
+Pierre de Fermat énonce ce résultat dans la marge de son exemplaire du livre Arithmetica de Diophante et y indique qu' il en a trouvé une « démonstration véritablement merveilleuse » .
+Il est peu probable qu' une démonstration accessible à Fermat existe .
+En effet , il fallut de nombreuses tentatives ainsi que près de 350 ans d' efforts pour qu' une preuve en soit donnée en 1994 , par Andrew Wiles .
+Si l' un des trois entiers x , y ou z est nul , alors l' équation devient évidente ; de telles solutions sont dites triviales .
+L' objectif est donc la recherche d' un triplet solution tel que le produit xyz soit non nul .

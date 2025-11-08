@@ -1,0 +1,10 @@
+Histoire de l' intelligence artificielle
+L' intelligence artificielle plonge ses racines dans l' Antiquité , mais c' est surtout dans la deuxième partie du XXe siècle qu' elle prit son essor , et qu' une lecture historique devient envisageable .
+Les premiers jalons historiques de l' intelligence artificielle ( ou IA ) datent de la Protohistoire , où mythes , légendes et rumeurs dotent des êtres artificiels , réalisés par des maîtres-artisans , d' une intelligence ou d' une conscience ; comme l' écrit Pamela_McCorduck ( en ) , l' intelligence artificielle commence avec « le vieux souhait de jouer à Dieu » .
+L' intelligence artificielle comme nous l' entendons aujourd'hui a été initiée par les philosophes classiques , dont Gottfried Wilhelm Leibniz avec son calculus ratiocinator , qui essaient de décrire le processus de la pensée humaine comme la manipulation mécanique de symboles , sans pour autant vouloir fabriquer des spécimens .
+Cette réflexion s' est concrétisée avec l' invention de l' ordinateur programmable dans les années 1940 .
+Cet instrument et les idées qu' il sous-tend ont inspiré les scientifiques qui ont commencé à évoquer sérieusement la faisabilité d' un « cerveau électronique » .
+La recherche en intelligence artificielle a vraiment commencé après une conférence tenue sur le campus de Dartmouth College pendant l' été 1956 .
+À la suite de cette réunion , certains participants se sont investis dans une recherche sur l' intelligence artificielle .
+Certains utopistes ont pronostiqué qu' une machine aussi intelligente qu' un être humain existerait en moins d' une génération et des millions de dollars ont alors été investis pour réifier cette prédiction .
+Avec le temps , il est apparu que les difficultés inhérentes à cette annonce avaient été grossièrement sous-estimées .

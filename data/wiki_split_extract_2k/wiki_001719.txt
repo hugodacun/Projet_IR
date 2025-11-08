@@ -1,0 +1,10 @@
+Formule propositionnelle
+Cet article doit être recyclé ( septembre 2016 ) .
+Une réorganisation et une clarification du contenu paraissent nécessaires .
+Améliorez-le , discutez des points à améliorer ou précisez les sections à recycler en utilisant { { section à recycler } } .
+En logique mathématique une proposition , ou formule propositionnelle , ou expression propositionnelle est une expression construite à partir de connecteurs et de variables propositionnelles .
+En logique propositionnelle classique , une formule propositionnelle , ou expression propositionnelle , est une formule bien formée qui possède une valeur de vérité .
+Si les valeurs de toutes les variables propositionnelles dans une formule propositionnelle sont données , une unique valeur de vérité peut être déterminée .
+Une formule propositionnelle est construite à partir de propositions simples , telles que « cinq est supérieur à trois » , ou de variables propositionnelles telles que P et Q , en utilisant des connecteurs logiques tels que NON , ET , OU et IMPLIQUE ; par exemple : ( P ET NON Q ) IMPLIQUE ( P OU Q ) .
+Dans le calcul des propositions , les propositions de base sont simples ou atomiques ( on ne peut pas les décomposer ) . Les propositions atomiques sont liées par des connecteurs propositionnels , les plus courants sont « ET » , « OU » , « SI ...
+ALORS ... » , « ni ... ni ... » , « ...

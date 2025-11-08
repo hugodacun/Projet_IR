@@ -1,0 +1,10 @@
+Paradoxe de Peto
+Le paradoxe de Peto est le constat , effectué par Richard Peto , qu' au niveau des espèces , l' incidence du cancer ne paraît pas être en corrélation avec le nombre de cellules de l' organisme .
+Par exemple , l' incidence des cancers chez l' être humain est bien plus élevée que chez les baleines , et ceci malgré le fait qu' une baleine a beaucoup plus de cellules qu' un être humain .
+Si la probabilité de carcinogenèse était constante pour une cellule donnée , on observerait au contraire une incidence beaucoup plus forte chez la baleine que chez l' homme .
+Le cancer touche probablement toutes les espèces de vertébrés .
+On trouve les mêmes types de cancers chez tous les mammifères , , et les mécanismes de base qui conduisent à ces cancers sont également très similaires .
+Par ailleurs , de nombreux mécanismes inhibant l' apparition de cancers , tels que les gènes suppresseurs de tumeurs , sont présents chez tous les mammifères .
+C' est cette similarité qui permet , pour la recherche sur le cancer , d' utiliser des mammifères comme modèle animal du cancer humain .
+Que ce soit dans la structure cellulaire et son métabolisme , ou dans les mécanismes de formation et de propagation du cancer , la classe des mammifères est d' une grande homogénéité , depuis la Kitti à nez de porc ( Craseonycteris thonglongyai ) et ses deux grammes jusqu' à la baleine bleue ( Balaenoptera musculus ) et ses deux cents tonnes — cent millions de fois plus grosse .
+Chez les mammifères , le taux de cancer est relativement constant , variant d' un facteur deux .

@@ -1,0 +1,10 @@
+Paramagnétisme
+Le paramagnétisme désigne en magnétisme le comportement d' un milieu matériel qui ne possède pas d' aimantation spontanée mais qui , sous l' effet d' un champ magnétique extérieur , acquiert une aimantation orientée dans le même sens que le champ magnétique appliqué .
+Un matériau paramagnétique possède une susceptibilité magnétique de valeur positive ( contrairement aux matériaux diamagnétiques ) .
+Cette grandeur sans unité est en général assez faible ( dans une gamme allant de 10−5 à 10−3 ) .
+L' aimantation du milieu disparaît lorsque le champ d' excitation est coupé .
+Il n' y a donc pas de phénomène d' hystérésis comme pour le ferromagnétisme .
+Un comportement paramagnétique peut apparaître sous certaines conditions de température et de champ appliqué , notamment : un matériau antiferromagnétique devient paramagnétique au-delà de la température de Néel ; un matériau ferromagnétique ou ferrimagnétique devient paramagnétique au-delà de la température de Curie .
+Le paramagnétisme est observé dans : Les atomes , molécules et défauts cristallins ayant un nombre impair d' électrons , pour lesquels le moment cinétique total ne peut pas s' annuler .
+Par exemple : atomes de sodium ( Na ) libres , monoxyde d' azote ( NO ) gazeux , radicaux libres organiques comme triphenylmethyl ( C ( C5H5 ) 3 ) ou le DPPH ; Des atomes et ions libres , avec une couche électronique interne partiellement remplie comme les éléments de transition , les ions isoélectroniques des éléments de transition , les terres rares et les actinides .
+Par exemple : Mn²⁺ , Gd³⁺ , U⁴⁺ ; Quelques composés avec le nombre pair d' électrons comme dans le dioxygène ( O2 ) et dans des biradicaux organiques ; Les métaux .

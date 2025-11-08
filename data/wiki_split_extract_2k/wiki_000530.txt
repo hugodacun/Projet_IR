@@ -1,0 +1,10 @@
+Grammaire du lojban
+Pour un article plus général , voir Lojban .
+La grammaire du lojban , langue construite sur la base de la logique des prédicats , est majoritairement empruntée au premier « langage logique » , le Loglan , et certaines de ses caractéristiques proviennent du Làadan .
+La manière dont le lojban considère et articule ses concepts pleins ( les brivla ) est directement décalquée du formalisme mathématique du calcul des prédicats .
+Afin de pouvoir transcrire ce qui est fondamentalement des prédicats ( parfois récursivement définis ) sous forme d' une suite de mots , le lojban dispose d' un riche vocabulaire de « mots grammaticaux » , les cmavo , qui permettent de traduire le plus naturellement possible les différentes articulations possibles entre prédicats , et si nécessaire de marquer parenthésages et séparations sur des structures complexes .
+La régularité , l' univocité , et la polyvalence de la grammaire du lojban doivent beaucoup à la linguistique scientifique et à la programmation informatique , qui étaient indisponibles pour les concepteurs de langues antérieures .
+Un avantage du lojban a été résumée comme suit : « Le lojban se place au-delà des restrictions de la grammaire européenne .
+Il incorpore ouvertement les universaux linguistiques , la construction de ce qui est nécessaire pour soutenir l' expressivité de toute la variété des langues naturelles , y compris celle des non-européens . » Les structures grammaticales de la langue sont « définies par un ensemble de règles qui ont été testées afin d' être non-ambiguës lorsque le lojban est utilisé par des ordinateurs » .
+Les textes lojban peuvent être analysés comme des textes de langages de programmation , n' utilisant que des grammaires formelles comme le PEG , YACC , et la forme de Backus-Naur .
+Il y a plusieurs types d' analyses syntaxiques disponibles , , .

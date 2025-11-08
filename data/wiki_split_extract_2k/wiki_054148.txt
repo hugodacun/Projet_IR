@@ -1,0 +1,10 @@
+Matrice de rotation
+En mathématiques , et plus précisément en algèbre linéaire , une matrice de rotation Q est une matrice orthogonale de déterminant 1 , ce qui peut s' exprimer par les équations suivantes : QtQ = I = QQt et det Q = 1 , où Qt est la matrice transposée de Q , et I est la matrice identité . ( cos ⁡ θ − sin ⁡ θ sin ⁡ θ cos ⁡ θ ) { \ displaystyle { \ begin { pmatrix } \ cos \ theta & - \ sin \ theta \ \ [ 3pt ] \ sin \ theta & \ cos \ theta \ \ \ end { pmatrix } } } Ces matrices sont exactement celles qui , dans un espace euclidien , représentent les isométries ( vectorielles ) directes .
+Ces dernières sont aussi appelées rotations vectorielles ( d' où le nom de « matrice de rotation » ) , parce qu' en dimension 2 et 3 , elles correspondent respectivement aux rotations affines planes autour de l' origine et aux rotations affines dans l' espace autour d' un axe passant par l' origine .
+En dimension 3 , ces matrices sont utilisées intensivement pour les calculs de géométrie , de physique et en infographie .
+L' ensemble de toutes les matrices de rotation de taille fixée forme un groupe appelé groupe des rotations ou groupe spécial orthogonal .
+C' est un sous-groupe du groupe orthogonal .
+Une propriété caractéristique des rotations du plan ou de l' espace est de conserver le caractère orthonormé direct des repères .
+Traduisant cela dans le langage des matrices , on démontre que la matrice Q { \ displaystyle Q } d' une application linéaire qui conserve les angles et les distances ( une isométrie vectorielle ) doit être orthogonale , c'est-à-dire que son inverse est égale à sa transposée : Q t = Q − 1 ⟺ Q Q t = I { \ displaystyle Q ^ { t } = Q ^ { -1 } \ iff QQ ^ { t } = I } .
+De plus , la conservation de l' orientation se traduit par la formule det Q = + 1 { \ displaystyle \ det Q = + 1 } .
+Les matrices vérifiant ces propriétés sont appelées matrices de rotation .

@@ -1,0 +1,10 @@
+Diode électroluminescente
+« Led » redirige ici .
+Pour les autres significations , voir LED .
+Une diode électroluminescente ( abrégé en DEL en français , ou LED , de l' anglais : light-emitting diode ) est un dispositif opto-électronique capable d' émettre de la lumière lorsqu' il est parcouru par un courant électrique .
+Une diode électroluminescente ne laisse passer le courant électrique que dans un seul sens et produit un rayonnement monochromatique ou polychromatique non cohérent par conversion d' énergie électrique lorsqu' un courant la traverse .
+Elle compte plusieurs dérivées , principalement l' OLED , l' AMOLED et la FOLED ( pour flexible oled ) .
+En raison de leur rendement lumineux , les lampes LED remplacent d' autres types de lampes .
+Elles sont aussi utilisées dans la construction des écrans plats de téléviseur : pour le rétroéclairage des écrans à cristaux liquides ou comme source d' illumination principale dans les téléviseurs à OLED .
+Les premières LED commercialisées ont produit de la lumière infrarouge , rouge , verte puis jaune , .
+L' arrivée de la LED bleue , associée aux progrès techniques et d' assemblage , a permis de couvrir « la bande des longueurs d' onde d' émission s' étendant de l' ultraviolet ( 350 nm ) à l' infrarouge ( 2 000 nm ) , ce qui répond à de nombreux besoins » .

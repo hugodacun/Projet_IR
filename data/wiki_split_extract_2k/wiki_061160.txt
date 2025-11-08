@@ -1,0 +1,10 @@
+Dormance
+La dormance est un terme qui regroupe toutes les formes de vie ralenties .
+Elle correspond à la période où , dans le cycle de vie d' un organisme , la croissance , le développement et / ou l' activité physique ( chez les animaux ) sont temporairement arrêtés .
+Cela réduit l' activité métabolique et aide donc l' organisme à conserver de l' énergie .
+Il s' agit d' une stratégie de minimisation des risques ( bet-hedging en anglais ) mise en place chez une vaste gamme de taxa .
+La dormance tend à être étroitement associée aux conditions environnementales et est caractérisée par plusieurs phases : entrée en dormance ( ou initiation ) , dormance ( ou maintien ) , levée de dormance ( ou sortie de dormance ) et post-dormance .
+Les organismes peuvent synchroniser une entrée en dormance , en fonction de leur environnement , par des moyens prédictifs ou indirects .
+La dormance prédictive ( dite dormance innée ou primaire ) se produit lorsque les organismes entrent dans une phase de dormance avant l' apparition de conditions défavorables .
+Il s' agit d' un mécanisme codé génétiquement .
+Par exemple , la photopériode et la diminution de température sont utilisées par de nombreuses plantes pour prédire l' arrivée de l' hiver .

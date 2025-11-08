@@ -1,0 +1,10 @@
+Hachage universel
+En mathématiques et en informatique , le hachage universel , en anglais universal hashing , ( dans un algorithme probabiliste ou un bloc de données ) est une méthode qui consiste à sélectionner aléatoirement une fonction de hachage dans une famille de fonctions de hachages qui ont certaines propriétés mathématiques .
+Cela permet de minimiser la probabilité de collision de hachage .
+Plusieurs familles de fonctions de hachages sont connues ( pour hacher des entiers , des chaînes de caractères ou des vecteurs ) , et leur calcul est souvent très efficace .
+Le hachage universel a de nombreux usages en informatique , par exemple dans l' implémentation des tables de hachage , les algorithmes probabilistes et le chiffrement de données .
+Article connexe : fonction de hachage .
+Supposons que nous désirions associer des clés provenant de l' univers U { \ displaystyle U } à des fragments binaires m { \ displaystyle m } ( indexés [ m ] = { 0 , … , m − 1 } { \ displaystyle [ m ] = \ { 0 , \ dots , m-1 \ } } ) .
+L' algorithme devra gérer des ensembles de données S ⊆ U { \ displaystyle S \ subseteq U } à partir des | S | = n { \ displaystyle | S | = n } clés , qui n' est pas connu à l' avance .
+Habituellement le but du hachage est de minimiser le nombre de collisions ( clés de S { \ displaystyle S } qui ont la même image par la fonction ) .
+Une fonction de hachage déterministe ne peut pas offrir la garantie contre la création intentionnelle de collision si la taille de U { \ displaystyle U } est plus grande que la taille de m ⋅ n { \ displaystyle m \ cdot n } par l' adversaire pour choisir S { \ displaystyle S } de telle sorte qu' il soit l' antécédent d' un fragment .

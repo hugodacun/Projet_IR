@@ -1,0 +1,10 @@
+Solar Orbiter
+Solar Orbiter Observatoire spatial du Soleil Un modèle structurel et thermique de la sonde Solar Orbiter en cours d' assemblage .
+Solar Orbiter ( en français orbiteur solaire ) est un satellite d' observation du Soleil de l' Agence spatiale européenne ( ESA ) développé avec une participation de la NASA qui est lancé le 10 février 2020 à 5h03 ( CET ) et doit commencer ses observations vers 2023 .
+L' objectif principal de cette mission scientifique est d' étudier les processus à l' origine du vent solaire , du champ magnétique héliosphérique , des particules solaires énergétiques , des perturbations interplanétaires transitoires ainsi que du champ magnétique du Soleil .
+Pour réaliser ses objectifs , le satellite d' un peu plus de 1,6 tonne circule sur une orbite autour du Soleil , en passant à son périhélie à une distance de 45 rayons solaires ( 0,22 AU ) .
+Le satellite emporte 10 instruments combinant mesure du milieu in situ et observations à distance du Soleil .
+Ces équipements sont placés derrière un bouclier thermique destiné à protéger la sonde spatiale des températures très élevées .
+Solar Orbiter doit réaliser des observations à haute résolution des régions polaires du Soleil , difficiles à observer depuis le plan de l' écliptique ( et donc depuis la Terre ) .
+La mission doit durer en tout 7 à 10 ans .
+L' origine de la mission Solar Orbiter est un projet baptisé Messenger soumis en 1982 par un groupe de scientifiques sous la direction de Richter en réponse à un appel à idées de l' Agence spatiale européenne ( ESA ) .

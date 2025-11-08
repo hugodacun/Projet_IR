@@ -1,0 +1,10 @@
+Coévolution antagoniste
+En écologie évolutive , la coévolution antagoniste peut se définir comme étant les conséquences évolutives des interactions écologiques de types hôtes / parasites , proies / prédateurs et de compétition .
+On peut définir la coévolution comme « un changement évolutif dans un trait des individus d' une population qui survient en réponse à un trait des individus d' une deuxième population et provoque une réaction évolutive de celle-ci » . , La lutte évolutive oppose une espèce persistante ( qui " attaque " ) à une espèce résistante ( qui se " défend " ) .
+Notons cependant que dans le cas de la coévolution antagoniste des sexes , les partenaires sont issus de la même espèce ( le plus souvent , le sexe persistant est le mâle et le sexe résistant la femelle ) , il s' agit alors d' une lutte intra-spécifique et inter-sexuelle .
+Dans une population ( persistante ou résistante ) : Apparaît un allèle X conférant aux individus un avantage par rapport à leurs semblables face à l' adversaire ( innovation X ) .
+Au cours des générations , cet allèle est sélectionné et va donc se répandre dans la population jusqu' à l' envahir complètement ( fréquence ( X ) tend vers 1 ) .
+Apparaît ensuite un allèle Y conférant de même un avantage .
+Il sera sélectionné de la même façon .
+Il en découle une succession de vagues sélectives au cours desquelles des allèles s' imposent dans la population qui acquiert ainsi de nombreuses innovations .
+En parallèle , dans la population antagoniste : L' allèle X entraîne l' émergence d' un allèle X ' conférant une résistance à l' innovation X .

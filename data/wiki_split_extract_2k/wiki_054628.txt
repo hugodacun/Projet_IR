@@ -1,0 +1,10 @@
+Base de registre
+Pour les articles homonymes , voir BDR .
+La base de registre ( BDR ) est une base de données utilisée par le système d' exploitation Windows .
+Elle contient les données de configuration du système d' exploitation et des autres logiciels installés désirant s' en servir .
+Depuis 1998 , Microsoft utilise plutôt le terme Registre Windows pour parler de cette base de données .
+Le plus souvent , les utilisateurs modifient la base de registre de façon transparente , via une interface graphique .
+Il existe des cas où aucune interface graphique n' est prévue : il est alors nécessaire d' utiliser l' outil Regedit , mais dans ce cas , il n' y a pas de garde-fou , le logiciel ne vérifie aucun des paramètres modifiés par l' utilisateur , qui peut donc endommager le système .
+La base de registre est apparue sur Windows 3.1 , sous l' appellation « Base de données de registration » , mais est alors très restreinte et sert exclusivement à associer un fichier ( une extension de fichier ) avec l' application qui permet de l' éditer ou le visualiser .
+En 1993 , avec la première version de NT , elle est étendue et comprend un ensemble de clés hiérarchiques et de valeurs .
+La base de registre est enregistrée dans plusieurs fichiers appelés ruches ( hives ) .

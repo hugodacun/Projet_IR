@@ -1,0 +1,10 @@
+Droit de l' informatique en France
+On peut regrouper sous l' expression droit de l' informatique l' ensemble des dispositions normatives ou jurisprudentielles relatives aux nouvelles technologies de l' information et de la communication ( NTIC ) .
+On ne peut toutefois pas le décrire comme une unité organique telle que le droit civil ou le droit commercial .
+À cause de la diffusion de l' informatique dans un grand nombre d' activités aussi bien professionnelles que privées , ce droit consiste plutôt en modifications , parfois substantielles ( droit de la communication portant sur les usages de l' information ) , parfois mineures , d' un grand nombre de domaines existants du droit .
+Pour bien comprendre le droit de l' informatique , il faut remonter à la préhistoire de l' informatique , c'est-à-dire à la mécanographie .
+L' inventeur de la mécanographie était un Américain d' origine allemande , Herman Hollerith .
+Celui-ci avait été employé pour le recensement américain de 1880 .
+Employé au bureau américain des brevets , il eut l' idée de développer un procédé permettant d' automatiser le recensement , et fit déposer un brevet pour la carte perforée .
+Dans les années 1930 , IBM acheta les brevets de la carte Hollerith à la Tabulating Machine Company .
+Bull travaillait également avec des brevets .

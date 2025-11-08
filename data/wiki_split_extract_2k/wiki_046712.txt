@@ -1,0 +1,10 @@
+Nombre complexe
+Pour les articles homonymes , voir complexe .
+En mathématiques , l' ensemble des nombres complexes a été progressivement introduit au XVIe siècle par l' école mathématique italienne ( Jérôme Cardan , Raphaël Bombelli , Tartaglia ) afin d' exprimer les solutions des équations du troisième degré en toute généralité par les formules de Cardan , en utilisant notamment des « nombres » de carré négatif .
+Cet ensemble est actuellement défini comme une extension de l' ensemble des nombres réels , contenant en particulier un nombre imaginaire noté i , tel que i2 = −1 .
+Le carré de ( −i ) est aussi égal à −1 : ( −i ) 2 = −1 .
+Tout nombre complexe peut s' écrire sous la forme a + i b où a et b sont des nombres réels .
+On peut munir l' ensemble des nombres complexes d' une addition et d' une multiplication qui en font un corps commutatif contenant le corps des nombres réels .
+Il est appelé corps des nombres complexes et se note ℂ .
+La notion de valeur absolue définie sur l' ensemble des nombres réels peut être étendue à l' ensemble des nombres complexes et prend alors le nom de module .
+Mais on ne peut pas munir l' ensemble des nombres complexes d' une relation d' ordre qui en ferait un corps totalement ordonné , c'est-à-dire qu' il n' est pas possible de comparer deux complexes en respectant les règles opératoires valables pour les nombres réels .

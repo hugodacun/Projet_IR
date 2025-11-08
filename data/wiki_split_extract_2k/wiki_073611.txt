@@ -1,0 +1,10 @@
+
+Géométrie euclidienne
+Vous lisez un « bon article » labellisé en 2008 .
+La géométrie euclidienne commence avec les Éléments d' Euclide , qui est à la fois une somme des connaissances géométriques de l' époque et une tentative de formalisation mathématique de ces connaissances .
+Les notions de droite , de plan , de longueur , d' aire y sont exposées et forment le support des cours de géométrie élémentaire .
+La conception de la géométrie est intimement liée à la vision de l' espace physique ambiant au sens classique du terme .
+Les conceptions géométriques connaissent , depuis les travaux d' Euclide , des évolutions suivant trois axes principaux : pour vérifier les critères de rigueur logique actuels , la définition axiomatique subit de profonds changements , l' objet mathématique restant néanmoins le même ; pour ne plus se limiter aux dimensions deux et trois et pour permettre l' élaboration d' une théorie plus puissante , un modèle algébrique de la géométrie est envisagé .
+L' espace euclidien est maintenant défini comme un espace vectoriel ou affine réel de dimension finie muni d' un produit scalaire ; enfin , la structure géométrique euclidienne n' est plus la seule envisageable ; il est établi qu' il existe d' autres géométries cohérentes .
+Plus de 2 000 ans après sa naissance , l' espace géométrique euclidien est un outil toujours efficace aux vastes domaines d' applications .
+À l' exception des échelles cosmiques et microscopiques , l' espace des physiciens reste encore principalement du domaine de la géométrie euclidienne .

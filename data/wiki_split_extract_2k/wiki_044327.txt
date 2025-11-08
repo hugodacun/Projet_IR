@@ -1,0 +1,10 @@
+Câble électrique à haute tension
+Un câble électrique à haute tension est un câble utilisé pour le transport d' électricité , que ce soit en courant alternatif ou en courant continu .
+Il est composé de différentes parties assemblées de manière concentrique , les principales sont : au centre un conducteur permet de transporter l' électricité , ensuite vient une isolation électrique pour empêcher le courant de s' écouler vers la terre , le tout est entouré d' une gaine métallique afin de confiner le champ électrique à l' intérieur du câble et d' une protection extérieure qui assure de bonnes propriétés mécaniques et le protège des agressions extérieures .
+Les câbles électriques à haute tension , utilisés pour des liaisons souterraines ou sous-marines est donc à distinguer des Conducteurs haute tension pour Ligne à haute tension qui eux ne comportent pas d' isolation .
+On peut distinguer 3 grandes familles technologiques : les câbles à papier imprégné de masse , ceux sous pression et ceux extrudés .
+Les premiers ne sont plus utilisés que pour les liaisons HVDC très haute tension .
+Ceux sous pression sont divisés entre ceux utilisant l' huile et ceux utilisant le gaz pour maintenir la pression et refroidir le conducteur d' une part et entre ceux à pression interne et ceux à pression externe d' autre part .
+Ces câbles sont très répandus mais ne sont quasiment plus installés .
+En effet les câbles extrudés , principalement à isolation en polyéthylène réticulé se sont imposés dans tous les domaines depuis les années 1970 .
+Toutefois la durée de vie longue des câbles à papier imprégné de masse et sous pression étant grande , ils restent très présents dans les réseaux électriques .

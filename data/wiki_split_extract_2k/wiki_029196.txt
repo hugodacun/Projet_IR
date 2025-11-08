@@ -1,0 +1,10 @@
+Méthodes de calcul d' intégrales de contour
+En analyse complexe , l' intégration de contour est une technique de calcul d' intégrale le long de chemins sur le plan complexe , , L' intégration de contour est fortement liée au calculs de résidus , une méthode de calcul utilisée pour évaluer des intégrales curvilignes sur l' axe des réelles , que les outils de la théorie de l' intégration ne permettent pas de calculer par une simple analyse réelle Les méthodes d' intégration de contour incluent : l' intégration directe d' une fonction à valeurs complexes le long d' une courbe du plan complexe ( ledit contour ) ; une application de la formule intégrale de Cauchy ; l' application du théorème des résidus .
+Ces méthodes peuvent être combinées pour obtenir les résultats attendus .
+Les contours donnent une définition précise des courbes sur lesquelles une intégrale peut être exactement définie .
+Une courbe du plan complexe est donc une fonction continue renvoyant un intervalle réel fermé sur le plan complexe : z : [ a , b ] → C .
+Cette définition coïncide avec la notion intuitive d' une courbe , mais inclut une paramétrisation par une fonction continue à partir d' un intervalle fermé .
+Cette définition plus précise permet de réfléchir aux propriétés que doit avoir une courbe pour qu' elle soit utile à l' intégration .
+Dans les sous-sections suivantes , on réduira l' ensemble de courbes intégrables pour n' inclure que celles qui peuvent être construites à partir d' un nombre fini de courbes continues , auxquelles on peut donner une direction .
+De plus , on empêchera les " morceaux " de se croiser , et on imposera que chaque morceau ait une dérivée continue finie ( non nulle ) .
+Ces exigences permettent de ne considérer que les courbes qui peuvent être tracées , comme par un stylo , dans une séquence de traits constants et réguliers , qui ne s' arrêtent que pour commencer un nouveau morceau de la courbe , le tout sans relever le stylo .

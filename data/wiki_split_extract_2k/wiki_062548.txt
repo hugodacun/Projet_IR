@@ -1,0 +1,10 @@
+Mise en page
+Cet article concerne une technique .
+Pour les autres significations , voir Mise en page ( homonymie ) .
+La mise en page , ou mise en pages , est l' opération de disposition graphique d' un contenu informationnel dans un espace donné ( feuille de papier , planche de bande dessinée , pages web , etc. ) .
+Elle succède au travail de collecte et de composition du contenu ( composition de texte « au kilomètre » , collection des composants ) et précède souvent le travail d' impression .
+Elle peut le précéder dans la mesure où elle est prédéfinie ( dimensions des colonnes , styles du texte , placement des illustrations , etc. ) .
+Elle vise à représenter le contenu ( textes , images , animations … ) de manière hiérarchique et harmonieuse ( équilibre des zones , des couleurs et des espaces , contrastes ) , afin de faciliter un parcours de lecture à plusieurs niveaux , avec un souci constant d' ergonomie .
+Elle comprend les techniques : de polices de caractères ; de typographie ; de mise en forme et d' espacement ; de titrage et de lettrines ; d' illustration et de leur habillage .
+Elle peut utiliser un thème en rapport avec le contenu ( par exemple une numérotation de page en forme de perles pour un document sur les colliers , ou un filigrane d' une encyclopédie sur le fond d' un article encyclopédique … ) .
+La mise en page des documents a subi plusieurs transformations avec la multiplicité des supports d' écriture qui sont apparus au cours de l' histoire .

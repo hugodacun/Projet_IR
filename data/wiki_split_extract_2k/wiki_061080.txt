@@ -1,0 +1,10 @@
+MAVEN
+Pour les articles homonymes , voir Maven .
+MAVEN Sonde spatiale Vue d' artiste de la sonde spatiale MAVEN .
+MAVEN ( acronyme de Mars Atmosphere and Volatile EvolutioN ) est une sonde spatiale d' exploration de la planète Mars développée dans le cadre du programme Mars Scout de l' agence spatiale américaine , la NASA , et lancée avec succès fin 2013 .
+Mars est aujourd'hui désertique , sèche , froide ( température au sol moyenne de −53 °C ) et dotée d' une atmosphère très ténue ( pression atmosphérique 170 fois plus faible que sur Terre ) .
+Pourtant , les indices géologiques recueillis par les engins spatiaux placés en orbite comme MRO ( traces de vallées fluviales , bassins lacustres … ) ou au sol comme les rovers MER et Curiosity ( détection d' argiles formées en présence d' eau liquide … ) démontrent que la planète Mars était autrefois ( il y a environ 4 milliards d' années ) chaude et dotée d' une atmosphère suffisamment dense pour permettre à l' eau de couler à l' état liquide à sa surface .
+L' état actuel de l' atmosphère de Mars est probablement le résultat de l' action du vent solaire , flot de particules ionisées émis en permanence par le Soleil qui , en bombardant l' atmosphère de Mars , a progressivement conduit à son échappement .
+La disparition du champ magnétique martien au début de l' histoire de la planète a sans doute contribué à ce processus .
+MAVEN , qui circule sur une orbite elliptique autour de Mars , a pour mission de déterminer les mécanismes à l' origine de la quasi-disparition de son atmosphère .
+À cet effet , ses instruments doivent étudier les caractéristiques de la partie supérieure de l' atmosphère de la planète exposée au bombardement solaire notamment en déterminant sa composition , mesurant le flux d' énergie solaire ainsi que le taux d' échappement actuel des différents gaz .
