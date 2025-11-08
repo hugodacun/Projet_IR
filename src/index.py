@@ -106,8 +106,6 @@ class InvertedIndex:
 
         with open(os.path.join(out_dir, "edge_index.json"), "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
-
-
     
     #pas besoin de self 
     @staticmethod 
@@ -129,6 +127,9 @@ class InvertedIndex:
             data = json.load(f)
         return data["edge_index"]
 
+
+
+    #---------------------------------Metriques de recherche---------------------------------
     # ---------- BM25 ----------
     # tf : term frequency dans le doc d
     # df : document frequency (nombre de docs contenant t)
