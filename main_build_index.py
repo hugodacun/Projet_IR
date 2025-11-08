@@ -8,3 +8,4 @@ if __name__ == "__main__":
     idx.build(DOCS_DIR, tp, use_bigrams=True)  # unigrams + bigrams
     idx.save("models")
     print(f"Index: N={idx.N}, avgdl={idx.avgdl:.2f}, vocab={len(idx.df)}")
+ 
