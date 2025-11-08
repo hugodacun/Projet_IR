@@ -4,18 +4,21 @@ import unicodedata ## pour normaliser Unicode ( retirer les accents proprement )
 from typing import List ## annotation de type List
 
 class TextPreprocessor: 
-    STOP_WORDS = """ au aux avec ce ces dans de des du elle elles en et eux il ils je la le les leur lui ma mais me
+    STOP_WORDS = """ au aux avec ca cela ce ces dans de des du elle elles en et eux il ils je la le les leur lui ma mais me
     meme nos notre nous on ou par pas pour qu que qui sa se ses son sur ta te tes toi
     tu un une vos votre vous c d j l a y ete etes etant est et auj hui """
     ## on mais tous les stop words sous forme de list avec split ["c","d"...]
     ## set pour enlever les doublons dans la liste 
     STOP_FR_WORDS = set(STOP_WORDS.split())
+    
     ## après normalisation, on a cette regexp qui doit etre respecté par les token 
     TOKEN_REGEXP = re.compile("[A-Za-z0-9]+") 
+    
     ## deux options pour le prétraitement : soit activer/désactiver stemming , soit garder:supprimer nombers(digits)
     def __init__(self, use_stemming : bool = True, keep_digits : bool = True):
      self.use_stemming = use_stemming 
      self.keep_digits = keep_digits 
+    
     ## sépare les lettres de leurs accents per exemple élève => e'le've => e l e v e => eleve 
     def _strip_accents(self, s: str) -> str:
      return "".join( 

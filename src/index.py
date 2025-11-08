@@ -122,6 +122,7 @@ class InvertedIndex:
         idx.postings = defaultdict(dict, {t: {d: int(tf) for d, tf in docs.items()} for t, docs in data["postings"].items()})
         return idx
     
+    @staticmethod 
     def load_edge_index(path="models/edge_index.json"):
         with open(path, encoding="utf-8") as f:
             data = json.load(f)

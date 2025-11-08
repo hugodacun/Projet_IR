@@ -28,3 +28,15 @@ class Autocomplete:
                 if len(w) < len(prefix) or w[:len(prefix)] > prefix:
                     break
         return suggestions
+
+
+if __name__ == "__main__":
+    ac = Autocomplete()
+
+    while True:
+        prefix = input("Tape un préfixe (ou 'quit' pour sortir) > ").strip()
+        if prefix.lower() == "quit":
+            break
+
+        suggestions = ac.suggest(prefix, top_k=10)
+        print(f"Suggestions pour '{prefix}': {suggestions}\n")
