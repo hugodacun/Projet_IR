@@ -71,7 +71,7 @@ class InvertedIndex:
             json.dump(data, f, ensure_ascii=False) 
     
     # ---------- Creation du fichier index_edge_ngrams.json ----------
-    def save_edge_index(self, out_dir: str = "models", min_gram: int = 2, max_gram: int = 6):
+    def save_edge_index(self, out_dir: str = "models"):
         """
         Crée un nouveau fichier JSON contenant les edge n-grams
         de chaque terme du vocabulaire (tous les mots de l'index).
@@ -81,23 +81,33 @@ class InvertedIndex:
         # Construire le vocabulaire à partir des postings
         vocab = list(self.postings.keys())
 
+        #ne garde que les unigrams
+        unigrams = []
+        for term in vocab:
+            # ignorer les bigrams ou tokens spéciaux
+            if "_" in term or " " in term or "-" in term or len(term) <= 1:
+                continue
+            # ignorer tout token contenant un chiffre
+            if any(c.isdigit() for c in term):
+                continue
+            unigrams.append(term)
+
         # Générer edge n-grams pour chaque mot du vocabulaire
-        edge_index = {term: make_edge_ngrams(term, min_gram, max_gram) for term in vocab}
+        edge_index = {term: make_edge_ngrams(term) for term in unigrams}
 
         edge_index = dict(sorted(edge_index.items()))  # trier par terme
+        
+        print(f"Généré edge n-grams pour {len(edge_index)} termes.")
 
         # Sauvegarde dans models/edge_index.json
         data = {
-            "min_gram": min_gram,
-            "max_gram": max_gram,
-            "vocab_size": len(vocab),
+            "vocab_size": len(unigrams),
             "edge_index": edge_index
         }
 
         with open(os.path.join(out_dir, "edge_index.json"), "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
 
-        print(f"edge_index.json créé ({len(vocab)} termes, min_gram={min_gram}, max_gram={max_gram})")
 
     
     #pas besoin de self 

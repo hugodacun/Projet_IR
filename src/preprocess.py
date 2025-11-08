@@ -65,11 +65,11 @@ def make_ngrams(tokens: list[str], n: int = 2) -> list[str]:
         return []
     return ["_".join(tokens[i:i+n]) for i in range(len(tokens) - n + 1)]
 
-def make_edge_ngrams(word: str, min_gram: int = 3, max_gram: int = 6) -> list[str]:
+def make_edge_ngrams(word: str) -> list[str]:
     """
     Génère les préfixes successifs (edge n-grams) d'un mot.
-    Ex: "ecologie" -> ["ec", "eco", "ecol", "ecolo", "ecolog"]
+    Ex: "ecologie" -> ["eco", "ecolog"]
     """
     word = word.lower()
-    return [word[:i] for i in range(min_gram, min(max_gram + 1, len(word) + 1))]
+    return [word[:i] for i in range(3, len(word),3)]
 
