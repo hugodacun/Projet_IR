@@ -1,0 +1,10 @@
+Décrochage ( aérodynamique )
+Pour les articles homonymes , voir Décrochage .
+Cet article ne cite pas suffisamment ses sources ( octobre 2019 ) .
+Si vous disposez d' ouvrages ou d' articles de référence ou si vous connaissez des sites web de qualité traitant du thème abordé ici , merci de compléter l' article en donnant les références utiles à sa vérifiabilité et en les liant à la section « Notes et références » En pratique : Quelles sources sont attendues ?
+Comment ajouter mes sources ?
+En aérodynamique , le décrochage est la perte de portance d' un avion ou d' une surface ( aile , pale de rotor , voilier , etc. ) due à un angle d' incidence trop important ( supérieur à l' incidence de décrochage ) En vol à trajectoire verticale constante ( vol horizontal par exemple ) , le décrochage d' un avion survient lorsque la vitesse passe en dessous de sa vitesse minimale ( dite vitesse de décrochage ) , d' où le nom de « perte de vitesse » qui lui était donné aux débuts de l' aviation .
+Il subit alors une soudaine perte d' altitude qui peut être fatale à faible hauteur .
+Mais le décrochage peut survenir à vitesse plus élevée dès que , sous l' effet du facteur de charge en virage ou en ressource , l' angle d' incidence dépasse l' incidence de décrochage ( décrochage dynamique ) .
+En cas de vol dissymétrique ( en dérapage ) , l' avion risque de partir en vrille .
+Le décrochage peut aussi concerner les pales du rotor d' un hélicoptère ( décrochage rotor ) ou les ailettes du compresseur d' un réacteur ( décrochage compresseur ) provoquant le pompage du réacteur .

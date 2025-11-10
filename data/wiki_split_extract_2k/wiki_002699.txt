@@ -1,0 +1,10 @@
+Gestion énergétique des centres de calcul
+La gestion énergétique des centres de calcul est la mise en œuvre de moyens permettant d' optimiser les besoins importants en énergie de ces centres .
+Elle fait partie du concept d' informatique durable .
+C' est une gestion intelligente qui s' appuie sur des indicateurs de performance énergétique obtenus par une évaluation de chaque site .
+Pour améliorer ces indicateurs , une étude préalable est nécessaire dès la phase de conception du centre , afin de tirer parti des avantages géographiques du lieu d' implantation ( climat , accessibilité à des sources d' énergie ) et de l' architecture même du site , liée notamment au choix de la solution de refroidissement .
+L' optimisation des logiciels , tant au niveau du traitement des données qu' au niveau du fonctionnement du centre , et l' amélioration continuelle de la performance de l' ensemble des équipements contribuent également à la réduction de la consommation et donc des coûts énergétiques .
+Cette efficacité est devenue aujourd'hui un enjeu majeur , aux niveaux tant économique qu' environnemental .
+Les sociétés consomment de plus en plus de ressources informatiques .
+Celles-ci leur pourraient leur permettre d' atteindre leurs objectifs et d' accroître leur rentabilité .
+En conséquence , le nombre de centres de données ne cesse d' augmenter et suscite un besoin croissant en énergie .

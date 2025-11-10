@@ -1,0 +1,10 @@
+Arithmétique modulaire
+Vous lisez un « article de qualité » labellisé en 2007 .
+En mathématiques et plus précisément en théorie algébrique des nombres , l' arithmétique modulaire est un ensemble de méthodes permettant la résolution de problèmes sur les nombres entiers .
+Ces méthodes dérivent de l' étude du reste obtenu par une division euclidienne .
+L' idée de base de l' arithmétique modulaire est de travailler non sur les nombres eux-mêmes , mais sur les restes de leur division par quelque chose .
+Quand on fait par exemple une preuve par neuf à l' école primaire , on effectue un peu d' arithmétique modulaire sans le savoir : le diviseur est alors le nombre 9 .
+Si ses origines remontent à l' Antiquité , les historiens associent généralement sa naissance à l' année 1801 , date de la publication du livre Disquisitiones arithmeticae de Carl Friedrich Gauss .
+Sa nouvelle approche permet d' élucider de célèbres conjectures et simplifie les démonstrations d' importants résultats par une plus grande abstraction .
+Si le domaine naturel de ces méthodes est la théorie des nombres , les conséquences des idées de Gauss se retrouvent dans d' autres champs des mathématiques , comme l' algèbre ou la géométrie .
+Le XXe siècle modifie le statut de l' arithmétique modulaire .

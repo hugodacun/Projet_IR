@@ -1,0 +1,10 @@
+
+Aire ( géométrie )
+Pour les articles homonymes , voir Aire .
+En mathématiques , l' aire est une grandeur relative à certaines figures du plan ou des surfaces en géométrie dans l' espace .
+Le développement de cette notion mathématique est lié à la rationalisation du calcul de grandeur de surfaces agricoles , par des techniques d' arpentage .
+Cette évaluation assortie d' une unité de mesure est aujourd'hui plutôt appelée superficie .
+Informellement , l' aire permet d' exprimer un rapport de grandeur d' une figure relativement à une unité , par le biais de découpages et recollements , de déplacements et retournements et de passage à la limite par approximation .
+La mesure d' une aire peut être un nombre réel positif ou être infinie pour certaines surfaces comme le plan dans son ensemble .
+Diverses techniques ont été élaborées pour mesurer une aire , de la méthode des indivisibles au calcul intégral et aux méthodes probabilistes comme la méthode de Monte-Carlo .
+Dans un espace euclidien de dimension 2 , un domaine a une aire s' il est un ensemble mesurable pour la mesure de Jordan et son aire est égale à cette mesure .

@@ -1,0 +1,10 @@
+Stratégie de reproduction
+Une stratégie de reproduction , est un ensemble structuré de comportements ou de règles qui s' applique aux événements reproductifs , le but étant de maximiser la fitness ( ou valeur sélective ) d' un individu ou d' une espèce .
+Elle porte notamment sur le choix du partenaire sexuel ( offrande et parade nuptiale ) , les stratégies et systèmes d' accouplement , le type de fécondation et l' investissement parental .
+L' évolution de ces stratégies est régie par la sélection naturelle .
+Au cours du temps , les stratégies de reproduction évoluent parallèlement à celle du milieu .
+Ces modifications du milieu vont s' assimiler à des poussées évolutives .
+Plusieurs stratégies peuvent être observées selon un environnement précis .
+Elles sont fonction de l' espèce et de l' environnement .
+Le biologiste Robert Trivers a cherché à les modéliser sous le concept d' effort reproductif , stratégie idéale qui repose sur deux points principaux , l' effort parental ( temps et énergie consacrés à l' investissement parental ) et l' effort sexuel ( production de gamètes , temps et énergie consacrés à la recherche et la conquête de partenaire et à l' éloignement des rivaux ) .
+Charles Darwin ( 1809 – 1882 ) fut le premier à apporter l' idée que les espèces évoluent au cours des temps grâce à un processus particulier : la sélection naturelle .

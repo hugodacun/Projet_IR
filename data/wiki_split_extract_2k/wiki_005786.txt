@@ -1,0 +1,10 @@
+Poussée d' Archimède
+Ne doit pas être confondu avec Poussée ( aérodynamique ) .
+La poussée d' Archimède est la force particulière que subit un corps placé entièrement ou partiellement dans un fluide ( liquide ou gaz ) et soumis à un champ de gravité .
+Cette force provient de l' augmentation de la pression du fluide avec la profondeur ou l' altitude ( effet de la gravité sur le fluide , voir l' article hydrostatique ) : la pression étant plus forte sur la partie inférieure d' un objet immergé que sur sa partie supérieure , il en résulte une poussée globalement verticale ascendante .
+C' est à partir de cette poussée qu' on définit la flottabilité d' un corps .
+Cette poussée a été pour la première fois étudiée par Archimède . « Tout corps plongé dans un fluide au repos , entièrement mouillé par celui-ci ou traversant sa surface libre , subit une force verticale , dirigée de bas en haut et égale ( et opposée ) au poids du volume de fluide déplacé .
+Cette force est appelée poussée d' Archimède .
+Elle s' applique au centre de masse du fluide déplacé , appelé centre de poussée . » Pour que le théorème s' applique il faut que le fluide immergeant et le corps immergé soient au repos .
+Il faut également qu' il soit possible de remplacer le corps immergé par du fluide immergeant sans rompre l' équilibre , le contre-exemple étant le bouchon d' une baignoire remplie d' eau : si celui-ci est remplacé par de l' eau , il est clair que la baignoire se vide et que le fluide n' est alors plus au repos .
+Le théorème ne s' applique pas puisque nous sommes dans un cas où le bouchon n' est pas entièrement mouillé par le liquide et ne traverse pas sa surface libre .

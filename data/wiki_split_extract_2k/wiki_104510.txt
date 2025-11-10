@@ -1,0 +1,10 @@
+Triangle
+Pour les articles homonymes , voir Triangle ( homonymie ) .
+En géométrie euclidienne , un triangle est une figure plane formée par trois points ( appelés sommets ) et par les trois segments qui les relient ( appelés côtés ) , délimitant un domaine du plan appelé intérieur .
+Lorsque les sommets sont distincts deux à deux , en chaque sommet les côtés délimitent un angle intérieur , d' où vient la dénomination de « triangle » .
+Le triangle est aussi le polygone le plus simple qui délimite une portion du plan et sert ainsi d' élément fondamental pour le découpage et l' approximation de surfaces .
+De nombreuses constructions géométriques de points , droites et cercles associés à un triangle sont liées par des propriétés qui étaient en bonne part déjà énoncées dans les Éléments d' Euclide , près de 300 ans avant Jésus-Christ .
+Les relations entre les mesures des angles et les longueurs des côtés sont notamment à l' origine de techniques de calcul de distances par triangulation .
+Le développement de ces techniques constitue d' ailleurs une branche des mathématiques appelée trigonométrie .
+Hors de la géométrie euclidienne , les côtés d' un triangle sont remplacés par des arcs géodésiques et beaucoup de ses propriétés sont modifiées ( voir Trigonométrie sphérique ) .
+Article connexe : Triangle ( géométries non euclidiennes ) .

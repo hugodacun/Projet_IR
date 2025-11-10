@@ -1,0 +1,10 @@
+Impact climatique du transport aérien
+L' impact climatique du transport aérien est la contribution de l' aviation commerciale au réchauffement climatique .
+Il résulte principalement de la combustion de kérosène dans les réacteurs d' avion , qui émet du dioxyde de carbone ( CO2 ) , un gaz à effet de serre qui s' accumule dans l' atmosphère et dont les émissions représentent 2,5 % des émissions anthropiques de CO2 .
+D' autres émissions contribuant à l' effet de serre s' ajoutent au CO2 : les oxydes d' azote ( NOx ) , dont l' effet sur le réchauffement climatique est indirect , et les traînées de condensation et cirrus artificiels qui se forment dans certaines conditions .
+Leur durée de vie beaucoup plus courte que celle du CO2 rend difficile la comparaison de leurs effets respectifs .
+La contribution du secteur aérien mondial au forçage radiatif effectif est estimée à 3,8 % de la contribution anthropogénique totale en 2018 .
+La Base Carbone administrée par l' Ademe en France fournit des facteurs d' émission moyens pour différents types de trajets en avion .
+Par exemple , ce facteur est de 152 g CO2éq / passager-km pour un trajet long-courrier en 2018 , dont 69 g de CO2 liés à la combustion du kérosène , 14 g de CO2 liés à sa production et sa distribution et 69 g d' émissions à courte durée de vie .
+Jusqu' en 2019 , l' impact climatique du transport aérien a augmenté régulièrement car les améliorations technologiques des avions et l' optimisation des procédures opérationnelles ont été insuffisantes pour compenser la forte croissance du trafic .
+En 2015 , le Parlement européen prévoyait que la part des émissions de CO2 de l' aviation internationale pourrait atteindre 22 % des émissions mondiales en 2050 si le secteur continuait à faire moins d' efforts que les autres .

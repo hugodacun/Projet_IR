@@ -1,0 +1,10 @@
+Ripple ( protocole de paiement )
+Le fond de cet article sur l' économie est à vérifier ( septembre 2016 ) .
+Améliorez-le ou discutez des points à vérifier .
+Si vous venez d' apposer le bandeau , merci d' indiquer ici les points à vérifier .
+Le ton de cet article est trop promotionnel ou publicitaire ( août 2019 ) .
+Modifiez l' article pour adopter un ton neutre ( aide quant au style ) ou discutez-en .
+Ripple Logo Ripple est un système de règlement brut en temps réel ( RBTR ) , un marché des changes et un réseau d' envois de fonds par la société Ripple .
+Aussi appelé le Ripple Transaction Protocol ( RTXP ) ou protocole Ripple , il est construit sur un protocole internet distribué et open source , un registre de consensus et une monnaie native appelée XRP ( ripples ) .
+Lancé en 2012 , le réseau Ripple vise à permettre des « transactions financières mondiales sécurisées , instantanées et presque gratuites , de toute taille sans rejets de débit » .
+Il prend en charge n' importe quelle monnaie fiduciaire , crypto-monnaie , commodité ou toute autre unité de valeur tels que miles aériens , minutes mobiles , .

@@ -1,0 +1,10 @@
+Carte Navigo
+Pour un article plus général , voir Tarification des transports en commun d' Île-de-France .
+Cet article ne cite pas suffisamment ses sources ( janvier 2022 ) .
+Si vous disposez d' ouvrages ou d' articles de référence ou si vous connaissez des sites web de qualité traitant du thème abordé ici , merci de compléter l' article en donnant les références utiles à sa vérifiabilité et en les liant à la section « Notes et références » En pratique : Quelles sources sont attendues ?
+Comment ajouter mes sources ?
+Une carte Navigo ( ou un passe Navigo avant 2014 ) est une carte à puce sans contact , utilisant la technologie NFC qui a succédé à la Radio-identification , afin de servir de support pour certains forfaits d' abonnement utilisables dans les transports en Île-de-France sur les réseaux RATP , SNCF , opérateurs membres de l' Optile , Vélib ' Métropole , Véligo et anciennement Autolib ' ( Paris ) .
+Sa mise en œuvre est supervisée par Île-de-France Mobilités , propriétaire de la marque .
+Elle a remplacé le précédent dispositif basé sur un ticket cartonné ( carte Orange et carte Intégrale notamment ) et constitue une première étape dans la suppression du support physique des titres de transport .
+L' étape suivante est le titre dématérialisé , comme à Londres ( par exemple ) , qui permet le paiement par smartphone ou par carte bancaire sans contact .
+Le présent article traite de la carte Navigo sur le plan technique .

@@ -1,0 +1,10 @@
+CHEOPS
+CHaracterising ExOPlanets Satellite Pour les articles homonymes , voir CHEOPS ( homonymie ) .
+CHEOPS Télescope spatial CHEOPS ( acronyme de CHaracterising ExOPlanets Satellite , c'est-à-dire Satellite de caractérisation des exoplanètes ) , est un télescope spatial de petite taille développé conjointement par l' université de Berne et l' Agence spatiale européenne ( ESA ) .
+CHEOPS a pour objectif de mesurer la taille et , dans la mesure du possible , les caractéristiques de l' atmosphère d' exoplanètes déjà identifiées orbitant autour d' étoiles lumineuses ( magnitude apparente comprise entre 6 et 12 ) situées au voisinage du Système solaire .
+Pour préciser les caractéristiques des exoplanètes , l' engin spatial , d' une masse de 273 kilogrammes , utilisera la méthode du transit à l' aide d' un télescope de 32 centimètres d' ouverture , qui permet une résolution spatiale d' une seconde d' arc et une précision de mesure de la luminosité de 15 ppm après cinq heures d' intégration .
+CHEOPS effectuera ses observations depuis une orbite héliosynchrone .
+La mission est placée en orbite le 18 décembre 2019 , par le lanceur Soyouz Fregat décollant de la base de Kourou .
+La durée de la mission primaire est de 3,5 ans .
+CHEOPS est la première mission de classe S du programme scientifique Cosmic Vision de l' ESA .
+Les missions de cette classe , caractérisées par un temps de développement court ( 4 ans ) et un coût réduit ( 50 millions d' euros financées par l' ESA auxquels s' ajoutent 50 autres millions fournis par le consortium de pays développant le télescope proprement dit ) , viennent compléter les missions plus complexes des classes M et L .

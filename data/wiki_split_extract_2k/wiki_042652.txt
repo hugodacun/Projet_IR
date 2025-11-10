@@ -1,0 +1,10 @@
+Contrôle d' attitude
+Le contrôle d' attitude est le processus qui permet de contrôler l' attitude ( c'est-à-dire l' orientation dans l' espace ) d' un engin aérospatial : aéronef , missile ou véhicule spatial tels qu' un satellite artificiel , une sonde spatiale , une station spatiale ou un lanceur - de manière que cet engin puisse remplir ses objectifs .
+Un engin aérospatial , même placé dans l' espace , subit des forces qui modifient plus ou moins rapidement son orientation .
+Pour maintenir celle-ci il dispose d' un système de contrôle d' attitude qui comprend des capteurs pour déterminer son orientation , d' un logiciel pour déterminer l' écart par rapport à l' orientation souhaitée et d' actionneurs pour corriger si nécessaire l' orientation .
+De nombreuses techniques peuvent être utilisées pour contrôler l' attitude d' un engin aérospatial .
+Celles-ci dépendent principalement des exigences à satisfaire et de l' environnement ( atmosphère terrestre , orbite terrestre basse , orbite terrestre haute , espace interplanétaire ) .
+Un engin spatial par exemple peut être stabilisé de manière passive ( spinné c'est-à-dire maintenu en rotation autour de son axe principal ou stabilisé par gradient de gravité ) ou de manière active .
+Le système de contrôle d' attitude désigne l' ensemble des équipements et algorithmes mis en œuvre de manière autonome sur un engin aérospatial - aéronef , missile ou véhicule spatial tels qu' un satellite artificiel , une sonde spatiale , une station spatiale ou un lanceur - afin de lui permettre de contrôler précisément son attitude , c'est-à-dire son orientation dans l' espace autour de son centre de gravité : position angulaire et vitesse angulaire dans le référentiel fourni par les étoiles .
+Pour les engins spatiaux le contrôle d' attitude se distingue du contrôle d' orbite , qui consiste à contrôler l' orbite ou la trajectoire interplanétaire du véhicule spatial dans l' espace .
+Néanmoins , les systèmes de contrôle d' attitude et d' orbite sont souvent étroitement liés et un engin spatial est généralement doté d' un « système de commande d' attitude et d' orbite » ( SCAO ) combinant ces deux fonctions .

@@ -1,0 +1,10 @@
+WiMAX
+WiMAX ( acronyme pour Worldwide Interoperability for Microwave Access ) désigne un standard de communication sans fil .
+Aujourd'hui il est surtout utilisé comme système de transmission et d' accès à Internet à haut débit , portant sur une zone géographique étendue .
+Ce terme est également employé comme label commercial , à l' instar du Wi-Fi .
+WiMAX est défini par une famille de normes ( IEEE 802.16 ) qui définissent une technique de transmissions de données à haut débit , par voie hertzienne .
+Le WiMAX Forum regroupe tous les acteurs ( industriels , opérateurs , exploitants , diffuseurs ... ) impliqués dans cette série de normes .
+WiMAX avait pour objectif de faire converger des normes et standards de réseaux sans fil précédemment indépendants : HiperMAN développé en Europe par l' ETSI ( European Telecommunications Standards Institute ) ou encore 802.16 développé par l' IEEE ( Institute of Electrical and Electronics Engineers ) .
+WiMAX utilise plusieurs technologies de diffusion hertziennes destinées principalement avec une architecture dite « point-multipoint » : un ou plusieurs émetteurs / récepteurs centralisés couvrent une zone où se situent de multiples terminaux .
+Le WiMAX procure des débits de plusieurs dizaines de mégabits par seconde sur une zone de couverture portant sur quelques dizaines de kilomètres au maximum .
+Le WiMAX s' adresse notamment au marché des réseaux métropolitains , le MAN ( metropolitan area network ) de HiperMAN mais également aux secteurs péri-urbains voire ruraux qui n' ont pas d' infrastructure téléphonique filaire exploitable .

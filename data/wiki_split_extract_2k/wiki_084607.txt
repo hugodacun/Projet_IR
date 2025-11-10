@@ -1,0 +1,10 @@
+Mécanique du vol de l' hélicoptère
+La mécanique du vol de l' hélicoptère est la science qui vise à établir la théorie du vol des aéronefs à voilure tournante .
+Elle traite plus particulièrement du fonctionnement du ou des rotor ( s ) , puisque ce sont eux qui caractérisent ce type d' aéronef .
+La théorie aérodynamique du rotor de l' hélicoptère est fondée sur deux théories : la théorie de Rankine-Froude ; la théorie des éléments de pale .
+Ces deux théories permettent l' analyse d' un hélicoptère existant .
+Pour une géométrie et une vitesse de rotation données du rotor , et pour une masse connue à sustenter , elles permettent de prédire la puissance sur l' arbre rotor et les pas de pales nécessaires aux différents régimes de vol .
+Elles servent aussi en phase de conception préliminaire d' un nouvel hélicoptère .
+Des objectifs de masse à sustenter et de vitesse maximale étant donnés , elles permettent de dimensionner la puissance des moteurs , la taille et la vitesse de rotation des rotors , ainsi que la géométrie de leurs pales ( notamment leur corde et leur vrillage ) , et le débattement des commandes de vol .
+Cet article traite essentiellement de l' aérodynamique du rotor de l' hélicoptère .
+La compréhension de certains effets aérodynamiques requiert toutefois de connaître quelques éléments de la dynamique de la pale .

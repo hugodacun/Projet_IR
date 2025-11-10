@@ -1,0 +1,10 @@
+Coefficients calorimétriques et thermoélastiques
+En physique , et plus particulièrement en thermodynamique , les coefficients calorimétriques et thermoélastiques sont des coefficients permettant d' exprimer , pour les premiers , la chaleur absorbée par un système thermodynamique et , pour les seconds , les variations de volume et de pression de ce système .
+Ces coefficients sont définis pour les corps purs comme pour les mélanges .
+Les transformations étudiées pour les établir s' effectuent sans changement de composition ni de phase .
+Ces coefficients sont liés aux potentiels thermodynamiques , dont ils sont les dérivées secondes .
+Il est ainsi possible d' établir le signe des capacités thermiques et des coefficients de compressibilité , ainsi que diverses relations , notamment les relations de Clapeyron , relation de Mayer et relation de Reech .
+Les coefficients calorimétriques sont liés aux variations de l' entropie du système .
+Les coefficients thermoélastiques permettent d' établir son équation d' état .
+Lorsqu' elles existent , les notations recommandées par le Green Book de l' Union internationale de chimie pure et appliquée ( IUPAC ) sont indiquées entre parenthèses .
+Par exemple les notations proposées pour le coefficient de dilatation isobare sont signalées ( Green Book p . 56 : α { \ displaystyle \ alpha } , α V { \ displaystyle \ alpha _ { V } } , γ { \ displaystyle \ gamma } ) .

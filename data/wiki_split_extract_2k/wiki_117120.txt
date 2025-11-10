@@ -1,0 +1,10 @@
+Automate quantique
+En informatique quantique et en informatique théorique , un automate fini quantique est une généralisation des automates finis où un mot est accepté selon le résultat d' une certaine mesure .
+Il existe plusieurs modèles des automates finis quantiques ; le plus restrictif est celui des automates dits « measure-once » de Moore et Crutchfield 2000 ; un autre est celui des automates « measure-many » de Kondacs et Watrous 1997 .
+Ces deux modèles sont très différents l' un de l' autre ; le modèle « measure-once » se rapproche plus de la théorie classique des automates finis .
+D' autres définitions , plus générales , ont été proposées , en généralisation des diverses variantes des automates , par exemple par Yakaryilmaz et Say 2011 .
+Un des objectifs de l' étude des automates fini quantiques est l' étude des langages formels qu' ils acceptent ; un autre est d' étudier les problèmes de décidabilité pour ces classes d' automates et de langages .
+Les automates finis quantiques sont similaires aux automates probabilistes , mais la classe des langages reconnus par automates quantiques est strictement contenue dans la classe des langages reconnus par automates probabilistes .
+Les automates finis quantiques peuvent aussi être vus comme une version quantique des sous-shifts de type fini , ou comme une variante quantique des chaînes de Markov .
+Les automates finis quantiques sont , à leur tour , des cas particuliers des automates finis dit géométriques ou des automates finis dit topologiques .
+Un automate fini quantique opère sur des mots finis w = a 1 a 2 ⋯ a m { \ displaystyle w = a_ { 1 } a_ { 2 } \ cdots a_ { m } } , dont les lettres a i { \ displaystyle a_ { i } } sont dans un alphabet donné Σ { \ displaystyle \ Sigma } .

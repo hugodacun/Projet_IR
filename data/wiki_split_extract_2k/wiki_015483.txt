@@ -1,0 +1,10 @@
+Propulsion nucléaire thermique
+La propulsion nucléaire thermique ou nucléo-thermique est un mode de propulsion des fusées qui utilise un réacteur nucléaire pour chauffer un fluide propulsif .
+Celui-ci , comme dans le cas d' un moteur-fusée classique , est expulsé via une tuyère pour fournir la poussée qui propulse la fusée .
+Ce type de propulsion permet d' atteindre en théorie des vitesses d' éjection de gaz nettement plus élevées et donc un meilleur rendement que la propulsion chimique utilisée sur les lanceurs actuels .
+Différentes architectures ont été étudiées depuis le début de l' ère spatiale du simple cœur solide ( similaire à celui d' une centrale nucléaire ) jusqu' aux concepts plus complexes mais plus efficaces tels que les cœurs gazeux .
+Bien que des prototypes aient été testés au sol par les États-Unis ( moteur NERVA ) et l' URSS ( RD-0410 ) , aucune fusée utilisant ce type de propulsion n' a encore jamais volé .
+Le principe de « criticité » de la physique nucléaire impose une masse minimale de combustible et donc un réacteur suffisamment puissant pour diminuer le rapport poids / poussée .
+La propulsion nucléaire est en panne de soutien dans le monde en raison des risques liés au lancement d' engins nucléaires et du coût financier d' une telle technologie .
+Aujourd'hui [ Quand ? ] , le recours à la propulsion nucléaire n' est évoqué que dans le cadre du programme Constellation , pour des missions habitées hypothétiques vers Mars , à échéance éloignée ( après 2037 ) .
+Cependant , en mai 2019 , la United States House Committee on Appropriations ( en ) alloue un budget de 125 millions de dollars à la NASA pour le développement de technologies de propulsion nucléaire .

@@ -1,0 +1,10 @@
+Voix sur IP
+La voix sur IP , ou « VoIP » pour « Voice over IP » , est une technologie informatique qui permet de transmettre la voix sur des réseaux compatibles IP , via Internet ou des réseaux privés ( intranets ) ou publics , qu' ils soient filaires ( câble / ADSL / fibre optique ) ou non ( satellite , Wi-Fi et réseaux mobiles ) .
+Des logiciels de VoIP tels que Skype , Signal , Discord , WhatsApp , gèrent aujourd'hui tous les flux multimédia ( téléphonie , appels vidéo , messagerie instantanée et transferts de fichiers ) .
+En ce qui concerne la téléphonie uniquement , cette technologie est complémentaire de la téléphonie sur IP ( « ToIP » pour Telephony over Internet Protocol ) , qui concerne les fonctions réalisées par un autocommutateur téléphonique IPBX .
+Les projets des entreprises s' intéressant à la VoIP ont été dopés par la création , le 4 avril 1994 , par Marc Andreessen et Jim Clark de Netscape qui sort le 13 octobre 1994 son navigateur web Netscape Navigator , le premier du genre , montrant ainsi les possibilités d' Internet .
+Dans la seconde partie des années 1990 , les premiers acteurs grand public d' Internet ont proposé des services de messagerie instantanée permettant de passer à la « Voix sur IP » mais n' ont pas pris le risque de mettre cette option en avant , afin de ne pas inquiéter les grands opérateurs traditionnels de télécoms .
+La messagerie ICQ est lancée en 1996 par les deux étudiants fondateurs de la jeune entreprise israélienne , Mirabilis , qui permet de retrouver ses amis et de gérer la liste de ses contacts personnels , puis elle est rachetée pour 285 millions de dollars en 1998 par AOL Time Warner .
+Parallèlement , écrit en langage PL / 1 sur un ordinateur par Dave Brown , AIM est présenté par AOL en mai 1997 .
+QQ , le clone chinois d' ICQ , crée un protocole fermé et propriétaire , concurrencé en 1998 par le protocole libre et ouvert Jabber .
+Les fournisseurs de contenu d' Internet ( Yahoo !

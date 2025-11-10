@@ -1,0 +1,10 @@
+Aérodynamique automobile
+Vous lisez un « bon article » labellisé en 2010 .
+Pour des articles plus généraux , voir Aérodynamique et Mécanique des fluides .
+L' aérodynamique automobile est l' étude des phénomènes aérodynamiques induits par l' écoulement de l' air autour d' un véhicule automobile en mouvement .
+La connaissance de ces phénomènes permet , entre autres , de réduire la consommation des véhicules en diminuant leur traînée , d' améliorer leur comportement routier en influant sur leur portance ( ou leur déportance ) et de diminuer les phénomènes aéroacoustiques ainsi que les turbulences à haute vitesse .
+Prise en compte très tôt dans l' histoire de l' automobile , par exemple dans La Jamais contente profilée comme une torpille , l' aérodynamique automobile a pris de l' ampleur dans les années 1930 .
+C' est en effet en 1934 aux États-Unis que la Chrysler Airflow , première automobile de série dessinée en respectant un profil aérodynamique , voit le jour .
+Par la suite , les automobiles n' ont cesseé de s' améliorer , notamment après l' apparition des Formule 1 dont le championnat suscite encore aujourd'hui beaucoup d' effervescence dans ce domaine .
+L' aérodynamique étant intrinsèquement liée à la mécanique des fluides , les essais en soufflerie sont aujourd'hui devenus indispensables aux constructeurs automobiles .
+Par ailleurs , en raison des phénomènes complexes mis en jeu en aérodynamique , ces derniers — et plus particulièrement les écuries de courses — ont également recours au calcul numérique ( ou CFD pour « Computational Fluid Dynamics » ) pour résoudre leurs problèmes .

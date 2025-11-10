@@ -1,0 +1,10 @@
+Instrument de bord ( aéronautique )
+Les instruments de bord servent à présenter à l' équipage technique toutes les informations utiles au pilotage et au fonctionnement de l' aéronef , à la navigation et aux communications avec les autres aéronefs et le contrôle aérien : pilotage : horizon artificiel , anémomètre , altimètre , variomètre , etc. navigation : compas , ILS , VOR , GPS , etc. gestion des groupes motopropulseurs : tachymètre , température et pression , etc. gestion des télécommunications : radio , système d' intercommunication de bord , etc. gestion des servitudes : consommation de carburant , tension et intensité électrique , etc. accomplissement de la mission : instruments spécialisés .
+Selon le type d' aéronef et le nombre de membres d' équipage les instruments sont regroupés sur des tableaux et , pour le pilote , sur le tableau de bord situé devant lui .
+Les quatre instruments de base sont toujours disposés de la même façon ( en configuration de T basique ) : l' horizon artificiel au centre ; l' anémomètre à gauche ; l' altimètre à droite ; le gyro directionnel ou plateau de route en dessous .
+Cette disposition permet d' optimiser le circuit visuel au cours du vol .
+La disposition des autres instruments est variable mais respecte certains standards .
+Sur les aéronefs les plus récents les instruments sont remplacés par des écrans rassemblant toutes les informations du T de base sur une seule surface de visualisation , les instruments conventionnels ne sont conservés qu' à titre de secours pour pallier une éventuelle défaillance des systèmes électroniques .
+Les écrans sont le plus souvent multi-fonctions , c'est-à-dire qu' ils sont prévus pour afficher l' ensemble des informations nécessaires à une phase de vol au gré du pilote .
+Originellement les écrans reprenaient les vues classiques des instruments analogiques .
+Ils sont progressivement remplacés par des visuels regroupant les informations selon des standards ergonomiques .

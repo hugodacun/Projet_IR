@@ -1,0 +1,10 @@
+Distribution ( mathématiques )
+Pour les articles homonymes , voir Distribution .
+En analyse mathématique , une distribution ( également appelée fonction généralisée ) est un objet qui généralise la notion de fonction et de mesure .
+La théorie des distributions étend la notion de dérivée à toutes les fonctions localement intégrables et au-delà , et est utilisée pour formuler des solutions à certaines équations aux dérivées partielles .
+Elles sont importantes en physique et en ingénierie où beaucoup de problèmes discontinus conduisent naturellement à des équations différentielles dont les solutions sont des distributions plutôt que des fonctions ordinaires .
+La théorie des distributions fut formalisée par le mathématicien français Laurent Schwartz et lui valut la médaille Fields en 1950 .
+Son introduction utilise des notions d' algèbre linéaire et de topologie centrées autour de l' idée de dualité .
+Il faut chercher l' origine de cette théorie dans le calcul symbolique de Heaviside ( 1894 ) et Poincaré ( 1912 ) , et dans l' introduction par les physiciens de la « fonction de Dirac » ( 1926 ) .
+L' objectif a été alors de généraliser la notion de fonction , afin de donner un sens mathématique correct à ces objets manipulés par les physiciens , en gardant en plus la possibilité de faire des opérations telles que des dérivations , convolutions , transformées de Fourier ou de Laplace .
+Jacques Hadamard , Salomon Bochner et Sergueï Sobolev ont été les artisans successifs de cette œuvre dont le dernier volet est dû à Laurent Schwartz .

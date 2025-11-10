@@ -1,0 +1,10 @@
+Équation de Schröder-van Laar
+En chimie physique , l' équation de Schröder-van Laar représente l' évolution de la composition d' un mélange liquide binaire ( composé de deux espèces chimiques ) en fonction de la température lorsque seul l' un des deux corps se solidifie ( les deux corps ne sont pas miscibles en phase solide ) .
+En d' autres termes , elle représente la courbe de congélation du mélange liquide ou la courbe de solubilité du solide dans le liquide .
+Cette équation est aussi appelée équation de Schröder-Le Chatelier , , ou encore équation de Schröder-van Laar-Le Chatelier .
+Elle a été proposée indépendamment par Le Chatelier en 1885,, Schröder en 1893 et van Laar en 1903,.
+Elle décrit le liquidus d' un diagramme de phase liquide-solide lorsque les deux solides purs sont totalement non miscibles et permet de déterminer la température et la composition de l' eutectique .
+Elle a pour cas limite la loi de la cryométrie lorsque la quantité en phase liquide du corps qui ne se solidifie pas est négligeable devant celle du corps qui se solidifie .
+Cette équation peut être étendue au cas des solides miscibles et au cas des solutions non idéales .
+Elle permet alors de représenter également le solidus du diagramme de phase liquide-solide .
+Soit un mélange binaire , constitué des deux espèces chimiques A { \ displaystyle { \ text { A } } } et B { \ displaystyle { \ text { B } } } , liquide sous la pression P { \ displaystyle P } constante .
