@@ -6,6 +6,7 @@ from typing import Iterable, Tuple
 class CorpusReader:
     def __init__(self):
         self.docs_dir = "data/wiki_split_extract_2k"
+        docs_dir = self.docs_dir
         ## trie des fichiers .txt
         self.files = sorted(
             f for f in os.listdir(docs_dir) if f.endswith(".txt")

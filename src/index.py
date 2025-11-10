@@ -30,7 +30,7 @@ class InvertedIndex:
     #But: construire l'index 
     def build(self, docs_dir: str, preproc: TextPreprocessor, use_bigrams: bool = True):
         # lecture des docs via la classe CorpusReader
-        cr = CorpusReader(docs_dir)
+        cr = CorpusReader()
         self.N = len(cr)
 
         for doc_id, text in cr.iter_docs():
@@ -176,3 +176,193 @@ class InvertedIndex:
     #Retourne {doc_id: tf} pour un terme
     def postings_for(self, term: str) -> Dict[str, int]:
         return dict(self.postings.get(term, {}))
+
+    # ---------- TF-IDF et recherche cosinus ----------
+    def _idf(self, df: int) -> float:
+        """
+        IDF lissée et positive: log(1 + (N + 1) / (df + 1))
+        (évite idf négatives pour les termes très fréquents)
+        """
+        return math.log(1.0 + (self.N + 1.0) / (df + 1.0))
+
+    def build_tfidf(self, tf_scheme: str = "log"):
+        """
+        Construit les vecteurs TF-IDF documentaires et leurs normes.
+        tf_scheme: "raw" (tf), "log" (1+log tf)
+        """
+        # 1) idf par terme
+        self.idf = {t: self._idf(df) for t, df in self.df.items()}
+
+        # 2) TF-IDF par document (sparse dict) + norme
+        self.doc_tfidf = {}
+        self.doc_norm = {}
+
+        # Pour itérer doc->(term, tf), on reconstruit en inversant postings
+        # (ou bien on accumule au vol dans une structure)
+        doc_terms: Dict[str, Dict[str, int]] = defaultdict(dict)
+        for term, docmap in self.postings.items():
+            for d, tf in docmap.items():
+                doc_terms[d][term] = tf
+
+        for d, tfmap in doc_terms.items():
+            vec: Dict[str, float] = {}
+            # pondération tf
+            for t, tf in tfmap.items():
+                if tf_scheme == "log":
+                    w_tf = 1.0 + math.log(tf)
+                else:  # "raw"
+                    w_tf = float(tf)
+                vec[t] = w_tf * self.idf.get(t, 0.0)
+
+            # norme L2
+            norm = math.sqrt(sum(w*w for w in vec.values())) or 1.0
+
+            self.doc_tfidf[d] = vec
+            self.doc_norm[d] = norm
+
+    def _query_tfidf(self, q_tokens: List[str], tf_scheme: str = "log") -> Dict[str, float]:
+        # tf de la requête
+        q_tf = Counter(q_tokens)
+        q_vec: Dict[str, float] = {}
+        for t, tf in q_tf.items():
+            # même schéma TF que pour les docs
+            if tf_scheme == "log":
+                w_tf = 1.0 + math.log(tf)
+            else:
+                w_tf = float(tf)
+            # utiliser idf si connu, sinon 0 (terme out-of-vocab)
+            w = w_tf * self.idf.get(t, 0.0)
+            if w != 0.0:
+                q_vec[t] = w
+        return q_vec
+
+    def search_cosine(
+        self,
+        query: str,
+        preproc: TextPreprocessor,
+        use_bigrams: bool = True,
+        top_k: int = 10,
+        tf_scheme: str = "log",
+    ) -> List[Tuple[str, float]]:
+        """
+        Recherche vectorielle (TF-IDF, cosinus) sur l'index existant.
+        Nécessite d'avoir appelé build_tfidf() après build().
+        """
+        if not self.doc_tfidf:
+            raise RuntimeError("build_tfidf() doit être appelé avant search_cosine().")
+
+        # 1) préparer la requête
+        q_tokens = preproc.process(query)
+        if use_bigrams:
+            q_tokens += make_ngrams(q_tokens, n=2)
+
+        q_vec = self._query_tfidf(q_tokens, tf_scheme=tf_scheme)
+        if not q_vec:
+            return []
+
+        q_norm = math.sqrt(sum(w*w for w in q_vec.values())) or 1.0
+
+        # 2) candidats: union des docs qui contiennent les termes de q
+        candidate_docs = set()
+        for t in q_vec.keys():
+            candidate_docs.update(self.postings.get(t, {}).keys())
+
+        # 3) cosinus = (q·d) / (||q||*||d||)
+        scores: Dict[str, float] = {}
+        for d in candidate_docs:
+            d_vec = self.doc_tfidf[d]
+            # produit scalaire sparse
+            dot = 0.0
+            # itérer sur les termes de la requête (souvent moins nombreux)
+            for t, wq in q_vec.items():
+                wd = d_vec.get(t)
+                if wd is not None:
+                    dot += wq * wd
+            if dot != 0.0:
+                scores[d] = dot / (q_norm * (self.doc_norm.get(d) or 1.0))
+
+        # 4) tri
+        return sorted(scores.items(), key=lambda x: x[1], reverse=True)[:top_k]
+
+    def _minmax(self, d: Dict[str, float]) -> Dict[str, float]:
+        if not d:
+            return {}
+        vals = list(d.values())
+        mn, mx = min(vals), max(vals)
+        if mx == mn:
+            return {k: 0.0 for k in d}
+        return {k: (v - mn) / (mx - mn) for k, v in d.items()}
+    
+    def search_hybrid_rrf(
+        self,
+        query: str,
+        preproc: TextPreprocessor,
+        use_bigrams: bool = True,
+        k_lex: int = 200,
+        k_vec: int = 200,
+        top_k: int = 20,
+        rrf_k: int = 60,
+    ) -> List[Tuple[str, float]]:
+        """
+        Fusion RRF (Reciprocal Rank Fusion) entre BM25 et cosinus TF-IDF.
+        Nécessite d'avoir appelé build_tfidf() au préalable.
+        """
+        if not self.doc_tfidf:
+            raise RuntimeError("build_tfidf() doit être appelé avant search_hybrid_rrf().")
+
+        # 1) résultats BM25 (rangs)
+        bm25 = self.search(query, preproc, use_bigrams=use_bigrams, top_k=k_lex)
+        rank_lex = {doc_id: r for r, (doc_id, _) in enumerate(bm25, start=1)}
+
+        # 2) résultats cosinus (rangs)
+        vec = self.search_cosine(query, preproc, use_bigrams=use_bigrams, top_k=k_vec)
+        rank_vec = {doc_id: r for r, (doc_id, _) in enumerate(vec, start=1)}
+
+        # 3) RRF
+        scores: Dict[str, float] = {}
+        for d, r in rank_lex.items():
+            scores[d] = scores.get(d, 0.0) + 1.0 / (rrf_k + r)
+        for d, r in rank_vec.items():
+            scores[d] = scores.get(d, 0.0) + 1.0 / (rrf_k + r)
+
+        # 4) tri final
+        return sorted(scores.items(), key=lambda x: x[1], reverse=True)[:top_k]
+
+    def search_hybrid_interp(
+        self,
+        query: str,
+        preproc: TextPreprocessor,
+        use_bigrams: bool = True,
+        k_lex: int = 200,
+        k_vec: int = 200,
+        top_k: int = 20,
+        alpha: float = 0.6,  # poids BM25
+    ) -> List[Tuple[str, float]]:
+        """
+        Interpolation pondérée entre scores BM25 et cosinus TF-IDF.
+        Normalise min-max chaque canal sur ses candidats avant fusion.
+        Nécessite build_tfidf().
+        """
+        if not self.doc_tfidf:
+            raise RuntimeError("build_tfidf() doit être appelé avant search_hybrid_interp().")
+
+        # 1) BM25 (scores)
+        bm25 = self.search(query, preproc, use_bigrams=use_bigrams, top_k=k_lex)
+        bm25_scores = {d: s for d, s in bm25}
+
+        # 2) Cosinus (scores)
+        vec = self.search_cosine(query, preproc, use_bigrams=use_bigrams, top_k=k_vec)
+        vec_scores = {d: s for d, s in vec}
+
+        # 3) normalisation min-max
+        nb = self._minmax(bm25_scores)
+        nv = self._minmax(vec_scores)
+
+        # 4) fusion
+        all_docs = set(nb) | set(nv)
+        fused = {d: alpha * nb.get(d, 0.0) + (1.0 - alpha) * nv.get(d, 0.0) for d in all_docs}
+
+        # 5) tri
+        return sorted(fused.items(), key=lambda x: x[1], reverse=True)[:top_k]
+    
+    
