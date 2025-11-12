@@ -1,0 +1,10 @@
+Arc ( architecture )
+L' arc est l' élément d' ossature de directrice courbe ou polygonale , qui enjambe l' espace ouvert entre deux piliers ( pieds-droits , etc. ) ou murs en transmettant toute la charge qu' il supporte aux appuis ( culées , contreforts , etc. ) , moyennant une force oblique dénommée « poussée » .
+En architecture s' est toujours présenté le problème de combler l' espace entre deux appuis .
+Avant l' invention du béton armé et des poutrelles en acier , la façon la plus simple de faire était d' utiliser une seule pièce de linteau , ou de poutre qui pouvait être en bois ou en pierre , et lorsqu' il n' y avait pas les pièces de la taille requise , diverses pièces plus petites , travaillées de sorte qu' elles puissent résister aux sollicitations mécaniques en jeu .
+Fonctionnellement , une arche est réalisée dans la longueur d' un mur comme couronnement d' une ouverture ( une baie , son embrasure ) ou d' une travée .
+Traditionnellement , un arc est composé de claveaux ( en pierre de taille , brique , adobe ) qui travaillent toujours en compression et qui peuvent adopter des formes et courbes diverses .
+Cet ensemble constructif permet donc d' enjamber des espaces relativement importants via l' appareillage de pièces de dimensions réduites .
+Quoiqu' assez simple , et d' usage commun dans la construction de structures depuis des temps reculés , le fonctionnement des arcs n' a été étudié scientifiquement qu' à partir du premier tiers du XIXe siècle .
+Avant cela , la conception des arches et des voûtes , mais aussi les dômes , faisait rentrer en jeu des méthodes empiriques géométriques qui permettaient de déterminer l' épaisseur à donner aux membres , ou la résistance et la forme à donner aux culées .
+Ces méthodes constructives manquaient de fondement scientifique et se basaient sur la capacité surdimensionnée des structures , généralement des appuis ou l' usage de tirants .

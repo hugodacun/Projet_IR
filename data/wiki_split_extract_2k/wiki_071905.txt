@@ -1,0 +1,10 @@
+
+Disjoncteur à haute tension
+Vous lisez un « article de qualité » labellisé en 2006 .
+Pour les disjoncteurs basse tension , voir disjoncteur .
+Un disjoncteur à haute tension est destiné à établir , supporter et interrompre des courants sous sa tension assignée ( la tension maximale du réseau électrique qu' il protège ) , selon la définition donnée par la Commission électrotechnique internationale .
+Il opère à la fois : dans des conditions normales de service , par exemple pour connecter ou déconnecter une ligne dans un réseau électrique ; dans des conditions anormales spécifiées , en particulier pour éliminer un court-circuit dans le réseau provoqué par la foudre ( Voir aussi la partie spécifique ) ou d' autres causes .
+De par ses caractéristiques , un disjoncteur est l' appareil de protection essentiel d' un réseau à haute tension , car il est seul capable d' interrompre un courant de court-circuit et donc d' éviter que le matériel connecté sur le réseau soit endommagé par ce court-circuit .
+La coupure d' un courant électrique par un disjoncteur à haute tension est obtenue en séparant des contacts dans un gaz ( air , SF6 . . ) ou dans un milieu isolant ( par exemple l' huile ou le vide ) .
+Après séparation des contacts , le courant continue de circuler dans le circuit à travers un arc électrique qui s' est établi entre les contacts du disjoncteur .
+À ce jour , les disjoncteurs à haute tension ( 72,5 kV à 1 100 kV ) utilisent essentiellement le gaz ou l' huile pour l' isolement et la coupure , la technique de coupure dans le vide est limitée aux applications en moyenne tension avec quelques développements récents pour une tension assignée de 84 kV .

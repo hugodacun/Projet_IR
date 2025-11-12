@@ -1,0 +1,10 @@
+Théorie de Galois
+En mathématiques et plus précisément en algèbre , la théorie de Galois est l' étude des extensions de corps commutatifs , par le biais d' une correspondance avec des groupes de transformations sur ces extensions , les groupes de Galois .
+Cette méthode féconde , qui constitue l' exemple historique , a essaimé dans bien d' autres branches des mathématiques , avec par exemple la théorie de Galois différentielle , ou la théorie de Galois des revêtements .
+Cette théorie est née de l' étude par Évariste Galois des équations algébriques .
+L' analyse de permutations des racines lui a permis non seulement de prouver à nouveau que l' équation générale de degré au moins cinq n' est pas résoluble par radicaux ( résultat connu sous le nom de théorème d' Abel-Ruffini ) , mais surtout d' expliciter une condition nécessaire et suffisante de résolubilité par radicaux .
+Les applications sont très variées .
+Elles s' étendent de la résolution de vieilles conjectures comme la détermination des polygones constructibles à la règle et au compas démontrée par le théorème de Gauss-Wantzel à la géométrie algébrique à travers , par exemple , le théorème des zéros de Hilbert .
+La théorie de Galois voit ses origines dans l' étude des équations algébriques .
+Elle se ramène à l' analyse des équations polynomiales .
+Une approche par des changements de variables et des substitutions a permis à des mathématiciens comme Al-Khwârizmî ( 783-850 ) , Tartaglia ( 1499-1557 ) , Cardan ( 1501-1576 ) ou Ferrari ( 1522-1565 ) de résoudre tous les cas jusqu' au degré quatre .

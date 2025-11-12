@@ -1,0 +1,10 @@
+
+Sécurité de l' information au sein des RFID
+Article principal : Radio-identification .
+La sécurité de l' information au sein des RFID est définie par l' ensemble des moyens techniques , organisationnels , juridiques et humains nécessaires à la sécurité des systèmes d' information qui exploitent des technologies de radio-identification telles que les étiquettes électroniques ( parfois appelées TAG ) , les passeports électroniques et plus généralement les cartes à puce sans contact .
+La technologie de radio-identification ( appelée RFID , de l' anglais Radio-Frequency Identification ) s' est fortement développée depuis sa création dans les années 1950 .
+Elle est très utilisée dans l' industrie , la grande distribution et trouve son utilité dans des domaines allant du marquage d' animaux au paiement automatique , en passant par la lutte contre la contrefaçon .
+L' utilisation massive des RFIDs est néanmoins l' objet de nombreuses critiques relatives tant au respect de la vie privée qu' à la sécurité des données qui y sont stockées .
+La nature même de cette technologie , basée sur la communication sans fil , est source de nombreuses failles de sécurité que ce soit au niveau matériel , logiciel ou réseau .
+Les acteurs industriels et le milieu académique s' attachent à proposer des solutions qui pourraient pallier ces faiblesses , mais chaque contre-mesure publiée s' accompagne de nouvelles attaques la mettant en défaut .
+Article principal : Radio-identification .

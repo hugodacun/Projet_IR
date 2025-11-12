@@ -1,0 +1,10 @@
+Space Launch System
+Le Space Launch System ( litt . « système de lancement spatial » ) , abrégé SLS , est un lanceur spatial super-lourd américain développé par la NASA depuis 2011 et dont le premier vol a lieu le 16 novembre 2022 .
+Le SLS joue un rôle central dans le programme Artemis dont l' objectif est , 50 ans après le programme Apollo , d' envoyer de nouveau des équipages à la surface de la Lune , puis de préparer les futures missions habitées vers Mars .
+Cette fusée sera chargée de placer le vaisseau Orion transportant l' équipage sur une trajectoire à destination de la Lune .
+Pour placer en orbite lunaire un vaisseau avec équipage d' une masse de près de 30 tonnes , il faut disposer d' un lanceur beaucoup plus puissant que ceux actuellement disponibles .
+Le lanceur Saturn V du programme Apollo , d' une capacité de 47 tonnes en orbite lunaire , n' est plus produit depuis la fin de ce programme au début des années 1970 .
+L' architecture du lanceur SLS , similaire à celle de l' Ares V abandonné après l' arrêt du programme Constellation en 2010 , reprend en les adaptant des composants utilisés par la navette spatiale américaine ( propulseurs d' appoint , moteurs-fusées SSME / RS-25 ) et dans sa version Bloc 1 l' étage supérieur du lanceur Delta IV .
+Plusieurs versions sont envisagées ( Bloc 1 , 1B et 2 ) , d' une capacité de mise en orbite terrestre basse s' échelonnant entre 70 tonnes et 130 tonnes .
+La version Bloc 1 , pouvant lancer 28 tonnes vers la Lune , est caractérisée par son deuxième étage ICPS , propulsé par un unique moteur RL-10 B2 .
+Courant 2020 , seule cette version est développée .

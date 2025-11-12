@@ -1,0 +1,10 @@
+Modélisation des robots
+Cet article ne cite pas suffisamment ses sources ( septembre 2019 ) .
+Si vous disposez d' ouvrages ou d' articles de référence ou si vous connaissez des sites web de qualité traitant du thème abordé ici , merci de compléter l' article en donnant les références utiles à sa vérifiabilité et en les liant à la section « Notes et références » En pratique : Quelles sources sont attendues ?
+Comment ajouter mes sources ?
+La modélisation d' un robot , considéré comme étant un système mécanique articulé , actionné et commandé , consiste à en établir un modèle mathématique .
+Outre une fonction générale d' aide à la conception , elle a de multiples utilisations pour , la prédiction des mouvements , l' adaptation des actionneurs , la planification des tâches , l' établissement des lois de commande , l' incorporation du robot dans des simulations informatiques , etc.
+Dans le langage courant , la modélisation précède la simulation sans que l' on distingue une séparation nette entre ces deux activités .
+Il est souvent acceptable de se contenter d' une modélisation simplifiée dans laquelle on ne tient pas compte des aspects qui sont , ou paraissent , secondaires tels que : les vibrations , les déformations élastiques , les jeux mécaniques , les tolérances de fabrication , etc.
+Dès lors , on est ramené dans le cadre classique de la mécanique rationnelle des solides rigides , appliquée sur des chaînes cinématiques ayant des liaisons holonomes ou non holonomes .
+Les données constructeur étant supposé connues , la modélisation en robotique , se situe donc typiquement dans le vaste domaine des mathématiques appliquées .

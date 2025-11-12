@@ -1,0 +1,10 @@
+Sondage d' opinion
+Cet article devrait être scindé en plusieurs articles distincts ( 14 avril 2022 ) .
+Pour plus d' informations , se reporter à la discussion présente sur Pages à scinder .
+Scission à effectuer : Il convient de séparer les notions générales et internationales d' un sondage d' opinion et les particularités spécifiques à la France uniquement .
+Un sondage d' opinion , ou une enquête d' opinion , est une application de la technique des sondages à une population humaine visant à déterminer les opinions probables via l' étude d' un échantillon confectionné par les entreprises de sondages .
+En France , par exemple , les enquêtes d' opinion réalisées avant l' élection présidentielle , à l' historique désormais facilement traçables grâce à Internet , sont passées de 111 en 1981 à 293 en 2007 puis ont à nouveau triplé , apportant aux entreprises de sondages l' essentiel de leur notoriété et suscitant un débat sur leur fiabilité ,,.
+Soit un sondage aléatoire de grandeur n { \ displaystyle n } et p ^ { \ displaystyle { \ hat { p } } } la proportion de personnes qui répondent « oui » à la question posée .
+Le théorème central limite dit que si n { \ displaystyle n } est grand alors p ^ { \ displaystyle { \ hat { p } } } suit approximativement une distribution normale avec moyenne p { \ displaystyle p } ( la proportion dans la population ) et écart-type p ( 1 − p ) n { \ displaystyle { \ sqrt { \ frac { p ( 1-p ) } { n } } } } .
+L' intervalle de confiance à 95 % est p ^ ± 1.96 p ( 1 − p ) n { \ displaystyle { \ hat { p } } \ pm 1.96 { \ sqrt { \ frac { p ( 1-p ) } { n } } } } .
+Par prudence , prenons la valeur p = 0.5 { \ displaystyle \ quad p = 0.5 } qui donne l' écart-type le plus grand .

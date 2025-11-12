@@ -1,0 +1,10 @@
+Énigme des trois maisons
+L' énigme des trois maisons , aussi appelée l' énigme de l' eau , du gaz et de l' électricité , est un jeu mathématique dont l' analyse utilise un théorème de topologie ou de théorie des graphes .
+Ce problème n' a pas de solution .
+Georges Perec le cite en 1978 dans son livre Je me souviens : « Je me souviens des heures que j' ai passées , en classe de troisième , je crois , à essayer d' alimenter en eau , gaz et électricité , trois maisons , sans que les tuyaux se croisent ( il n' y a pas de solution tant que l' on reste dans un espace à deux dimensions ; c' est l' un des exemples élémentaires de la topologie , comme les ponts de Königsberg , ou le coloriage des cartes ) » , .
+Cette énigme est déjà posée par Henry Dudeney en 1917 dans son livre Amusements in mathematics .
+Il précise qu' « il existe une demi-douzaine d' énigmes vieilles comme le monde , qui réapparaissent perpétuellement » .
+Celle de l' article en est une , qu' il appelle eau , gaz , et électricité .
+Elle est popularisée par Martin Gardner , qui la présente dans son Sixième livre de jeux mathématiques .
+Il existe deux approches pour démontrer l' inexistence d' une solution connectant chacune des trois maison directement aux trois fournisseurs .
+La première approche montrant l' impossibilité utilise le théorème de Jordan , indiquant que si l' on dessine une boucle dans un plan , le complémentaire de la boucle , c'est-à-dire la partie non dessinée du plan , se compose de deux connexes par arcs , l' un borné ( l' intérieur de la boucle ) et l' autre non ( l' extérieur de la boucle ) .

@@ -1,0 +1,10 @@
+Téléphonie mobile
+La téléphonie mobile , ou téléphonie cellulaire est un moyen de télécommunication , plus précisément de radiocommunication , par téléphone mobile .
+Ce moyen de communication s' est largement répandu à la fin des années 1990 .
+La technologie associée bénéficie des améliorations des composants électroniques , notamment leur miniaturisation , ce qui permet aux téléphones d' acquérir des fonctions jusqu' alors réservées aux ordinateurs .
+L' appareil téléphonique en lui-même peut être nommé « mobile » , « téléphone portable » , « portable » , « téléphone cellulaire » ( en Amérique du Nord ) , « cell » ( au Québec dans le langage familier ) , « natel » ( en Suisse ) , « GSM » ( en Belgique et au Luxembourg ) , « vini » ( en Polynésie française ) .
+Quand il est doté de fonctions évoluées , c' est un smartphone , ordiphone ou téléphone intelligent .
+Article détaillé : Réseau de téléphonie mobile .
+La téléphonie mobile est fondée sur la radiocommunication , c'est-à-dire la transmission de la voix et de données à l' aide d' ondes radioélectriques ( fréquences dans les bandes UHF allant de 700 à 2 600 MHz ) entre une station de base qui peut couvrir une zone de plusieurs dizaines de kilomètres de rayon et le téléphone mobile de l' utilisateur .
+Les premiers systèmes mobiles fonctionnaient en mode analogique .
+Les terminaux étaient de taille importante , seulement utilisables dans les automobiles où ils occupaient une partie du coffre et profitaient de l' alimentation électrique du véhicule .

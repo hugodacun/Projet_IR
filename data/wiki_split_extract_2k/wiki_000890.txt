@@ -1,0 +1,10 @@
+Irrigation
+L' irrigation est l' opération consistant à apporter artificiellement de l' eau à des végétaux cultivés pour en augmenter la production et permettre leur développement normal , en cas de déficit d' eau induit par un déficit pluviométrique , un drainage excessif ou une baisse de nappe , en particulier dans les zones arides .
+L' irrigation peut aussi avoir d' autres applications : l' apport d' éléments fertilisants soit au sol , soit , par aspersion , aux feuilles ( fertilisation foliaire ) ; dans la culture hydroponique , l' irrigation se confond totalement avec la fertilisation ; la lutte contre le gel , par aspersion d' eau sur le feuillage ( vergers , vignobles ) peut permettre de gagner quelques degrés de température précieux au moment des gelées printanières , voire dans certains cas par inondation .
+Généralement il est d' usage d' employer le terme d' « arrosage » pour les petites surfaces ( jardinage ) réservant le terme d' « irrigation » pour les surfaces plus importantes ( agriculture de plein champ , horticulture ) , mais il n' y a pas de norme en la matière .
+Selon le glossaire international d' hydrologie , l' irrigation est un apport artificiel d' eau sur des terres à des fins agricoles .
+On peut distinguer plusieurs techniques d' irrigation , plus ou moins économes en eau ( ou à risque de salinisation , etc. ) , outre l' arrosage manuel ( arrosoir , seau , etc. ) réservé aux très petites surfaces .
+L' irrigation de surface ( « irrigation par sillons » , « à la raie » ou « gravitaire » ) , utilise la gravité via un réseau de canaux et rigoles de taille dégressive .
+L' arrosage lui-même s' effectue ensuite par ruissellement , par submersion ou par infiltration dans le sous-sol proche des cultures .
+Cette technique consiste à imiter l' effet des précipitations : l' eau , acheminée sous pression par des tuyaux flexibles , est propulsée en l' air sous forme de gouttelettes , lesquelles retombent sur les cultures autour de chaque asperseur .
+La technique peut être déclinée en micro aspersion , semblable à la précédente mais plus localisée donc plus économe en eau .

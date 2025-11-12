@@ -1,0 +1,10 @@
+
+Munition insensible
+Une munition insensible ( MI ou IM , acronyme anglais de Insensitive munitions ) est un type de munitions conçu pour résister à des stimuli risquant de provoquer l' auto-amorçage de la munition et donc une explosion , source potentielle d' accident ( ces accidents sont rares , mais potentiellement graves ) .
+Ces stimuli sont principalement : les chocs ou ondes de choc , provenant par exemple de balles , de fragments et de jets de charge creuse ou de munitions détonantes adjacentes ... ( « détonation sympathique » ) ; la chaleur d' incendies ( ou d' événements thermiques adjacents ) , ou l' électricité .
+La conception de la MI vise à éviter dans toute la mesure du possible , l' auto-ignition par exposition à la chaleur , aux impacts de balle et de fragment et aux impact de jet de charge creuse .
+Divers moyens diminuer la vulnérabilité des munitions à l' auto-ignition ou à l' explosion accidentelle sont utilisés ou testés , seuls ou en combinaison , tels que des matériaux énergétiques à vulnérabilité réduite , des caractéristiques de conception , des ajouts ou des modifications à l' emballage , etc. .
+Les munitions peuvent être des balles , des ogives , des bombes , des missiles , des torpilles , etc. mais les forces armées ou chercheurs de différents pays peuvent avoir leurs propres définitions .
+L' auto-ignition de munitions peut être source d' accidents matériels graves et affecter ou détruire des vies humaines , induire des coûts importants de réparation et de remplacement du matériel , réduire une capacité opérationnelles .
+Certains pays ( ex : États-Unis ) ont une législation qui impose de traiter ces risques en rendant les munitions plus " insensibles " ( IM ) Les munitions insensibles ( IM ) , au lieu d' exploser vont plutôt brûler si et quand elles sont exposées à un échauffement rapide ou lent , des balles , des éclats d' obus , des charges creuses ou la détonation d' une autre munition à proximité .
+Trois grandes approches sont adoptées dans la conception de munitions dites « insensibles » : la charge ou le dispositif énergétique peut être protégé et transporté avec une protection externe .

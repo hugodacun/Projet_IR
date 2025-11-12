@@ -1,0 +1,10 @@
+Arbre de décision ( apprentissage )
+L' apprentissage par arbre de décision désigne une méthode basée sur l' utilisation d' un arbre de décision comme modèle prédictif .
+On l' utilise notamment en fouille de données et en apprentissage automatique .
+Dans ces structures d' arbre , les feuilles représentent les valeurs de la variable-cible et les embranchements correspondent à des combinaisons de variables d' entrée qui mènent à ces valeurs .
+En analyse de décision , un arbre de décision peut être utilisé pour représenter de manière explicite les décisions réalisées et les processus qui les amènent .
+En apprentissage et en fouille de données , un arbre de décision décrit les données mais pas les décisions elles-mêmes , l' arbre serait utilisé comme point de départ au processus de décision .
+C' est une technique d' apprentissage supervisé : on utilise un ensemble de données pour lesquelles on connaît la valeur de la variable-cible afin de construire l' arbre ( données dites étiquetées ) , puis on extrapole les résultats à l' ensemble des données de test .
+Les arbres de décision font partie des algorithmes les plus populaires en apprentissage automatique , .
+L' apprentissage par arbre de décision est une méthode classique en apprentissage automatique .
+Son but est de créer un modèle qui prédit la valeur d' une variable-cible depuis la valeur de plusieurs variables d' entrée .

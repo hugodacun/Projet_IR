@@ -1,0 +1,10 @@
+Algorithme génétique
+Les algorithmes génétiques appartiennent à la famille des algorithmes évolutionnistes .
+Leur but est d' obtenir une solution approchée à un problème d' optimisation , lorsqu' il n' existe pas de méthode exacte ( ou que la solution est inconnue ) pour le résoudre en un temps raisonnable .
+Les algorithmes génétiques utilisent la notion de sélection naturelle et l' appliquent à une population de solutions potentielles au problème donné .
+La solution est approchée par « bonds » successifs , comme dans une procédure de séparation et évaluation ( branch & bound ) , à ceci près que ce sont des formules qui sont recherchées et non plus directement des valeurs .
+L' utilisation d' algorithmes génétiques , dans la résolution de problèmes , est à l' origine le fruit des recherches de John Holland et de ses collègues et élèves de l' Université du Michigan qui ont , dès 1960 , travaillé sur ce sujet .
+La nouveauté introduite par ce groupe de chercheurs a été la prise en compte de l' opérateur d' enjambement ( cross-over ) en complément des mutations .
+Et c' est cet opérateur qui permet le plus souvent de se rapprocher de l' optimum d' une fonction en combinant les gènes contenus dans les différents individus de la population .
+Le premier aboutissement de ces recherches a été la publication en 1975 de Adaptation in Natural and Artificial System .
+La popularisation des algorithmes génétiques sera l' œuvre de David Goldberg à travers son livre Genetic Algorithms in Search , Optimization , and Machine Learning ( 1989 ) .

@@ -1,0 +1,10 @@
+
+Développement décimal de l' unité
+En mathématiques , le développement décimal périodique qui s' écrit 0,999 … , que l' on dénote encore par 0 , 9 ¯ { \ displaystyle 0 , { \ bar { 9 } } } ou 0 , 9 ˙ { \ displaystyle 0 , { \ dot { 9 } } } ou 0 , ( 9 ) { \ displaystyle 0 , ( 9 ) } , représente un nombre réel dont on peut montrer que c' est le nombre 1 .
+En d' autres termes , les deux notations 0,999 … et 1 sont deux notations différentes pour le même nombre .
+Les démonstrations mathématiques de cette identité ont été formulées avec des degrés variés de rigueur mathématique , et selon les préférences relatives à la définition des nombres réels , les hypothèses sous-jacentes , le contexte historique et le public visé .
+Le fait que certains nombres réels peuvent être représentés par plus d' une chaîne de « décimales » n' est pas limité au système décimal , c'est-à-dire de base dix .
+Le même phénomène a lieu dans toutes les bases entières , et les mathématiciens ont aussi repéré la manière d' écrire 1 dans des systèmes à base non entière .
+Ce phénomène n' est d' ailleurs pas spécifique au nombre 1 : tout nombre décimal non nul a une écriture finie et une autre écriture avec une infinité de 9 , comme 18,32 = 18,31999 … .
+L' écriture avec un nombre fini de décimales est plus simple , et est presque toujours celle que l' on préfère , ce qui contribue au préjugé que c' est la « seule » représentation .
+Cependant , l' autre forme , avec une infinité de décimales , est parfois plus utile pour la compréhension du développement décimal de certaines fractions , ou , en base 3 , pour caractériser l' ensemble de Cantor .

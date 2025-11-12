@@ -1,0 +1,10 @@
+Preuve en droit civil français
+En droit civil français , la preuve est la démonstration de la réalité d' un fait , d' un état , d' une circonstance ou d' une obligation , dans le but de faire valoir une prétention , c'est-à-dire l' objet d' une demande à laquelle une partie engagée dans une procédure judiciaire sollicite qu' il lui soit fait droit .
+Il s' agit d' une notion fondamentale , car en cas de contestation , ne pas pouvoir prouver son droit revient à ne pas en avoir .
+Il existe deux systèmes de preuve en droit civil français : le système dit de preuve libre ou morale ( qui permet l' utilisation de tous les modes de preuves ) et le système de la preuve légale ( qui reconnaît surtout les preuves par écrit ) .
+En droit civil , le système de preuve libre est employé lorsqu' il s' agit de prouver des faits juridiques ( à l' exception de la naissance et du décès ) , alors que le système de preuve légale est employé lorsqu' il s' agit de prouver des actes juridiques ( contrats , testament , etc. ) au-delà d' un certain montant fixé par décret ( actuellement 1 500 € ) .
+Le système de preuve est fixé par l' article 9 du code de procédure civile , qui énonce : « Il incombe à chaque partie de prouver conformément à la loi les faits nécessaires au succès de sa prétention » .
+La charge de la preuve est l' obligation faite à une partie au procès de prouver les éléments qu' elle avance à l' appui de ses prétentions .
+Celui qui a la charge de la preuve supporte le risque de la preuve .
+C'est-à-dire que s' il ne parvient pas à convaincre le juge , le fait qu' il allègue est jugé faux sans que son adversaire ait à prouver quoi que ce soit .
+Deux adages de droit romain permettent de saisir les grands principes relatifs à la charge de la preuve : Actori incumbit probatio : « La charge de la preuve incombe au demandeur . » Reus in excipiendo fit actor : « Celui qui allègue une exception en défense doit la prouver . » Cette articulation se retrouve au sein de l' article 1353 du code civil , qui dispose : « Celui qui réclame l' exécution d' une obligation doit la prouver .

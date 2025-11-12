@@ -1,0 +1,10 @@
+Relativité restreinte
+Pour les articles homonymes , voir relativité .
+La relativité restreinte est la théorie élaborée par Albert Einstein en 1905 en vue de tirer toutes les conséquences physiques de la relativité galiléenne et du principe selon lequel la vitesse de la lumière dans le vide a la même valeur dans tous les référentiels galiléens ( ou inertiels ) , ce qui était implicitement énoncé dans les équations de Maxwell ( mais interprété bien différemment jusque-là , avec « l' espace absolu » de Newton et l' éther ) .
+La relativité galiléenne énonce , en langage moderne , que toute expérience faite dans un référentiel inertiel se déroule de manière parfaitement identique dans tout autre référentiel inertiel .
+Devenu « principe de relativité » , son énoncé sera ensuite modifié par Einstein pour être étendu aux référentiels non inertiels : de « restreinte » , la relativité deviendra « générale » , et traitera de plus de la gravitation , ce que ne fait pas la relativité restreinte .
+La théorie de la relativité restreinte a établi de nouvelles formules permettant de passer d' un référentiel galiléen à un autre .
+Les équations correspondantes conduisent à des prévisions de phénomènes qui heurtent le sens commun ( mais aucune de ces prévisions n' a été infirmée par l' expérience ) , un des plus surprenants étant le ralentissement des horloges en mouvement , qui a permis de concevoir l' expérience de pensée souvent appelée paradoxe des jumeaux .
+Ce phénomène est régulièrement utilisé en science-fiction .
+La relativité restreinte a eu également un impact en philosophie en éliminant toute possibilité d' existence d' un temps et de durées absolus dans l' ensemble de l' univers ( Newton ) .
+À la suite d' Henri Poincaré , elle a forcé les philosophes à se poser différemment la question du temps et de l' espace .

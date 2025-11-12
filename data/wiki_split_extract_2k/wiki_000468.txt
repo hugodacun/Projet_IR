@@ -1,0 +1,10 @@
+
+Air-Cobot
+Vous lisez un « bon article » labellisé en 2016 .
+Air-Cobot Air-Cobot , Aircraft enhanced Inspection by smaRt & Collaborative rOBOT , est un projet français de recherche et développement d' un robot mobile collaboratif capable d' inspecter un avion durant les opérations de maintenance .
+Porté par le groupe Akka Technologies , ce projet multi-partenaires fait intervenir des laboratoires de recherche et des industriels .
+La recherche autour de ce prototype a été développée selon trois axes : la navigation autonome , le contrôle non destructif et la collaboration homme-machine .
+Air-Cobot est présenté comme le premier robot roulant d' inspection visuelle des avions .
+Des robots d' inspection utilisant d' autres types de capteurs ont été envisagés avant comme celui du projet européen Robair .
+Depuis le lancement du projet , d' autres solutions basées sur la vision commencent à se développer comme le drone de la compagnie aérienne Britannique Easy Jet ou l' essaim de drones de la startup toulousaine Donecle ou encore le projet Aircam du constructeur aéronautique Airbus .
+Dès ses débuts en 2013 , le robot Air-Cobot est prévu pour inspecter les parties basses de l' appareil .

@@ -1,0 +1,10 @@
+Mécanisme de simulation dans les jeux de rôle
+Un jeu de rôle est un jeu de société consistant à jouer un rôle au sein d' un univers imaginaire .
+Les joueurs interprètent un personnage dans un environnement fictif — ou « fictionnel » , puisque c' est le cadre de la fiction — : un monde imaginaire , qui peut être notre monde réel ou bien un univers plus ou moins fantastique .
+Le tout est souvent arbitré par un joueur ayant un statut particulier , le meneur de jeu .
+Les personnages interprétés , appelés « personnages joueurs » , sont donc immergés dans l' environnement imaginaire constitué d' autres personnages , les « personnages non-joueurs » , d' éléments naturels ( relief , faune , flore , météorologie , … ) , de bâtiments , d' objets manufacturés ( meubles , outils , armes , machines , … ) .
+Le résultat de ces interactions est habituellement géré par le meneur de jeu .
+Celui-ci utilise pour cela les règles d' un jeu de rôle .
+L' ensemble des règles ou système , sert à gérer les capacités des personnages , à résoudre leurs actions , à arbitrer la partie ; ce sont des mécanismes de simulation .
+Si les conventions du jeu de rôle sont la plupart du temps communes à tous les jeux , les systèmes de jeu sont différents d' un jeu à l' autre .
+La plupart des jeux de rôle ont un mécanisme principal , qui est utilisé pour les situations les plus importantes ou les plus fréquentes lors des séances de jeu , en particulier celles liées à la résolution des actions des personnages joueurs .

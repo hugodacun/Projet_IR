@@ -1,0 +1,10 @@
+Moment d' inertie
+Pour les articles homonymes , voir Moment .
+Moment d' inertie En serrant ses bras le long du corps , cette patineuse diminue son moment d' inertie , augmentant sa vitesse de rotation , puisque son moment cinétique est conservé .
+Le moment d' inertie d' un système physique est une grandeur qui caractérise son inertie vis-à-vis des mouvements de rotation , comme sa masse caractérise son inertie vis-à-vis des mouvements de translation .
+Il dépend de la valeur et de la répartition des masses au sein du système et a pour dimension M·L 2 ( produit d' une masse par le carré d' une longueur ) ; il s' exprime donc en kg·m2 dans le Système international d' unités .
+Dans le cas simple de la rotation d' une masse autour d' un axe fixe , le moment d' inertie par rapport à cet axe est une grandeur scalaire qui apparaît dans les expressions du moment cinétique et de l' énergie cinétique de rotation de ce corps .
+Toutefois dans le cas général d' une rotation autour d' un axe dont la direction varie au cours du temps , il est nécessaire d' introduire un tenseur symétrique du second ordre , le tenseur d' inertie .
+Il est toujours possible de choisir un système d' axes , dits axes principaux d' inertie , tels que la matrice représentative de ce tenseur prenne une forme diagonale .
+Les trois moments correspondants sont moments principaux d' inertie .
+Dans le cas particulier d' un solide homogène , ils ne dépendent que de la forme géométrique de celui-ci .
