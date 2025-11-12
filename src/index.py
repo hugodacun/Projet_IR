@@ -72,7 +72,7 @@ class InvertedIndex:
         with open(os.path.join(out_dir, "index.json"), "w", encoding="utf-8") as f:
             # sérialise le dict data en json dans le fichier
             # ensure_ascii juste pour s'assurer que les caractères non ASCII s'affiche proprement. 
-            json.dump(data, f, ensure_ascii=False) 
+            json.dump(data, f, ensure_ascii=False, indent=2) 
     #pas besoin de self 
 
      # ---------- Creation du fichier index_edge_ngrams.json ----------

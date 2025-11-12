@@ -138,17 +138,14 @@ st.title("IR Evaluation Dashboard")
 
 # Sidebar
 with st.sidebar:
-    st.header("Configuration")
-    models_dir = st.text_input("Models dir", value="models")
-    data_dir = st.text_input("Data dir", value="data/wiki_split_extract_2k")
-    jsonl_path = st.text_input("JSONL (queries & answers)", value="data/requetes.jsonl")
-
-    st.markdown("---")
-    st.subheader("Build / Rebuild")
+    models_dir = "models"
+    data_dir = "data/wiki_split_extract_2k"
+    jsonl_path = "data/requetes.jsonl"
+    st.subheader("Création de l'index inversé et edge n-grams")
     use_bigrams_build = st.checkbox("Use bigrams (build)", value=True, help="Sert lors du build de l’index.")
-    build_now = st.button("🛠️ Build/Rebuild index + edge n-grams")
+    build_now = st.button("Build/Rebuild index + edge n-grams")
     force_tfidf = st.checkbox("Forcer (re)build TF-IDF", value=False)
-    build_tfidf_now = st.button("🧮 Build/Rebuild TF-IDF (in-memory)")
+    build_tfidf_now = st.button("Build/Rebuild TF-IDF")
 
     st.markdown("---")
     st.subheader("Méthode de recherche")
@@ -168,7 +165,7 @@ with st.sidebar:
     st.markdown("---")
     st.subheader("Évaluation")
     k_eval = st.number_input("k pour @k", 1, 100, 10)
-    run_eval = st.button("🚀 Lancer l'évaluation")
+    run_eval = st.button("Lancer l'évaluation")
 
 # Cache simple de l'engine
 @st.cache_resource(show_spinner=False)
@@ -199,47 +196,9 @@ if build_tfidf_now:
         st.error(f"Échec TF-IDF: {e}")
 
 # Onglets
-tab_search, tab_eval, tab_compare = st.tabs(["🔍 Search", "📊 Eval", "🧪 Comparaison"])
+tab_eval, tab_compare = st.tabs(["Evaluation", "Comparaison"])
 
-# --- Tab Search ---
-with tab_search:
-    st.markdown("### Test interactif")
-    q = st.text_input("Query", "")
-    colA, colB = st.columns([1,3])
-    with colA:
-        if st.button("Search", key="btn_search"):
-            st.session_state["_do_search"] = True
 
-    if st.session_state.get("_do_search") and q:
-        t0 = time.time()
-        if method == "BM25":
-            res = engine.search(q, top_k=top_k)
-        elif method == "TF-IDF Cosine":
-            ensure_tfidf_loaded(engine, tf_scheme=tf_scheme, force=False)
-            res = engine.index.search_cosine(q, engine.preproc, use_bigrams=use_bigrams, top_k=top_k, tf_scheme=tf_scheme)
-        elif method == "Hybrid RRF":
-            ensure_tfidf_loaded(engine, tf_scheme=tf_scheme, force=False)
-            res = engine.index.search_hybrid_rrf(q, engine.preproc, use_bigrams=use_bigrams, k_lex=k_lex, k_vec=k_vec, top_k=top_k, rrf_k=rrf_k)
-        else:
-            ensure_tfidf_loaded(engine, tf_scheme=tf_scheme, force=False)
-            res = engine.index.search_hybrid_interp(q, engine.preproc, use_bigrams=use_bigrams, k_lex=k_lex, k_vec=k_vec, top_k=top_k, alpha=alpha)
-        dt = (time.time() - t0) * 1000
-
-        with colB:
-            st.caption(f"Latence: {dt:.1f} ms")
-            if not res:
-                st.warning("Aucun résultat.")
-            else:
-                st.dataframe(
-                    [{"rank": i+1, "doc_id": d, "score": s} for i, (d, s) in enumerate(res)],
-                    use_container_width=True
-                )
-            try:
-                ac = Autocomplete(f"{models_dir}/edge_index.json")
-                st.caption("Suggestions :")
-                st.write(", ".join(ac.suggest(q, top_k=5)) or "—")
-            except FileNotFoundError:
-                st.caption("Pas d’edge_index.json — clique 'Build/Rebuild index'.")
 
 # --- Tab Eval ---
 with tab_eval:
@@ -255,7 +214,7 @@ with tab_eval:
         rows = []
         sum_p = sum_r = sum_hit1 = sum_mrr = sum_ndcg = 0.0
         rank_hist = Counter()
-
+        # exemple : Q1: "langue roumain" 
         for qid, text in queries.items():
             cut = max(k_eval, 50)
             if method == "BM25":
@@ -268,6 +227,7 @@ with tab_eval:
                 res = engine.index.search_hybrid_interp(text, engine.preproc, use_bigrams=use_bigrams, k_lex=k_lex, k_vec=k_vec, top_k=cut, alpha=alpha)
 
             run = [d for d, _ in res]
+            # Q1: doc.. 
             rels = qrels.get(qid, {})
 
             p = precision_at_k(run, rels, k=k_eval)
