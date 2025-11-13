@@ -20,7 +20,6 @@ st.set_page_config(page_title="IR Evaluation Dashboard", layout="wide")
 # CSS léger pour des cartes propres (compatible dark/light)
 st.markdown("""
 <style>
-/* Conteneur carte */
 .card {
   border-radius: 14px;
   padding: 18px 20px;
@@ -29,7 +28,6 @@ st.markdown("""
   background: linear-gradient(135deg, rgba(20,32,44,.75), rgba(20,32,44,.55));
   border: 1px solid rgba(255,255,255,.08);
 }
-/* Carte claire (accent) */
 .card-accent {
   background: linear-gradient(135deg, #0e3a5b, #0f4c75);
   border: 1px solid rgba(255,255,255,.08);
@@ -49,6 +47,71 @@ st.markdown("""
 .sep { height: 8px; }
 </style>
 """, unsafe_allow_html=True)
+
+# --------- Couleurs et légende rubans (utilisées partout) ---------
+# Palette (inchangée)
+COLORS = {
+    "BM25": "#3b82f6",
+    "TF-IDF Cosine": "#22c55e",
+    "Hybrid RRF": "#f59e0b",
+    "Hybrid Interp": "#ef4444",
+}
+
+def ribbon_legend(labels: list[str], colors: list[str]) -> go.Figure:
+    """
+    Légende custom stable (aucun zoom/pan), en coordonnées 'paper'
+    pour éviter tout autoscale et chevauchement.
+    """
+    fig = go.Figure()
+
+    # Géométrie en coordonnées paper (0..1)
+    x0, y0 = 0.06, 0.30     # origine du premier ruban
+    w, h   = 0.20, 0.15     # largeur/hauteur d’un ruban
+    dx     = 0.05           # décalage pour l’inclinaison (parallélogramme)
+    pad    = 0.07           # petit espace entre rubans
+
+    for i, (lab, col) in enumerate(zip(labels, colors)):
+        xi = x0 + i * (w - dx + pad)
+
+        # Parallélogramme : coordonnées en 'paper'
+        path = (
+            f"M {xi},{y0} "
+            f"L {xi+w},{y0} "
+            f"L {xi+w-dx},{y0+h} "
+            f"L {xi-dx},{y0+h} Z"
+        )
+        fig.add_shape(
+            type="path",
+            path=path,
+            fillcolor=col,
+            line=dict(width=0),
+            xref="paper", yref="paper",  # <<< clé pour stabilité
+            layer="below"
+        )
+
+        # Label centré dans le ruban
+        fig.add_annotation(
+            x=xi + (w / 2),          # <-- ICI : w/2 sans le - dx/2
+            y=y0 + (h / 2),
+            xref="paper", yref="paper",
+            text=lab,
+            showarrow=False,
+            font=dict(color="white", size=15),
+            align="center"
+        )
+
+
+    # On cache axes et on fixe une taille confortable
+    fig.update_xaxes(visible=False)
+    fig.update_yaxes(visible=False)
+    fig.update_layout(
+        height=130,
+        margin=dict(l=0, r=0, t=0, b=0),
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        dragmode=False
+    )
+    return fig
 
 # ---------- helpers ----------
 def load_jsonl_queries(path: str) -> List[Tuple[str, str, str]]:
@@ -125,7 +188,6 @@ def notify_build_result(before: dict, after: dict, path: str = "models/index.jso
     if before.get("md5_10") == after.get("md5_10"):
         st.toast(f"ℹ️ Aucun changement — taille: {after.get('size_kb', 0):.1f} KB")
         return
-    # modifié
     delta = None
     if isinstance(before.get("size_kb"), (int, float)) and isinstance(after.get("size_kb"), (int, float)):
         delta = after["size_kb"] - before["size_kb"]
@@ -133,7 +195,7 @@ def notify_build_result(before: dict, after: dict, path: str = "models/index.jso
     delta_txt = f"{fleche} {delta:+.1f} KB" if delta is not None else "taille modifiée"
     st.toast(f"✅ {path} mis à jour — {delta_txt}, nouvelle taille: {after.get('size_kb', 0):.1f} KB")
 
-# ============ Header =============
+# ============ Header ============
 st.title("IR Evaluation Dashboard")
 
 # Sidebar
@@ -198,8 +260,6 @@ if build_tfidf_now:
 # Onglets
 tab_eval, tab_compare = st.tabs(["Evaluation", "Comparaison"])
 
-
-
 # --- Tab Eval ---
 with tab_eval:
     if run_eval:
@@ -214,7 +274,6 @@ with tab_eval:
         rows = []
         sum_p = sum_r = sum_hit1 = sum_mrr = sum_ndcg = 0.0
         rank_hist = Counter()
-        # exemple : Q1: "langue roumain" 
         for qid, text in queries.items():
             cut = max(k_eval, 50)
             if method == "BM25":
@@ -227,7 +286,6 @@ with tab_eval:
                 res = engine.index.search_hybrid_interp(text, engine.preproc, use_bigrams=use_bigrams, k_lex=k_lex, k_vec=k_vec, top_k=cut, alpha=alpha)
 
             run = [d for d, _ in res]
-            # Q1: doc.. 
             rels = qrels.get(qid, {})
 
             p = precision_at_k(run, rels, k=k_eval)
@@ -289,7 +347,6 @@ def donut_gauge(title: str, value: float, maxv: float = 1.0):
         hole=.75,
         textinfo='none'
     )])
-    # couleurs par défaut (s’adapte au thème)
     fig.update_traces(marker=dict(colors=["#FFB703", "#334155"]), hoverinfo='skip')
     fig.update_layout(
         margin=dict(l=0, r=0, t=0, b=0),
@@ -309,7 +366,7 @@ def kpi_card(title: str, value: float | str, sub: str = "", accent: bool = False
     </div>
     """, unsafe_allow_html=True)
 
-# --- Tab Comparison (NOUVEAU DESIGN) ---
+# --- Tab Comparison ---
 with tab_compare:
     st.markdown("### Comparaison multi-méthodes")
 
@@ -399,15 +456,12 @@ with tab_compare:
             g1, g2, g3 = st.columns(3)
             metric_map = {"P@k": "P@k", "R@k":"R@k", "Hit@1":"Hit@1", "MRR":"MRR", "nDCG@k":"nDCG@k"}
             key = metric_map[metric_for_gauge]
-            # on met la meilleure méthode au centre
             row_g = df.loc[df[key].idxmax()]
             with g1:
                 st.plotly_chart(donut_gauge(f"{metric_for_gauge} (best)", row_g[key], 1.0), use_container_width=True)
             with g2:
-                # moyenne globale
                 st.plotly_chart(donut_gauge(f"{metric_for_gauge} (moy.)", df[key].mean(), 1.0), use_container_width=True)
             with g3:
-                # deuxième (si dispo)
                 if len(df) > 1:
                     second = df.sort_values(key, ascending=False).iloc[1]
                     st.plotly_chart(donut_gauge(f"{metric_for_gauge} (2ᵉ)", second[key], 1.0), use_container_width=True)
@@ -416,18 +470,168 @@ with tab_compare:
 
             st.markdown('<div class="sep"></div>', unsafe_allow_html=True)
 
-            # ======== Barres par métrique ========
-            st.subheader("Scores par méthode")
-            colm1, colm2 = st.columns(2)
-            with colm1:
-                st.bar_chart(df.set_index("Méthode")["P@k"])
-                st.bar_chart(df.set_index("Méthode")["Hit@1"])
-            with colm2:
-                st.bar_chart(df.set_index("Méthode")["R@k"])
-                st.bar_chart(df.set_index("Méthode")["MRR"])
+            # ======== Légende inclinée (UNE SEULE FOIS) ========
+            labels = df["Méthode"].tolist()
+            colors = [COLORS.get(m, "#999999") for m in labels]
+            st.plotly_chart(
+                ribbon_legend(labels, colors),
+                use_container_width=True,
+                config={"staticPlot": True, "displayModeBar": False}
+            )
 
-            st.bar_chart(df.set_index("Méthode")["nDCG@k"])
+            # ======== Graphiques barres (sans légende) ========
+            # ======== Graphiques barres (sans légende) ========
+            def plot_metric_group(df: pd.DataFrame, metric: str) -> go.Figure:
+                """
+                4 barres séparées, plus fines, sans légende.
+                Axe Y auto-zoomé autour des valeurs du metric.
+                """
+                fig = go.Figure()
+                xs = list(range(len(df)))  # positions 0,1,2,3
+
+                # valeurs numériques du metric
+                vals = [float(v) for v in df[metric].tolist()]
+                vmin, vmax = min(vals), max(vals)
+                delta = vmax - vmin
+
+                # on définit une petite marge autour (pour bien voir les différences)
+                if delta == 0:
+                    # tous identiques : on met une fenêtre serrée autour de la valeur
+                    margin = max(0.01, vmin * 0.2)
+                else:
+                    margin = delta * 0.5   # tu peux augmenter à 0.7 si tu veux encore plus zoomé
+
+                y_low  = max(0.0, vmin - margin)
+                y_high = min(1.0, vmax + margin)
+
+                for i, (_, row) in enumerate(df.iterrows()):
+                    method = row["Méthode"]
+                    value = float(row[metric])
+                    fig.add_bar(
+                        x=[xs[i]],
+                        y=[value],
+                        width=0.35,
+                        marker_color=COLORS.get(method, None),
+                        name=method,
+                        hovertemplate=f"{method}<br>{metric}: %{{y:.3f}}<extra></extra>"
+                )
+
+                fig.update_layout(
+                    barmode="group",
+                    bargap=0.35,
+                    showlegend=False,
+                    margin=dict(l=10, r=10, t=10, b=0),
+                    yaxis_title=metric,
+                    dragmode=False,
+                    yaxis=dict(range=[y_low, y_high])   # ⬅️ zoom sur la zone utile
+                )
+                fig.update_xaxes(showticklabels=False, showgrid=False, zeroline=False)
+                return fig
+
+
+            st.subheader("Scores par méthode")
+            config_static = {"staticPlot": True, "displayModeBar": False}
+
+            colm1, colm2 = st.columns(2)
+
+            with colm1:
+                # 1er graphique
+                st.plotly_chart(
+                    plot_metric_group(df, "P@k"),
+                    use_container_width=True,
+                    config=config_static,
+                )
+                # ESPACE vertical
+                st.markdown("<div style='height:25px;'></div>", unsafe_allow_html=True)
+
+                # 2e graphique
+                st.plotly_chart(
+                    plot_metric_group(df, "Hit@1"),
+                    use_container_width=True,
+                    config=config_static,
+                )
+
+            with colm2:
+                # 3e graphique
+                st.plotly_chart(
+                    plot_metric_group(df, "R@k"),
+                    use_container_width=True,
+                    config=config_static,
+                )
+                # ESPACE vertical
+                st.markdown("<div style='height:25px;'></div>", unsafe_allow_html=True)
+
+                # 4e graphique
+                st.plotly_chart(
+                    plot_metric_group(df, "MRR"),
+                    use_container_width=True,
+                    config=config_static,
+                )   
+
+            # encore un petit espace avant le dernier
+            st.markdown("<div style='height:30px;'></div>", unsafe_allow_html=True)
+
+            st.plotly_chart(
+                plot_metric_group(df, "nDCG@k"),
+                use_container_width=True,
+                config=config_static,
+            )
+
 
             # ======== Tableau récap ========
+            def styled_table(df: pd.DataFrame) -> go.Figure:
+                """
+                Tableau comparatif stylé avec en-tête foncée et zébrage des lignes.
+                """
+                # On enlève l'index 0,1,2,3 qui ne sert à rien dans l'affichage
+                df_display = df.reset_index(drop=True)
+
+                headers = list(df_display.columns)
+                cells = [df_display[col].tolist() for col in headers]
+
+                n_rows = len(df_display)
+                # zébrage des lignes : une couleur sur les lignes paires, une autre sur les impaires
+                row_colors = [
+                    "rgba(15,23,42,0.95)" if i % 2 == 0 else "rgba(31,41,55,0.95)"
+                    for i in range(n_rows)
+                ]
+
+                fig = go.Figure(
+                    data=[
+                        go.Table(
+                            columnwidth=[60] + [40] * (len(headers) - 1),
+                            header=dict(
+                                values=headers,
+                                fill_color="#020617",         # bandeau très foncé
+                                line_color="#0f172a",
+                                align="center",
+                                font=dict(color="white", size=14, family="Segoe UI"),
+                                height=38,
+                            ),
+                            cells=dict(
+                                values=cells,
+                                fill_color=[row_colors],      # zébrage
+                                line_color="#0f172a",
+                                align=["left"] + ["center"] * (len(headers) - 1),
+                                font=dict(color="#e5e7eb", size=13),
+                                height=32,
+                            ),
+                        )
+                    ]
+                )
+
+                fig.update_layout(
+                    margin=dict(l=0, r=0, t=0, b=0),
+                    paper_bgcolor="rgba(0,0,0,0)",
+                    plot_bgcolor="rgba(0,0,0,0)",
+                )
+                return fig
+
             st.subheader("Tableau comparatif")
-            st.dataframe(df, use_container_width=True)
+
+            st.plotly_chart(
+                styled_table(df),
+                use_container_width=True,
+                config={"staticPlot": True, "displayModeBar": False}
+            )
+
