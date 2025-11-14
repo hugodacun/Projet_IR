@@ -6,6 +6,7 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px   
+from pathlib import Path
 
 from src.search import SearchEngine
 from src.metrics import precision_at_k, recall_at_k, hit_at_1, mrr, ndcg_at_k
@@ -44,6 +45,19 @@ st.markdown("""
   background: rgba(255,255,255,.06);
 }
 .sep { height: 8px; }
+.stButton > button {
+  background: linear-gradient(135deg, #dc2626, #ef4444);  /* rouge vif */
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 999px;
+  border: 1px solid rgba(248, 113, 113, .6);
+  padding: 0.4rem 1.4rem;
+}
+
+.stButton > button:hover {
+  background: linear-gradient(135deg, #b91c1c, #dc2626);
+  border-color: rgba(254, 202, 202, .9);
+}        
 </style>
 """, unsafe_allow_html=True)
 
@@ -204,7 +218,7 @@ with st.sidebar:
     data_dir = "data/wiki_split_extract_2k"
     jsonl_path = "data/requetes.jsonl"
     st.subheader("Création de l'index inversé et edge n-grams")
-    use_bigrams_build = st.checkbox("Use bigrams (build)", value=True, help="Sert lors du build de l’index.")
+    use_bigrams_build = st.checkbox("Utilisation des bigrams", value=True, help="Sert lors du build de l’index.")
     build_now = st.button("Build/Rebuild index + edge n-grams")
     force_tfidf = st.checkbox("Forcer (re)build TF-IDF", value=False)
     build_tfidf_now = st.button("Build/Rebuild TF-IDF")
@@ -225,13 +239,16 @@ with st.sidebar:
     st.markdown("---")
     st.subheader("Évaluation")
     k_eval = st.number_input("k pour @k", 1, 100, 10)
-    run_eval = st.button("Lancer l'évaluation")
+    run_eval = st.button("▶ Lancer l'évaluation")
 
 # Cache simple de l'engine
 @st.cache_resource(show_spinner=False)
 def get_engine(models_dir: str) -> SearchEngine:
     eng = SearchEngine(models_dir=models_dir)
-    eng.load()
+    index_path = Path(models_dir) / "index.json"
+
+    if index_path.exists():
+        eng.load()   # on ne charge que si le fichier est là
     return eng
 
 engine = get_engine(models_dir)
@@ -239,14 +256,35 @@ engine = get_engine(models_dir)
 # Actions build/rebuild
 if build_now:
     try:
-        before = file_info(f"{models_dir}/index.json")
-        idx, _ = build_all_artifacts(data_dir, models_dir, use_bigrams=use_bigrams_build)
-        engine = SearchEngine(models_dir=models_dir)
-        engine.load()
-        after = file_info(f"{models_dir}/index.json")
-        notify_build_result(before, after, path=f"{models_dir}/index.json")
+        index_path = Path(models_dir) / "index.json"
+
+        # Avant le build : si l'index existe, on récupère ses infos,
+        # sinon on met un dict vide (pour éviter NoneType)
+        if index_path.exists():
+            before = file_info(str(index_path))
+        else:
+            before = {}   # 👈 au lieu de None
+
+        idx, _ = build_all_artifacts(
+            data_dir,
+            models_dir,
+            use_bigrams=use_bigrams_build
+        )
+
+        # Recharger le moteur en vidant le cache
+        get_engine.clear()
+        engine = get_engine(models_dir)
+
+        after = file_info(str(index_path))
+
+        notify_build_result(before, after, path=str(index_path))
+
+        st.success("Index (re)construit avec succès ✅")
+
     except Exception as e:
         st.error(f"Échec build: {e}")
+
+
 
 if build_tfidf_now:
     try:
@@ -257,9 +295,56 @@ if build_tfidf_now:
 
 # Onglets
 tab_eval, tab_compare = st.tabs(["Evaluation", "Comparaison"])
+def styled_table(df: pd.DataFrame) -> go.Figure:
+                """
+                Tableau comparatif stylé avec en-tête foncée et zébrage des lignes.
+                """
+                # On enlève l'index 0,1,2,3 qui ne sert à rien dans l'affichage
+                df_display = df.reset_index(drop=True)
 
+                headers = list(df_display.columns)
+                cells = [df_display[col].tolist() for col in headers]
+
+                n_rows = len(df_display)
+                # zébrage des lignes : une couleur sur les lignes paires, une autre sur les impaires
+                row_colors = [
+                    "rgba(15,23,42,0.95)" if i % 2 == 0 else "rgba(31,41,55,0.95)"
+                    for i in range(n_rows)
+                ]
+
+                fig = go.Figure(
+                    data=[
+                        go.Table(
+                            columnwidth=[60] + [40] * (len(headers) - 1),
+                            header=dict(
+                                values=headers,
+                                fill_color="#020617",         # bandeau très foncé
+                                line_color="#0f172a",
+                                align="center",
+                                font=dict(color="white", size=14, family="Segoe UI"),
+                                height=38,
+                            ),
+                            cells=dict(
+                                values=cells,
+                                fill_color=[row_colors],      # zébrage
+                                line_color="#0f172a",
+                                align=["left"] + ["center"] * (len(headers) - 1),
+                                font=dict(color="#e5e7eb", size=13),
+                                height=32,
+                            ),
+                        )
+                    ]
+                )
+
+                fig.update_layout(
+                    margin=dict(l=0, r=0, t=0, b=0),
+                    paper_bgcolor="rgba(0,0,0,0)",
+                    plot_bgcolor="rgba(0,0,0,0)",
+                )
+                return fig
 # --- Tab Eval ---
 with tab_eval:
+
     if run_eval:
         triples = load_jsonl_queries(jsonl_path)
         qrels, queries = to_qrels(triples)
@@ -374,15 +459,78 @@ with tab_eval:
 
 
         st.subheader("Détails par requête")
-        st.dataframe(rows, use_container_width=True)
 
+        df_rows = pd.DataFrame(rows)
 
+        # (optionnel) forcer 3 décimales sur les colonnes numériques
+        num_cols = [c for c in df_rows.columns if c not in ("qid", "query", "answer")]
+        df_rows[num_cols] = df_rows[num_cols].astype(float).round(3)
+
+        # --- CSS + HTML pour un tableau scrollable avec le même style sombre ---
+        st.markdown("""
+        <style>
+        .details-wrapper {
+            max-height: 420px;         /* hauteur visible -> scroll interne */
+            overflow-y: auto;
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,.08);
+            box-shadow: 0 8px 18px rgba(0,0,0,.12);
+        }
+        table.details-table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 13px;
+        }
+        table.details-table thead th {
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            background-color: #020617;   /* header foncé */
+            color: #ffffff;
+            text-align: center;
+            padding: 8px;
+            border-bottom: 1px solid #111827;
+        }
+        table.details-table tbody td {
+            background-color: #030712;
+            color: #e5e7eb;
+            padding: 6px 8px;
+            text-align: center;
+            border-top: 1px solid #111827;
+        }
+        table.details-table tbody tr:nth-child(even) td {
+            background-color: #111827;   /* zébrage */
+        }
+        /* query + answer alignés à gauche pour être plus lisibles */
+        table.details-table tbody td:nth-child(2),
+        table.details-table tbody td:nth-child(3) {
+            text-align: left;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+
+        # HTML du tableau sans index
+        html_table = df_rows.to_html(
+            index=False,
+            classes="details-table",
+            escape=False
+        )
+
+        st.markdown(
+            f'<div class="details-wrapper">{html_table}</div>',
+            unsafe_allow_html=True
+        )
+
+        # --- Export CSV ---
+        csv_data = df_rows.to_csv(index=False).encode("utf-8")
         st.download_button(
             "⬇️ Export CSV",
-            data="\n".join([",".join(map(str, r.values())) for r in rows]),
+            data=csv_data,
             file_name="eval_results.csv",
             mime="text/csv"
         )
+
+
     else:
         st.info("Configure et clique dans la sidebar pour évaluer.")
 
@@ -417,6 +565,8 @@ def kpi_card(title: str, value: float | str, sub: str = "", accent: bool = False
 
 # --- Tab Comparison ---
 with tab_compare:
+            # ======== Tableau récap ========
+
     st.markdown("### Comparaison multi-méthodes")
 
     # Choix méthodes + paramètres
@@ -426,7 +576,8 @@ with tab_compare:
         do_cos = st.checkbox("TF-IDF Cosine (log)", value=True)
         do_rrf = st.checkbox("Hybrid RRF", value=True)
         do_interp = st.checkbox("Hybrid Interp", value=True)
-        metric_for_gauge = st.selectbox("Jauge principale", ["P@k", "R@k", "Hit@1", "MRR", "nDCG@k"], index=0)
+        metric_for_gauge = st.selectbox("Métrique principale affichée dans la jauge", ["P@k", "R@k", "Hit@1", "MRR", "nDCG@k"], index=0)
+        
     with coly:
         k_eval_cmp = st.number_input("k pour @k (comparaison)", 1, 100, 10, key="k_eval_cmp")
         k_lex_cmp = st.number_input("k_lex (RRF/Interp)", 10, 2000, 200, 10, key="klexcmp")
@@ -434,7 +585,7 @@ with tab_compare:
         rrf_k_cmp = st.number_input("rrf_k (RRF)", 1, 200, 60, 1, key="rrfkc")
         alpha_cmp = st.slider("alpha (Interp)", 0.0, 1.0, 0.6, 0.05, key="alphacmp")
 
-    if st.button("▶️ Lancer la comparaison"):
+    if st.button("▶ Lancer la comparaison"):
         triples = load_jsonl_queries(jsonl_path)
         qrels, queries = to_qrels(triples)
         methods = []
@@ -507,13 +658,13 @@ with tab_compare:
             key = metric_map[metric_for_gauge]
             row_g = df.loc[df[key].idxmax()]
             with g1:
-                st.plotly_chart(donut_gauge(f"{metric_for_gauge} (best)", row_g[key], 1.0), use_container_width=True)
+                st.plotly_chart(donut_gauge(f"{metric_for_gauge} (1er)", row_g[key], 1.0), use_container_width=True)
             with g2:
                 st.plotly_chart(donut_gauge(f"{metric_for_gauge} (moy.)", df[key].mean(), 1.0), use_container_width=True)
             with g3:
                 if len(df) > 1:
                     second = df.sort_values(key, ascending=False).iloc[1]
-                    st.plotly_chart(donut_gauge(f"{metric_for_gauge} (2ᵉ)", second[key], 1.0), use_container_width=True)
+                    st.plotly_chart(donut_gauge(f"{metric_for_gauge} (2e)", second[key], 1.0), use_container_width=True)
                 else:
                     st.plotly_chart(donut_gauge(f"{metric_for_gauge}", row_g[key], 1.0), use_container_width=True)
 
@@ -630,54 +781,7 @@ with tab_compare:
             )
 
 
-            # ======== Tableau récap ========
-            def styled_table(df: pd.DataFrame) -> go.Figure:
-                """
-                Tableau comparatif stylé avec en-tête foncée et zébrage des lignes.
-                """
-                # On enlève l'index 0,1,2,3 qui ne sert à rien dans l'affichage
-                df_display = df.reset_index(drop=True)
 
-                headers = list(df_display.columns)
-                cells = [df_display[col].tolist() for col in headers]
-
-                n_rows = len(df_display)
-                # zébrage des lignes : une couleur sur les lignes paires, une autre sur les impaires
-                row_colors = [
-                    "rgba(15,23,42,0.95)" if i % 2 == 0 else "rgba(31,41,55,0.95)"
-                    for i in range(n_rows)
-                ]
-
-                fig = go.Figure(
-                    data=[
-                        go.Table(
-                            columnwidth=[60] + [40] * (len(headers) - 1),
-                            header=dict(
-                                values=headers,
-                                fill_color="#020617",         # bandeau très foncé
-                                line_color="#0f172a",
-                                align="center",
-                                font=dict(color="white", size=14, family="Segoe UI"),
-                                height=38,
-                            ),
-                            cells=dict(
-                                values=cells,
-                                fill_color=[row_colors],      # zébrage
-                                line_color="#0f172a",
-                                align=["left"] + ["center"] * (len(headers) - 1),
-                                font=dict(color="#e5e7eb", size=13),
-                                height=32,
-                            ),
-                        )
-                    ]
-                )
-
-                fig.update_layout(
-                    margin=dict(l=0, r=0, t=0, b=0),
-                    paper_bgcolor="rgba(0,0,0,0)",
-                    plot_bgcolor="rgba(0,0,0,0)",
-                )
-                return fig
 
             st.subheader("Tableau comparatif")
             st.markdown("<div style='height:20px;'></div>", unsafe_allow_html=True)
