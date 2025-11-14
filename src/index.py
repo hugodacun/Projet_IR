@@ -187,7 +187,7 @@ class InvertedIndex:
         return math.log(1.0 + (self.N + 1.0) / (df + 1.0))
         
     def build_tfidf(self, tf_scheme: str = "log"):
-        """
+        """ doc {term: tf-idf}
         Construit les vecteurs TF-IDF documentaires et leurs normes.
         tf_scheme: "raw" (tf), "log" (1+log tf)
         """

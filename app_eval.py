@@ -14,10 +14,17 @@ from src.index import InvertedIndex
 from src.preprocess import TextPreprocessor
 from src.suggest import Autocomplete
 
-# ============ Style global de l'interface (cartes façon dashboard) ============
+# ============================== Style global de l'interface (cartes façon dashboard) =============================
 st.set_page_config(page_title="IR Evaluation Dashboard", layout="wide")
+# ----- Flags de session pour contrôler index / TF-IDF -----
+if "tfidf_ready" not in st.session_state:
+    st.session_state["tfidf_ready"] = False
 
-# CSS 
+if "index_ready" not in st.session_state:
+    from pathlib import Path
+    st.session_state["index_ready"] = (Path("models") / "index.json").exists()
+
+# ---------------------------------------------------CSS --------------------------------------------------------
 st.markdown("""
 <style>
 .card {
@@ -61,15 +68,13 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# --------- Couleurs et légende rubans ---------
-# Palette (inchangée)
+# ------------------------------------------------ Couleurs et légende rubans ---------------------------------------------
 COLORS = {
-    "BM25":        "#9eacd3",  # bleu foncé
-    "TF-IDF Cosine": "#37486E",  # bleu un peu moins foncé
-    "Hybrid RRF":  "#5373A7",  # bleu moyen
-    "Hybrid Interp": "#d9dde0",  # bleu plus clair
+    "BM25":        "#9eacd3",  
+    "TF-IDF Cosine": "#37486E",  
+    "Hybrid RRF":  "#5373A7",  
+    "Hybrid Interp": "#d9dde0", 
 }
-
 
 def ribbon_legend(labels: list[str], colors: list[str]) -> go.Figure:
     """
@@ -77,17 +82,14 @@ def ribbon_legend(labels: list[str], colors: list[str]) -> go.Figure:
     pour éviter tout autoscale et chevauchement.
     """
     fig = go.Figure()
-
-    # Géométrie en coordonnées paper (0..1)
-    x0, y0 = 0.06, 0.30     # origine du premier ruban
-    w, h   = 0.20, 0.15     # largeur/hauteur d’un ruban
-    dx     = 0.05           # décalage pour l’inclinaison (parallélogramme)
-    pad    = 0.07           # petit espace entre rubans
+    x0, y0 = 0.06, 0.30    
+    w, h   = 0.20, 0.15     
+    dx     = 0.05           
+    pad    = 0.07          
 
     for i, (lab, col) in enumerate(zip(labels, colors)):
         xi = x0 + i * (w - dx + pad)
 
-        # Parallélogramme : coordonnées en 'paper'
         path = (
             f"M {xi},{y0} "
             f"L {xi+w},{y0} "
@@ -99,13 +101,12 @@ def ribbon_legend(labels: list[str], colors: list[str]) -> go.Figure:
             path=path,
             fillcolor=col,
             line=dict(width=0),
-            xref="paper", yref="paper",  # <<< clé pour stabilité
+            xref="paper", yref="paper",  
             layer="below"
         )
 
-        # Label centré dans le ruban
         fig.add_annotation(
-            x=xi + (w / 2),          # <-- ICI : w/2 sans le - dx/2
+            x=xi + (w / 2),        
             y=y0 + (h / 2),
             xref="paper", yref="paper",
             text=lab,
@@ -114,8 +115,6 @@ def ribbon_legend(labels: list[str], colors: list[str]) -> go.Figure:
             align="center"
         )
 
-
-    # On cache axes et on fixe une taille confortable
     fig.update_xaxes(visible=False)
     fig.update_yaxes(visible=False)
     fig.update_layout(
@@ -127,9 +126,9 @@ def ribbon_legend(labels: list[str], colors: list[str]) -> go.Figure:
     )
     return fig
 
-# ---------- helpers ----------
+# -------------------------------------------------------- helpers ---------------------------------------------------
 def load_jsonl_queries(path: str) -> List[Tuple[str, str, str]]:
-    """Retourne [(qid, query, answer_doc)] à partir d'un jsonl {Answer file, Queries}."""
+    """Retourne [(qid, query, answer_doc)] à partir de requetes jsonl {Answer file, Queries}."""
     triples, qid = [], 1
     with open(path, encoding="utf-8") as f:
         for line in f:
@@ -173,16 +172,16 @@ def file_info(path: str) -> dict:
         "md5_10": h,
     }
 
-# ---------- build utils ----------
+# ----------------------------------------------------- build utils --------------------------------------------------
 def build_all_artifacts(data_dir: str, models_dir: str, use_bigrams: bool = True):
     """Build index + edge n-grams and save to models_dir (écrase les anciens)."""
     preproc = TextPreprocessor(use_stemming=True, keep_digits=True)
     idx = InvertedIndex()
     st.toast("Construction de l’index…")
     idx.build(data_dir, preproc, use_bigrams=use_bigrams)
-    idx.save(models_dir)                 # (ré)écrit models/index.json
+    idx.save(models_dir)             
     st.toast("Génération des edge n-grams…")
-    idx.save_edge_index(models_dir)      # (ré)écrit models/edge_index.json
+    idx.save_edge_index(models_dir)     
     st.toast("Index + edge n-grams sauvegardés", icon="✅")
     return idx, preproc
 
@@ -191,7 +190,7 @@ def ensure_tfidf_loaded(engine: SearchEngine, tf_scheme: str = "log", force: boo
     if force or not getattr(engine.index, "doc_tfidf", None):
         engine.index.build_tfidf(tf_scheme=tf_scheme)
 
-# --- Petite notif synthèse après build ---
+# ---------------------------notification synthèse après build d'indexe et edge_ngrams---------------------------
 def notify_build_result(before: dict, after: dict, path: str = "models/index.json"):
     if not after.get("exists"):
         st.toast(f"❌ {path} introuvable après le build.")
@@ -209,10 +208,10 @@ def notify_build_result(before: dict, after: dict, path: str = "models/index.jso
     delta_txt = f"{fleche} {delta:+.1f} KB" if delta is not None else "taille modifiée"
     st.toast(f"✅ {path} mis à jour — {delta_txt}, nouvelle taille: {after.get('size_kb', 0):.1f} KB")
 
-# ============ Header ============
+# ============================================== Header ============================================================
 st.title("IR Evaluation Dashboard")
 
-# Sidebar
+# ---------------------------------------------------------Sidebar-------------------------------------------------
 with st.sidebar:
     models_dir = "models"
     data_dir = "data/wiki_split_extract_2k"
@@ -240,8 +239,7 @@ with st.sidebar:
     st.subheader("Évaluation")
     k_eval = st.number_input("k pour @k", 1, 100, 10)
     run_eval = st.button("▶ Lancer l'évaluation")
-
-# Cache simple de l'engine
+# -------------------------------------------------- Charger le moteur ------------------------------------------------
 @st.cache_resource(show_spinner=False)
 def get_engine(models_dir: str) -> SearchEngine:
     eng = SearchEngine(models_dir=models_dir)
@@ -253,7 +251,7 @@ def get_engine(models_dir: str) -> SearchEngine:
 
 engine = get_engine(models_dir)
 
-# Actions build/rebuild
+#----------------------------------------------------- Build index --------------------------------------------------
 if build_now:
     try:
         index_path = Path(models_dir) / "index.json"
@@ -263,7 +261,7 @@ if build_now:
         if index_path.exists():
             before = file_info(str(index_path))
         else:
-            before = {}   # 👈 au lieu de None
+            before = {}   
 
         idx, _ = build_all_artifacts(
             data_dir,
@@ -280,33 +278,46 @@ if build_now:
         notify_build_result(before, after, path=str(index_path))
 
         st.success("Index (re)construit avec succès ✅")
+                # L'index a changé → on invalide le TF-IDF
+        st.session_state["index_ready"] = True
+        st.session_state["tfidf_ready"] = False
+
+        # On vide un éventuel TF-IDF encore en mémoire
+        if hasattr(engine.index, "doc_tfidf"):
+            engine.index.doc_tfidf = {}
+        if hasattr(engine.index, "doc_norm"):
+            engine.index.doc_norm = {}
 
     except Exception as e:
         st.error(f"Échec build: {e}")
-
-
-
+#-------------------------------------------------- Build TF-IDF ---------------------------------------------------
 if build_tfidf_now:
-    try:
-        ensure_tfidf_loaded(engine, tf_scheme=tf_scheme, force=force_tfidf)
-        st.toast("TF-IDF (in-memory)", icon="✅")
-    except Exception as e:
-        st.error(f"Échec TF-IDF: {e}")
+    index_path = Path(models_dir) / "index.json"
+    if not index_path.exists():
+        msg = "⚠️ Construis d'abord l'index (bouton *Build/Rebuild index + edge n-grams* dans la sidebar)."
+        st.warning(msg)
+        st.toast(msg)
+    else:
+        try:
+            # Ici on force vraiment le (re)build parce que l'utilisateur a cliqué sur le bouton
+            ensure_tfidf_loaded(engine, tf_scheme=tf_scheme, force=True)
+            st.session_state["tfidf_ready"] = True
+            st.toast("TF-IDF construit en mémoire ✅", icon="✅")
+        except Exception as e:
+            st.error(f"Échec TF-IDF: {e}")
 
-# Onglets
+# -------------------------------------------------- Design Tableau d'interface ---------------------------------------------------
 tab_eval, tab_compare = st.tabs(["Evaluation", "Comparaison"])
 def styled_table(df: pd.DataFrame) -> go.Figure:
                 """
                 Tableau comparatif stylé avec en-tête foncée et zébrage des lignes.
                 """
-                # On enlève l'index 0,1,2,3 qui ne sert à rien dans l'affichage
                 df_display = df.reset_index(drop=True)
 
                 headers = list(df_display.columns)
                 cells = [df_display[col].tolist() for col in headers]
 
                 n_rows = len(df_display)
-                # zébrage des lignes : une couleur sur les lignes paires, une autre sur les impaires
                 row_colors = [
                     "rgba(15,23,42,0.95)" if i % 2 == 0 else "rgba(31,41,55,0.95)"
                     for i in range(n_rows)
@@ -318,7 +329,7 @@ def styled_table(df: pd.DataFrame) -> go.Figure:
                             columnwidth=[60] + [40] * (len(headers) - 1),
                             header=dict(
                                 values=headers,
-                                fill_color="#020617",         # bandeau très foncé
+                                fill_color="#020617",        
                                 line_color="#0f172a",
                                 align="center",
                                 font=dict(color="white", size=14, family="Segoe UI"),
@@ -326,7 +337,7 @@ def styled_table(df: pd.DataFrame) -> go.Figure:
                             ),
                             cells=dict(
                                 values=cells,
-                                fill_color=[row_colors],      # zébrage
+                                fill_color=[row_colors],      
                                 line_color="#0f172a",
                                 align=["left"] + ["center"] * (len(headers) - 1),
                                 font=dict(color="#e5e7eb", size=13),
@@ -342,17 +353,32 @@ def styled_table(df: pd.DataFrame) -> go.Figure:
                     plot_bgcolor="rgba(0,0,0,0)",
                 )
                 return fig
-# --- Tab Eval ---
+# --------------------------------------------------------- Tab Eval --------------------------------------------------------
 with tab_eval:
 
     if run_eval:
+        index_path = Path(models_dir) / "index.json"
+
+        # 1) Vérifier que l'index existe
+        if not index_path.exists():
+            msg = "Cliquer d'abord sur **Build/Rebuild index + edge n-grams** dans la sidebar."
+            st.warning(msg)
+            st.toast(msg)
+            st.stop()
+
+        # 2) Vérifier TF-IDF pour les méthodes qui en ont besoin
+        if method in ("TF-IDF Cosine", "Hybrid RRF", "Hybrid Interp"):
+            if not st.session_state.get("tfidf_ready", False):
+                msg = "Pour ces méthodes, cliquer d'abord sur **Build/Rebuild TF-IDF** dans la sidebar."
+                st.warning(msg)
+                st.toast(msg)
+                st.stop()
+
         triples = load_jsonl_queries(jsonl_path)
         qrels, queries = to_qrels(triples)
         n = len(queries)
         st.write(f"**Évaluation sur {n} requêtes**")
 
-        if method in ("TF-IDF Cosine", "Hybrid RRF", "Hybrid Interp"):
-            ensure_tfidf_loaded(engine, tf_scheme=tf_scheme, force=False)
 
         rows = []
         sum_p = sum_r = sum_hit1 = sum_mrr = sum_ndcg = 0.0
@@ -394,7 +420,7 @@ with tab_eval:
                 "rank": rank
             })
 
-        # ----- Scores moyens (macro) : affichage en cartes -----
+# ----------------------------------- Scores moyens: affichage en cartes ------------------------------------------
         st.subheader("Scores moyens ")
 
         avg_scores = {
@@ -405,31 +431,18 @@ with tab_eval:
             f"nDCG@{k_eval}": round(sum_ndcg / n, 3),
         }
 
-        # une colonne par métrique
         cols = st.columns(len(avg_scores))
 
         for col, (name, value) in zip(cols, avg_scores.items()):
             with col:
                 st.metric(label=name, value=f"{value:.3f}")
-
-
+# ----------------------------------- Histogramme des rangs ------------------------------------------
         st.subheader("Distribution des rangs")
 
-        # 1) Même logique de buckets que plus haut
         keys_ordered = [i for i in range(1, k_eval + 1)] + [f">{k_eval}", "miss"]
-
-        # 2) Labels affichés (tout en string)
         x_labels = [str(k) for k in keys_ordered]
-
-        # 3) Valeurs associées (on prend bien les clés originales : int, ">k", "miss")
         y_values = [rank_hist.get(k, 0) for k in keys_ordered]
-
-        # (option debug, tu peux commenter après test)
-        # st.write("keys_ordered =", keys_ordered)
-        # st.write("x_labels =", x_labels)
-        # st.write("y_values =", y_values)
-
-        # 4) Graph statique avec go.Bar
+        # Graph statique 
         fig_ranks = go.Figure(
             data=[
                 go.Bar(
@@ -443,7 +456,6 @@ with tab_eval:
             margin=dict(l=10, r=10, t=10, b=40),
             xaxis_title="Rang de la bonne réponse",
             yaxis_title="Nombre de requêtes",
-            # on force un axe catégoriel dans l'ordre donné
             xaxis=dict(
                 type="category",
                 categoryorder="array",
@@ -457,20 +469,19 @@ with tab_eval:
             config={"staticPlot": True, "displayModeBar": False},
         )
 
-
+# ------------------------------------------ Détails par requête --------------------------------------------------
         st.subheader("Détails par requête")
 
         df_rows = pd.DataFrame(rows)
 
-        # (optionnel) forcer 3 décimales sur les colonnes numériques
         num_cols = [c for c in df_rows.columns if c not in ("qid", "query", "answer")]
         df_rows[num_cols] = df_rows[num_cols].astype(float).round(3)
 
-        # --- CSS + HTML pour un tableau scrollable avec le même style sombre ---
+        # --- CSS + HTML pour le design du tableau de affiché dans la partie détails requetes---
         st.markdown("""
         <style>
         .details-wrapper {
-            max-height: 420px;         /* hauteur visible -> scroll interne */
+            max-height: 420px;         
             overflow-y: auto;
             border-radius: 14px;
             border: 1px solid rgba(255,255,255,.08);
@@ -485,7 +496,7 @@ with tab_eval:
             position: sticky;
             top: 0;
             z-index: 2;
-            background-color: #020617;   /* header foncé */
+            background-color: #020617;   
             color: #ffffff;
             text-align: center;
             padding: 8px;
@@ -499,9 +510,8 @@ with tab_eval:
             border-top: 1px solid #111827;
         }
         table.details-table tbody tr:nth-child(even) td {
-            background-color: #111827;   /* zébrage */
+            background-color: #111827;  
         }
-        /* query + answer alignés à gauche pour être plus lisibles */
         table.details-table tbody td:nth-child(2),
         table.details-table tbody td:nth-child(3) {
             text-align: left;
@@ -509,7 +519,6 @@ with tab_eval:
         </style>
         """, unsafe_allow_html=True)
 
-        # HTML du tableau sans index
         html_table = df_rows.to_html(
             index=False,
             classes="details-table",
@@ -521,20 +530,18 @@ with tab_eval:
             unsafe_allow_html=True
         )
 
-        # --- Export CSV ---
+        # ----------------------------------------- Export CSV------------------------------------------------
         csv_data = df_rows.to_csv(index=False).encode("utf-8")
         st.download_button(
-            "⬇️ Export CSV",
+            "⬇ Export CSV",
             data=csv_data,
             file_name="eval_results.csv",
             mime="text/csv"
         )
-
-
     else:
         st.info("Configure et clique dans la sidebar pour évaluer.")
 
-# ------------------ Helpers UI pour la comparaison ------------------
+# -------------------------------------- Helpers UI pour la comparaison -----------------------------------------------
 def donut_gauge(title: str, value: float, maxv: float = 1.0):
     """Jauge circulaire (donut) Plotly."""
     v = max(0.0, min(value, maxv))
@@ -563,9 +570,8 @@ def kpi_card(title: str, value: float | str, sub: str = "", accent: bool = False
     </div>
     """, unsafe_allow_html=True)
 
-# --- Tab Comparison ---
+# ------------------------------------------ Tab Comparaison ------------------------------------------------------
 with tab_compare:
-            # ======== Tableau récap ========
 
     st.markdown("### Comparaison multi-méthodes")
 
@@ -586,6 +592,13 @@ with tab_compare:
         alpha_cmp = st.slider("alpha (Interp)", 0.0, 1.0, 0.6, 0.05, key="alphacmp")
 
     if st.button("▶ Lancer la comparaison"):
+        index_path = Path(models_dir) / "index.json"
+        if not index_path.exists():
+            msg = "Cliquer d'abord sur **Build/Rebuild index + edge n-grams** dans la sidebar."
+            st.warning(msg)
+            st.toast(msg)
+            st.stop()
+
         triples = load_jsonl_queries(jsonl_path)
         qrels, queries = to_qrels(triples)
         methods = []
@@ -594,8 +607,13 @@ with tab_compare:
         if do_rrf: methods.append(("Hybrid RRF", None))
         if do_interp: methods.append(("Hybrid Interp", None))
 
-        if any(m[0] in ("TF-IDF Cosine","Hybrid RRF","Hybrid Interp") for m in methods):
-            ensure_tfidf_loaded(engine, tf_scheme="log", force=False)
+        if any(m[0] in ("TF-IDF Cosine", "Hybrid RRF", "Hybrid Interp") for m in methods):
+            if not st.session_state.get("tfidf_ready", False):
+                msg = "Pour comparer ces méthodes, cliquer d'abord sur **Build/Rebuild TF-IDF** dans la sidebar."
+                st.warning(msg)
+                st.toast(msg)
+                st.stop()
+
 
         results = []
         for name, _ in methods:
@@ -670,27 +688,23 @@ with tab_compare:
 
             st.markdown('<div class="sep"></div>', unsafe_allow_html=True)
 
-            # ======== Graphiques barres (sans légende) ========
-            # ======== Graphiques barres (sans légende) ========
+            # ===============================Graphiques barres ======================================
             def plot_metric_group(df: pd.DataFrame, metric: str) -> go.Figure:
                 """
                 4 barres séparées, plus fines, sans légende.
                 Axe Y auto-zoomé autour des valeurs du metric.
                 """
                 fig = go.Figure()
-                xs = list(range(len(df)))  # positions 0,1,2,3
+                xs = list(range(len(df)))  
 
                 # valeurs numériques du metric
                 vals = [float(v) for v in df[metric].tolist()]
                 vmin, vmax = min(vals), max(vals)
                 delta = vmax - vmin
-
-                # on définit une petite marge autour (pour bien voir les différences)
                 if delta == 0:
-                    # tous identiques : on met une fenêtre serrée autour de la valeur
                     margin = max(0.01, vmin * 0.2)
                 else:
-                    margin = delta * 0.5   # tu peux augmenter à 0.7 si tu veux encore plus zoomé
+                    margin = delta * 0.5  
 
                 y_low  = max(0.0, vmin - margin)
                 y_high = min(1.0, vmax + margin)
@@ -708,29 +722,25 @@ with tab_compare:
                 )
 
                 fig.update_layout(
-                    yaxis=dict(range=[y_low, y_high], title=metric)  # comme tu as déjà
+                    yaxis=dict(range=[y_low, y_high], title=metric)  
                 )
 
-                # On ne veut pas de texte ni de grille sur l’axe x
                 fig.update_xaxes(
                     showticklabels=False,
                     showgrid=False,
                     zeroline=False
                 )
 
-                # 👉 Ajouter une ligne horizontale qui joue le rôle d'axe x
                 fig.add_shape(
                     type="line",
-                    x0=-0.5,                  # un peu avant la 1ère barre
-                    x1=len(xs) - 0.5,         # un peu après la dernière barre
-                    y0=y_low, y1=y_low,       # pile en bas de la fenêtre
+                    x0=-0.5,                  
+                    x1=len(xs) - 0.5,        
+                    y0=y_low, y1=y_low,      
                     line=dict(color="#e5e7eb", width=1),
                     layer="below"
                 )
 
                 return fig
-
-
 
             st.subheader("Scores par méthode")
             config_static = {"staticPlot": True, "displayModeBar": False}
@@ -744,7 +754,6 @@ with tab_compare:
                     use_container_width=True,
                     config=config_static,
                 )
-                # ESPACE vertical
                 st.markdown("<div style='height:25px;'></div>", unsafe_allow_html=True)
 
                 # 2e graphique
@@ -761,7 +770,6 @@ with tab_compare:
                     use_container_width=True,
                     config=config_static,
                 )
-                # ESPACE vertical
                 st.markdown("<div style='height:25px;'></div>", unsafe_allow_html=True)
 
                 # 4e graphique
@@ -771,7 +779,6 @@ with tab_compare:
                     config=config_static,
                 )   
 
-            # encore un petit espace avant le dernier
             st.markdown("<div style='height:30px;'></div>", unsafe_allow_html=True)
 
             st.plotly_chart(
@@ -779,10 +786,6 @@ with tab_compare:
                 use_container_width=True,
                 config=config_static,
             )
-
-
-
-
             st.subheader("Tableau comparatif")
             st.markdown("<div style='height:20px;'></div>", unsafe_allow_html=True)
 
