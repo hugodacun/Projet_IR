@@ -1,12 +1,11 @@
-# app_eval.py
 from __future__ import annotations
 import json, time, math, os, hashlib, datetime
 from typing import Dict, List, Tuple
 from collections import defaultdict, Counter
-
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
+import plotly.express as px   
 
 from src.search import SearchEngine
 from src.metrics import precision_at_k, recall_at_k, hit_at_1, mrr, ndcg_at_k
@@ -14,10 +13,10 @@ from src.index import InvertedIndex
 from src.preprocess import TextPreprocessor
 from src.suggest import Autocomplete
 
-# ============ Style global (cartes façon dashboard) ============
+# ============ Style global de l'interface (cartes façon dashboard) ============
 st.set_page_config(page_title="IR Evaluation Dashboard", layout="wide")
 
-# CSS léger pour des cartes propres (compatible dark/light)
+# CSS 
 st.markdown("""
 <style>
 .card {
@@ -48,14 +47,15 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# --------- Couleurs et légende rubans (utilisées partout) ---------
+# --------- Couleurs et légende rubans ---------
 # Palette (inchangée)
 COLORS = {
-    "BM25": "#3b82f6",
-    "TF-IDF Cosine": "#22c55e",
-    "Hybrid RRF": "#f59e0b",
-    "Hybrid Interp": "#ef4444",
+    "BM25":        "#9eacd3",  # bleu foncé
+    "TF-IDF Cosine": "#37486E",  # bleu un peu moins foncé
+    "Hybrid RRF":  "#5373A7",  # bleu moyen
+    "Hybrid Interp": "#d9dde0",  # bleu plus clair
 }
+
 
 def ribbon_legend(labels: list[str], colors: list[str]) -> go.Figure:
     """
@@ -213,11 +213,9 @@ with st.sidebar:
     st.subheader("Méthode de recherche")
     method = st.radio("Moteur", ["BM25", "TF-IDF Cosine", "Hybrid RRF", "Hybrid Interp"], index=0)
     use_bigrams = st.checkbox("Use bigrams (search)", value=True)
-    top_k = st.number_input("top_k affiché", 1, 100, 10)
 
     st.markdown("**Paramètres**")
-    k1 = st.slider("BM25: k1 (info)", 0.5, 2.0, 1.2, 0.1)
-    b = st.slider("BM25: b (info)", 0.0, 1.0, 0.75, 0.05)
+
     tf_scheme = st.selectbox("Cosine TF scheme", ["log", "raw"], index=0)
     k_lex = st.number_input("Hybrid: k_lex (BM25)", 10, 2000, 200, 10)
     k_vec = st.number_input("Hybrid: k_vec (Cosine)", 10, 2000, 200, 10)
@@ -311,22 +309,73 @@ with tab_eval:
                 "rank": rank
             })
 
-        st.subheader("Scores moyens (macro)")
-        st.write({
-            f"P@{k_eval}": round(sum_p/n, 3),
-            f"R@{k_eval}": round(sum_r/n, 3),
-            "Hit@1": round(sum_hit1/n, 3),
-            "MRR": round(sum_mrr/n, 3),
-            f"nDCG@{k_eval}": round(sum_ndcg/n, 3),
-        })
+        # ----- Scores moyens (macro) : affichage en cartes -----
+        st.subheader("Scores moyens ")
+
+        avg_scores = {
+            f"P@{k_eval}": round(sum_p / n, 3),
+            f"R@{k_eval}": round(sum_r / n, 3),
+            "Hit@1":      round(sum_hit1 / n, 3),
+            "MRR":        round(sum_mrr / n, 3),
+            f"nDCG@{k_eval}": round(sum_ndcg / n, 3),
+        }
+
+        # une colonne par métrique
+        cols = st.columns(len(avg_scores))
+
+        for col, (name, value) in zip(cols, avg_scores.items()):
+            with col:
+                st.metric(label=name, value=f"{value:.3f}")
+
 
         st.subheader("Distribution des rangs")
-        keys_ordered = [i for i in range(1, k_eval+1)] + [f">{k_eval}", "miss"]
-        dist = {str(k): rank_hist.get(k, 0) for k in keys_ordered}
-        st.bar_chart(dist)
+
+        # 1) Même logique de buckets que plus haut
+        keys_ordered = [i for i in range(1, k_eval + 1)] + [f">{k_eval}", "miss"]
+
+        # 2) Labels affichés (tout en string)
+        x_labels = [str(k) for k in keys_ordered]
+
+        # 3) Valeurs associées (on prend bien les clés originales : int, ">k", "miss")
+        y_values = [rank_hist.get(k, 0) for k in keys_ordered]
+
+        # (option debug, tu peux commenter après test)
+        # st.write("keys_ordered =", keys_ordered)
+        # st.write("x_labels =", x_labels)
+        # st.write("y_values =", y_values)
+
+        # 4) Graph statique avec go.Bar
+        fig_ranks = go.Figure(
+            data=[
+                go.Bar(
+                x=x_labels,
+                y=y_values,
+                )
+            ]
+        )   
+
+        fig_ranks.update_layout(
+            margin=dict(l=10, r=10, t=10, b=40),
+            xaxis_title="Rang de la bonne réponse",
+            yaxis_title="Nombre de requêtes",
+            # on force un axe catégoriel dans l'ordre donné
+            xaxis=dict(
+                type="category",
+                categoryorder="array",
+                categoryarray=x_labels,
+            ),
+        )
+
+        st.plotly_chart(
+            fig_ranks,
+            use_container_width=True,
+            config={"staticPlot": True, "displayModeBar": False},
+        )
+
 
         st.subheader("Détails par requête")
         st.dataframe(rows, use_container_width=True)
+
 
         st.download_button(
             "⬇️ Export CSV",
@@ -335,7 +384,7 @@ with tab_eval:
             mime="text/csv"
         )
     else:
-        st.info("Configure et clique 🚀 dans la sidebar pour évaluer.")
+        st.info("Configure et clique dans la sidebar pour évaluer.")
 
 # ------------------ Helpers UI pour la comparaison ------------------
 def donut_gauge(title: str, value: float, maxv: float = 1.0):
@@ -441,16 +490,16 @@ with tab_compare:
             c1, c2, c3, c4 = st.columns(4)
             with c1:
                 kpi_card("Meilleure P@k", f"{best_row['P@k']:.3f}",
-                         sub=f"🏆 {best_row['Méthode']}", accent=True)
+                         sub=f" {best_row['Méthode']}", accent=True)
             with c2:
                 kpi_card("Meilleure nDCG@k", f"{df.loc[df['nDCG@k'].idxmax(), 'nDCG@k']:.3f}",
-                         sub=f"🏆 {df.loc[df['nDCG@k'].idxmax(), 'Méthode']}")
+                         sub=f" {df.loc[df['nDCG@k'].idxmax(), 'Méthode']}")
             with c3:
                 kpi_card("Meilleure MRR", f"{df.loc[df['MRR'].idxmax(), 'MRR']:.3f}",
-                         sub=f"🏆 {df.loc[df['MRR'].idxmax(), 'Méthode']}")
+                         sub=f" {df.loc[df['MRR'].idxmax(), 'Méthode']}")
             with c4:
                 kpi_card("Latence min", f"{df['Latence (ms)'].min():.0f} ms",
-                         sub=f"⚡ {df.loc[df['Latence (ms)'].idxmin(), 'Méthode']}")
+                         sub=f" {df.loc[df['Latence (ms)'].idxmin(), 'Méthode']}")
 
             # ======== Jauges (donut) ========
             g1, g2, g3 = st.columns(3)
@@ -469,15 +518,6 @@ with tab_compare:
                     st.plotly_chart(donut_gauge(f"{metric_for_gauge}", row_g[key], 1.0), use_container_width=True)
 
             st.markdown('<div class="sep"></div>', unsafe_allow_html=True)
-
-            # ======== Légende inclinée (UNE SEULE FOIS) ========
-            labels = df["Méthode"].tolist()
-            colors = [COLORS.get(m, "#999999") for m in labels]
-            st.plotly_chart(
-                ribbon_legend(labels, colors),
-                use_container_width=True,
-                config={"staticPlot": True, "displayModeBar": False}
-            )
 
             # ======== Graphiques barres (sans légende) ========
             # ======== Graphiques barres (sans légende) ========
@@ -517,16 +557,28 @@ with tab_compare:
                 )
 
                 fig.update_layout(
-                    barmode="group",
-                    bargap=0.35,
-                    showlegend=False,
-                    margin=dict(l=10, r=10, t=10, b=0),
-                    yaxis_title=metric,
-                    dragmode=False,
-                    yaxis=dict(range=[y_low, y_high])   # ⬅️ zoom sur la zone utile
+                    yaxis=dict(range=[y_low, y_high])  # comme tu as déjà
                 )
-                fig.update_xaxes(showticklabels=False, showgrid=False, zeroline=False)
+
+                # On ne veut pas de texte ni de grille sur l’axe x
+                fig.update_xaxes(
+                    showticklabels=False,
+                    showgrid=False,
+                    zeroline=False
+                )
+
+                # 👉 Ajouter une ligne horizontale qui joue le rôle d'axe x
+                fig.add_shape(
+                    type="line",
+                    x0=-0.5,                  # un peu avant la 1ère barre
+                    x1=len(xs) - 0.5,         # un peu après la dernière barre
+                    y0=y_low, y1=y_low,       # pile en bas de la fenêtre
+                    line=dict(color="#e5e7eb", width=1),
+                    layer="below"
+                )
+
                 return fig
+
 
 
             st.subheader("Scores par méthode")
@@ -628,6 +680,7 @@ with tab_compare:
                 return fig
 
             st.subheader("Tableau comparatif")
+            st.markdown("<div style='height:20px;'></div>", unsafe_allow_html=True)
 
             st.plotly_chart(
                 styled_table(df),
