@@ -396,7 +396,7 @@ def donut_gauge(title: str, value: float, maxv: float = 1.0):
         hole=.75,
         textinfo='none'
     )])
-    fig.update_traces(marker=dict(colors=["#FFB703", "#334155"]), hoverinfo='skip')
+    fig.update_traces(marker=dict(colors=["#6485CE", "#334155"]), hoverinfo='skip')
     fig.update_layout(
         margin=dict(l=0, r=0, t=0, b=0),
         showlegend=False,
@@ -557,7 +557,7 @@ with tab_compare:
                 )
 
                 fig.update_layout(
-                    yaxis=dict(range=[y_low, y_high])  # comme tu as déjà
+                    yaxis=dict(range=[y_low, y_high], title=metric)  # comme tu as déjà
                 )
 
                 # On ne veut pas de texte ni de grille sur l’axe x
