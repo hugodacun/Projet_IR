@@ -1,4 +1,4 @@
-# Projet IR – Moteur de recherche & Dashboard d’évaluation
+# Projet IR – Moteur de recherche & Dashboard d’évaluation 
 
 Ce projet implémente un petit moteur de recherche en Python sur un corpus de pages Wikipédia en français, avec :
 
